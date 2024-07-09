@@ -97,6 +97,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Fasiliti Besar" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="13"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonFBTapped:" destination="7rN-Ba-Cko" eventType="touchUpInside" id="i6D-Hq-mHs"/>

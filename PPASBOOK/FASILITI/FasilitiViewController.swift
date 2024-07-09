@@ -100,36 +100,6 @@ class FasilitiViewController: UIViewController {
         return layout
     }
     
-    @IBAction func buttonFBTapped(_ sender: UIButton) {
-        applyCapacityFilter(minCapacity: 30, maxCapacity: 500)
-    }
-
-    @IBAction func buttonPMTapped(_ sender: UIButton) {
-        applyCapacityFilter(minCapacity: 1, maxCapacity: 29)
-    }
-
-    private func applyCapacityFilter(minCapacity: Int?, maxCapacity: Int?) {
-        filteredItems = items.filter { item in
-            if let capacityText = item.label2Text.split(separator: " ").first,
-               let capacity = Int(capacityText) {
-                if let minCapacity = minCapacity, let maxCapacity = maxCapacity {
-                    return capacity >= minCapacity && capacity <= maxCapacity
-                } else if let minCapacity = minCapacity {
-                    return capacity >= minCapacity
-                } else if let maxCapacity = maxCapacity {
-                    return capacity <= maxCapacity
-                }
-            }
-            return false
-        }
-        
-        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(filteredItems)
-        dataSource.apply(snapshot, animatingDifferences: true)
-    }
-
-    
     @IBAction func filterButtonTapped(_ sender: UIButton) {
         let alert = UIAlertController(title: "FILTER", message: "Masukkan julat harga:", preferredStyle: .alert)
         
@@ -185,6 +155,17 @@ class FasilitiViewController: UIViewController {
     @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func buttonFBTapped(_ sender: UIButton) {
+        // Toggle background color on tap
+        buttonFB.backgroundColor = buttonFB.backgroundColor == .systemTeal ? .clear : .systemTeal
+    }
+
+    @IBAction func buttonPMTapped(_ sender: UIButton) {
+        // Toggle background color on tap
+        buttonPM.backgroundColor = buttonPM.backgroundColor == .systemTeal ? .clear : .systemTeal
+    }
+
 
     private func configureButtonShadows() {
         buttonFB.layer.borderWidth = 1.0
@@ -194,6 +175,8 @@ class FasilitiViewController: UIViewController {
         buttonFB.layer.shadowOffset = CGSize(width: 0, height: 2)
         buttonFB.layer.shadowOpacity = 0.5
         buttonFB.layer.shadowRadius = 4
+        buttonFB.addTarget(self, action: #selector(buttonFBTapped(_:)), for: .touchUpInside)
+            buttonFB.backgroundColor = .clear // Set initial background color
         
         buttonPM.layer.borderWidth = 1.0
         buttonPM.layer.borderColor = UIColor.gray.cgColor
@@ -202,6 +185,8 @@ class FasilitiViewController: UIViewController {
         buttonPM.layer.shadowOffset = CGSize(width: 0, height: 2)
         buttonPM.layer.shadowOpacity = 0.5
         buttonPM.layer.shadowRadius = 4
+        buttonPM.addTarget(self, action: #selector(buttonPMTapped(_:)), for: .touchUpInside)
+            buttonPM.backgroundColor = .clear // Set initial background color
     }
 }
 
