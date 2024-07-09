@@ -31,6 +31,7 @@
 		7CDA7B822C129730002F7C0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA7B812C129730002F7C0B /* SceneDelegate.swift */; };
 		7CDA7B872C129730002F7C0B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 7CDA7B862C129730002F7C0B /* Base */; };
 		7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDA7B882C129731002F7C0B /* Assets.xcassets */; };
+		7CF322162C3CC97600877517 /* Pinjaman.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF322152C3CC97600877517 /* Pinjaman.storyboard */; };
 		7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */; };
 		7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322192C3CCBC500877517 /* YourDataModel.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		7CDA7B862C129730002F7C0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CDA7B882C129731002F7C0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CDA7B8D2C129731002F7C0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF322152C3CC97600877517 /* Pinjaman.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pinjaman.storyboard; sourceTree = "<group>"; };
 		7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CF322192C3CCBC500877517 /* YourDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -241,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF322162C3CC97600877517 /* Pinjaman.storyboard in Resources */,
 				7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */,
 				7CDA7B872C129730002F7C0B /* Base in Resources */,
 				7CCC80FF2C2142560092F741 /* MainPage.storyboard in Resources */,
@@ -261,6 +264,7 @@
 			files = (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				3219F2462C3CD01D000BA091 /* AAViewController.swift in Sources */,
 				3DE50DBB2C3790AC00DB2D78 /* DistrictCollectionViewCell.swift in Sources */,
@@ -268,10 +272,13 @@
 =======
 				3DE50DBB2C3790AC00DB2D78 /* DistrictCollectionViewCell.swift in Sources */,
 >>>>>>> parent of 908909a (PPAS LOCATION)
+=======
+>>>>>>> parent of 3557f04 (ok)
 				7CCC81012C2142680092F741 /* MainPageViewController.swift in Sources */,
 				3219F24C2C3CD01D000BA091 /* RQViewController.swift in Sources */,
 				7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */,
 				7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 				3DE50DBF2C3CE30800DB2D78 /* PPASLocation.swift in Sources */,
@@ -281,6 +288,9 @@
 >>>>>>> 81091d2b87468060ccbaec7d1bddad257ab0d764
 =======
 >>>>>>> parent of 908909a (PPAS LOCATION)
+=======
+				3DE50DBF2C3CE30800DB2D78 /* PPASLocation.swift in Sources */,
+>>>>>>> parent of 3557f04 (ok)
 				7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */,
 				7CDA7B802C129730002F7C0B /* AppDelegate.swift in Sources */,
 				3219F24B2C3CD01D000BA091 /* PCViewController.swift in Sources */,
