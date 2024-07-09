@@ -79,6 +79,7 @@
                                     <outlet property="delegate" destination="7rN-Ba-Cko" id="dCE-iH-dLK"/>
                                 </connections>
                             </searchBar>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB0-9t-l5h">
                                 <rect key="frame" x="16" y="166" width="144" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,6 +116,8 @@
                                     <action selector="buttonPMTapped:" destination="7rN-Ba-Cko" eventType="touchUpInside" id="RmW-hH-k3R"/>
                                 </connections>
                             </button>
+=======
+>>>>>>> parent of 3557f04 (ok)
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XyC-rS-7LF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,9 +125,6 @@
                     <navigationItem key="navigationItem" id="YlY-Jr-cAk" userLabel="Location : Tun Raja Uda"/>
                     <connections>
                         <outlet property="backButton" destination="S7C-7I-C1Y" id="7ZD-NE-V3g"/>
-                        <outlet property="buttonFB" destination="nsK-89-EPl" id="Kf9-oc-9TZ"/>
-                        <outlet property="buttonFilter" destination="ZB0-9t-l5h" id="CLv-yK-PMC"/>
-                        <outlet property="buttonPM" destination="rqv-Lw-QEo" id="bLr-WK-uwZ"/>
                         <outlet property="collectionView" destination="GsI-wC-3sH" id="RA4-LN-x3G"/>
                         <outlet property="searchBar" destination="KVW-1T-b80" id="DAf-iP-FSM"/>
                     </connections>
