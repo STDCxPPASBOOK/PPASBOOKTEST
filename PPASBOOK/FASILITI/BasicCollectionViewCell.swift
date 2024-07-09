@@ -20,7 +20,6 @@ class BasicCollectionViewCell: UICollectionViewCell {
         backgroundColor = .white
         layer.borderWidth = 1.0
         layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = 8.0
         
         // Configure imageView
         imageView.contentMode = .scaleAspectFit
@@ -28,28 +27,26 @@ class BasicCollectionViewCell: UICollectionViewCell {
         addSubview(imageView)
         
         // Configure label1
-        label1.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label1.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.textColor = .systemTeal
         addSubview(label1)
         
         // Configure label2
-        label2.font = UIFont.systemFont(ofSize: 14)
+        label2.font = UIFont.systemFont(ofSize: 12)
         label2.translatesAutoresizingMaskIntoConstraints = false
-        //label2.textColor = .blue
         addSubview(label2)
         
         // Configure label3
-        label3.font = UIFont.systemFont(ofSize: 14)
+        label3.font = UIFont.systemFont(ofSize: 12)
         label3.translatesAutoresizingMaskIntoConstraints = false
-        //label3.textColor = .blue
         addSubview(label3)
         
         NSLayoutConstraint.activate([
             // Constraints for imageView
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -0),
             imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.6),
             
             // Constraints for label1
@@ -68,7 +65,13 @@ class BasicCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with data: YourDataModel) {
-        imageView.image = UIImage(named: data.imageName)
+        // Set image
+        if let image = UIImage(named: data.imageName) {
+            imageView.image = image
+        } else {
+            imageView.image = UIImage(named: "placeholder") // Placeholder image if named image is not found
+        }
+        
         label1.text = data.label1Text
         label2.text = data.label2Text
         label3.text = data.label3Text
