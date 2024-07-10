@@ -1,10 +1,3 @@
-//
-//  PPASLocationViewController.swift
-//  PPASBOOK
-//
-//  Created by STDC_14 on 09/07/2024.
-//
-
 import UIKit
 
 class PPASLocationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -33,6 +26,8 @@ class PPASLocationViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 100
+        tableView.estimatedRowHeight = 100
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,11 +37,6 @@ class PPASLocationViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PPASCell", for: indexPath) as! PPASLocationTableViewCell
         let location = ppasLocations[indexPath.row]
-        
-        print("Location: \(location.name)")
-        print("District: \(location.district)")
-        print("Operation Hours: \(getCurrentDayOperationHours(for: location))")
-        print("Status: \(getCurrentDayOperationStatus(for: location))")
         
         cell.titleLabel.text = location.name
         cell.districtLabel.text = location.district
@@ -86,5 +76,13 @@ class PPASLocationViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
+    func getCurrentDayOperationHours(for location: PPASLocation) -> String {
+        // Implement your logic to get operation hours for the current day
+        return "08:00 - 18:00"
+    }
     
+    func getCurrentDayOperationStatus(for location: PPASLocation) -> String {
+        // Implement your logic to get operation status for the current day
+        return "Open"
+    }
 }
