@@ -16,7 +16,7 @@
 		3219F24C2C3CD01D000BA091 /* RQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2432C3CD01D000BA091 /* RQViewController.swift */; };
 		3219F24D2C3CD01D000BA091 /* DesktopsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */; };
 		3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2452C3CD01D000BA091 /* DekstopViewController.swift */; };
-		324A16E12C3E78BA003E85B5 /* Borang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324A16E02C3E78BA003E85B5 /* Borang.storyboard */; };
+		324A16E32C3E7D7A003E85B5 /* Borang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324A16E22C3E7D7A003E85B5 /* Borang.storyboard */; };
 		32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE759C2C3E78390093FF31 /* ProfileViewController.swift */; };
 		3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */; };
 		3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */; };
@@ -51,7 +51,7 @@
 		3219F2432C3CD01D000BA091 /* RQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RQViewController.swift; sourceTree = "<group>"; };
 		3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopsInfoViewController.swift; sourceTree = "<group>"; };
 		3219F2452C3CD01D000BA091 /* DekstopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DekstopViewController.swift; sourceTree = "<group>"; };
-		324A16E02C3E78BA003E85B5 /* Borang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Borang.storyboard; path = ../../../../../.Trash/PPASBOOKTEST/PPASBOOK/PINJAMAN/Borang.storyboard; sourceTree = "<group>"; };
+		324A16E22C3E7D7A003E85B5 /* Borang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Borang.storyboard; sourceTree = "<group>"; };
 		32FE759C2C3E78390093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocation.swift; sourceTree = "<group>"; };
@@ -205,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				3219F23E2C3CD01D000BA091 /* PC.storyboard */,
+				324A16E22C3E7D7A003E85B5 /* Borang.storyboard */,
 				3219F2402C3CD01D000BA091 /* AA2ViewController.swift */,
 				3219F23D2C3CD01D000BA091 /* AAViewController.swift */,
 				3219F2452C3CD01D000BA091 /* DekstopViewController.swift */,
@@ -213,7 +214,6 @@
 				3219F23F2C3CD01D000BA091 /* LRRViewController.swift */,
 				3219F2422C3CD01D000BA091 /* PCViewController.swift */,
 				3219F2432C3CD01D000BA091 /* RQViewController.swift */,
-				324A16E02C3E78BA003E85B5 /* Borang.storyboard */,
 			);
 			path = PINJAMAN;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				3DE50E5F2C3E38C200DB2D78 /* Profile.storyboard in Resources */,
 				7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */,
 				7C271BDA2C350FAD00050986 /* Fasiliti.storyboard in Resources */,
-				324A16E12C3E78BA003E85B5 /* Borang.storyboard in Resources */,
+				324A16E32C3E7D7A003E85B5 /* Borang.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
