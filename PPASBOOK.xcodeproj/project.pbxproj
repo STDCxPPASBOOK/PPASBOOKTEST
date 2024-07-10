@@ -16,6 +16,7 @@
 		3219F24C2C3CD01D000BA091 /* RQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2432C3CD01D000BA091 /* RQViewController.swift */; };
 		3219F24D2C3CD01D000BA091 /* DesktopsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */; };
 		3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2452C3CD01D000BA091 /* DekstopViewController.swift */; };
+		32FE75992C3E5F1C0093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE75982C3E5F1C0093FF31 /* ProfileViewController.swift */; };
 		3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */; };
 		3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */; };
 		3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 		3219F2432C3CD01D000BA091 /* RQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RQViewController.swift; sourceTree = "<group>"; };
 		3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopsInfoViewController.swift; sourceTree = "<group>"; };
 		3219F2452C3CD01D000BA091 /* DekstopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DekstopViewController.swift; sourceTree = "<group>"; };
+		32FE75982C3E5F1C0093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../../../.Trash/PPASBOOKTEST 11-31-56-732/PPASBOOK/PROFILES/ProfileViewController.swift"; sourceTree = "<group>"; };
 		3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocation.swift; sourceTree = "<group>"; };
 		3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -83,6 +85,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32FE75972C3E4C2C0093FF31 /* BOOKING HISTORY */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "BOOKING HISTORY";
+			sourceTree = "<group>";
+		};
 		3DE50E432C3D19DF00DB2D78 /* LOCATION */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3DE50E5E2C3E38C200DB2D78 /* Profile.storyboard */,
+				32FE75982C3E5F1C0093FF31 /* ProfileViewController.swift */,
 			);
 			path = PROFILES;
 			sourceTree = "<group>";
@@ -168,6 +178,7 @@
 		7CDA7B7E2C129730002F7C0B /* PPASBOOK */ = {
 			isa = PBXGroup;
 			children = (
+				32FE75972C3E4C2C0093FF31 /* BOOKING HISTORY */,
 				7CDA7B7F2C129730002F7C0B /* AppDelegate.swift */,
 				7CDA7B812C129730002F7C0B /* SceneDelegate.swift */,
 				7CDA7B8D2C129731002F7C0B /* Info.plist */,
@@ -295,6 +306,7 @@
 				3219F24A2C3CD01D000BA091 /* FormApplicantViewController.swift in Sources */,
 				3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */,
 				7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */,
+				32FE75992C3E5F1C0093FF31 /* ProfileViewController.swift in Sources */,
 				7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */,
 				3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */,
 			);
