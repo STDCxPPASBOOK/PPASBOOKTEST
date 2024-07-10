@@ -102,6 +102,14 @@
 			path = PROFILES;
 			sourceTree = "<group>";
 		};
+		3DE50E612C3E647E00DB2D78 /* HISTORY */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = HISTORY;
+			path = ../HISTORY;
+			sourceTree = "<group>";
+		};
 		7C271BD82C3503A300050986 /* FASILITI */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +187,7 @@
 				7CCC80FD2C2142300092F741 /* MAINPAGE */,
 				7C271BD82C3503A300050986 /* FASILITI */,
 				3DE50E432C3D19DF00DB2D78 /* LOCATION */,
+				3DE50E612C3E647E00DB2D78 /* HISTORY */,
 				7CF322142C3CC95500877517 /* PINJAMAN */,
 			);
 			path = PPASBOOK;
