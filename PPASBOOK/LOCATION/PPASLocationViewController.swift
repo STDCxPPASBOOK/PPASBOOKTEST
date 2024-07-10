@@ -74,7 +74,7 @@ class PPASLocationViewController: UIViewController, UITableViewDataSource, UITab
             "Tuesday": OperationHours(open: "08:00", close: "18:00", breakStart: "12:00", breakEnd: "13:00"),
             // Add other days
         ]),
-        PPASLocation(name: "PPAS Daerah Sabak Bernam", district: "Shah Alam", operationHours: [
+        PPASLocation(name: "PPAS Daerah Sabak Bernam", district: "Sabak Bernam", operationHours: [
             "Monday": OperationHours(open: "08:00", close: "18:00", breakStart: "12:00", breakEnd: "13:00"),
             "Tuesday": OperationHours(open: "08:00", close: "18:00", breakStart: "12:00", breakEnd: "13:00"),
             // Add other days
