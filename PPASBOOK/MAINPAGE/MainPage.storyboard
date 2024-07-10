@@ -148,7 +148,7 @@
         <scene sceneID="pFw-7Y-G6d">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hgY-ac-1h5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HOME" image="house.fill" catalog="system" selectedImage="house.fill" id="P9f-1H-nHV">
+                    <tabBarItem key="tabBarItem" tag="2" title="HOME" image="house.fill" catalog="system" selectedImage="house.fill" id="P9f-1H-nHV">
                         <color key="badgeColor" red="0.31764706970000001" green="0.68627452850000004" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -177,9 +177,9 @@
                         <color key="selectedImageTintColor" red="0.31764706970000001" green="0.69411766529999996" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="hgY-ac-1h5" kind="relationship" relationship="viewControllers" id="2eL-yY-brq"/>
-                        <segue destination="Phj-Di-WoD" kind="relationship" relationship="viewControllers" id="hxA-sm-kWO"/>
-                        <segue destination="Qj7-8G-9NV" kind="relationship" relationship="viewControllers" id="VFw-bz-yOf"/>
+                        <segue destination="Phj-Di-WoD" kind="relationship" relationship="viewControllers" id="Tub-uE-yVx"/>
+                        <segue destination="hgY-ac-1h5" kind="relationship" relationship="viewControllers" id="yJB-om-BUC"/>
+                        <segue destination="Qj7-8G-9NV" kind="relationship" relationship="viewControllers" id="sCy-YI-DiU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnk-rn-bAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -190,7 +190,7 @@
         <scene sceneID="rxm-6r-oAl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Phj-Di-WoD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MAP" image="map.fill" catalog="system" id="bxN-un-99e"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="MAP" image="map.fill" catalog="system" id="bxN-un-99e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JrF-VL-ihe">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -219,7 +219,7 @@
         <scene sceneID="Sxx-e4-kzm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qj7-8G-9NV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="person.crop.circle.fill" catalog="system" id="XnX-SN-jRG"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="PROFILE" image="person.crop.circle.fill" catalog="system" id="XnX-SN-jRG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EAf-1w-FOg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
