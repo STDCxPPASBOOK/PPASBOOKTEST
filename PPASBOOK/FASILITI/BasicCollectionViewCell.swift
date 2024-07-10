@@ -28,19 +28,19 @@ class BasicCollectionViewCell: UICollectionViewCell {
         addSubview(imageView)
         
         // Configure label1
-        label1.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label1.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.textColor = .systemTeal
         addSubview(label1)
         
         // Configure label2
-        label2.font = UIFont.systemFont(ofSize: 14)
+        label2.font = UIFont.systemFont(ofSize: 12)
         label2.translatesAutoresizingMaskIntoConstraints = false
         //label2.textColor = .blue
         addSubview(label2)
         
         // Configure label3
-        label3.font = UIFont.systemFont(ofSize: 14)
+        label3.font = UIFont.systemFont(ofSize: 12)
         label3.translatesAutoresizingMaskIntoConstraints = false
         //label3.textColor = .blue
         addSubview(label3)

@@ -160,13 +160,62 @@ class FasilitiViewController: UIViewController {
         // Toggle background color on tap
         buttonFB.backgroundColor = buttonFB.backgroundColor == .systemTeal ? .clear : .systemTeal
         buttonPM.backgroundColor = .clear // Deselect buttonPM when buttonFB is selected
+        if buttonFB.backgroundColor == .systemTeal {
+            applyPriceFilter()
+        } else {
+            applySnapshot() // Clear the filter
+        }
+    }
+
+    private func applyPriceFilter() {
+        filteredItems = items.sorted { item1, item2 in
+            // Extract the price from the label3Text and convert to an integer
+            if let priceText1 = item1.label3Text.split(separator: " ").last,
+               let price1 = Int(priceText1.replacingOccurrences(of: "RM", with: "").replacingOccurrences(of: "/Jam", with: "")),
+               let priceText2 = item2.label3Text.split(separator: " ").last,
+               let price2 = Int(priceText2.replacingOccurrences(of: "RM", with: "").replacingOccurrences(of: "/Jam", with: "")) {
+                return price1 < price2
+            }
+            return false
+        }
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(filteredItems)
+        dataSource.apply(snapshot, animatingDifferences: true)
     }
 
     @IBAction func buttonPMTapped(_ sender: UIButton) {
         // Toggle background color on tap
         buttonPM.backgroundColor = buttonPM.backgroundColor == .systemTeal ? .clear : .systemTeal
         buttonFB.backgroundColor = .clear // Deselect buttonFB when buttonPM is selected
+        if buttonPM.backgroundColor == .systemTeal {
+            applyPriceDescendingFilter()
+        } else {
+            applySnapshot() // Clear the filter
+        }
     }
+
+    private func applyPriceDescendingFilter() {
+        filteredItems = items.sorted { item1, item2 in
+            // Extract the price from the label3Text and convert to an integer
+            if let priceText1 = item1.label3Text.split(separator: " ").last,
+               let price1 = Int(priceText1.replacingOccurrences(of: "RM", with: "").replacingOccurrences(of: "/Jam", with: "")),
+               let priceText2 = item2.label3Text.split(separator: " ").last,
+               let price2 = Int(priceText2.replacingOccurrences(of: "RM", with: "").replacingOccurrences(of: "/Jam", with: "")) {
+                return price1 > price2 // Compare in descending order
+            }
+            return false
+        }
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(filteredItems)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+
+
+
 
     private func configureButtonShadows() {
         buttonFB.layer.borderWidth = 1.0
@@ -177,7 +226,7 @@ class FasilitiViewController: UIViewController {
         buttonFB.layer.shadowOpacity = 0.5
         buttonFB.layer.shadowRadius = 4
         buttonFB.addTarget(self, action: #selector(buttonFBTapped(_:)), for: .touchUpInside)
-           buttonFB.backgroundColor = .clear // Set initial background color
+        buttonFB.backgroundColor = .clear // Set initial background color
         
         buttonPM.layer.borderWidth = 1.0
         buttonPM.layer.borderColor = UIColor.gray.cgColor
@@ -187,7 +236,7 @@ class FasilitiViewController: UIViewController {
         buttonPM.layer.shadowOpacity = 0.5
         buttonPM.layer.shadowRadius = 4
         buttonPM.addTarget(self, action: #selector(buttonPMTapped(_:)), for: .touchUpInside)
-           buttonPM.backgroundColor = .clear // Set initial background color
+        buttonPM.backgroundColor = .clear // Set initial background color
     }
 }
 

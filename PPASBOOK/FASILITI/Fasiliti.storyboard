@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gCf-0y-jHw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rN-Ba-Cko">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -10,12 +10,12 @@
     </dependencies>
     <scenes>
         <!--MainPage-->
-        <scene sceneID="u5f-lF-Q5I">
+        <scene sceneID="F8d-pQ-hHf">
             <objects>
-                <viewControllerPlaceholder storyboardName="MainPage" id="SHk-VJ-1cv" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="evG-qe-NK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MainPage" id="vGE-dN-8eT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbC-0C-87H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5279" y="-35"/>
+            <point key="canvasLocation" x="5228" y="-447"/>
         </scene>
         <!--Fasiliti View Controller-->
         <scene sceneID="L7J-FZ-kdv">
@@ -25,30 +25,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wo5-bx-Ado">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Location : Tun Raja Uda" id="qNM-TL-y3I">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrowshape.backward.fill" catalog="system" id="S7C-7I-C1Y">
-                                            <connections>
-                                                <action selector="backButtonTapped:" destination="7rN-Ba-Cko" id="rFH-uU-tte"/>
-                                                <segue destination="SHk-VJ-1cv" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="EXj-SL-qGM"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fasiliti Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-Up-5DB">
-                                <rect key="frame" x="48" y="111" width="296" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GsI-wC-3sH">
-                                <rect key="frame" x="16" y="274" width="361" height="544"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GsI-wC-3sH">
+                                <rect key="frame" x="16" y="277" width="361" height="541"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1RW-Au-xxS">
                                     <size key="itemSize" width="128" height="128"/>
@@ -71,17 +49,41 @@
                                     <outlet property="delegate" destination="7rN-Ba-Cko" id="EF8-uA-Ed9"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVW-1T-b80">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wo5-bx-Ado">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Location : Tun Raja Uda" id="qNM-TL-y3I">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="arrowshape.backward.fill" catalog="system" changesSelectionAsPrimaryAction="YES" id="S7C-7I-C1Y">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="7rN-Ba-Cko" id="8A7-MA-adh"/>
+                                                <segue destination="vGE-dN-8eT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="28O-oU-IJQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fasiliti Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-Up-5DB">
+                                <rect key="frame" x="48" y="111" width="297" height="47"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="KVW-1T-b80">
                                 <rect key="frame" x="16" y="223" width="361" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bWA-xc-DCG"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="7rN-Ba-Cko" id="dCE-iH-dLK"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-ar-gvZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-ar-gvZ">
                                 <rect key="frame" x="16" y="166" width="144" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HW0-OX-6wT"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="FILTER">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,24 +92,26 @@
                                     <action selector="filterButtonTapped:" destination="7rN-Ba-Cko" eventType="touchUpInside" id="w00-2v-pA5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czp-9z-B83">
-                                <rect key="frame" x="168" y="174" width="99" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czp-9z-B83">
+                                <rect key="frame" x="168" y="173.66666666666666" width="99" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="3C8-sX-KTj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Fasiliti Besar">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                <buttonConfiguration key="configuration" style="plain" title="⏬">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonFBTapped:" destination="7rN-Ba-Cko" eventType="touchUpInside" id="ASd-mk-4wc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdi-HU-aTm">
-                                <rect key="frame" x="275" y="174" width="102" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdi-HU-aTm">
+                                <rect key="frame" x="275" y="173.66666666666666" width="102" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="xMR-zH-ka7"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Pod Kecil">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                <buttonConfiguration key="configuration" style="plain" title="⏫">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -117,10 +121,32 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XyC-rS-7LF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WfG-ar-gvZ" firstAttribute="centerY" secondItem="czp-9z-B83" secondAttribute="centerY" id="1Pp-Bl-M89"/>
+                            <constraint firstItem="KVW-1T-b80" firstAttribute="top" secondItem="WfG-ar-gvZ" secondAttribute="bottom" constant="7" id="2Wj-nk-d4i"/>
+                            <constraint firstItem="czp-9z-B83" firstAttribute="leading" secondItem="WfG-ar-gvZ" secondAttribute="trailing" constant="8" symbolic="YES" id="5HO-Jx-7CL"/>
+                            <constraint firstItem="jK4-Up-5DB" firstAttribute="centerX" secondItem="KVW-1T-b80" secondAttribute="centerX" id="Aha-tX-2J4"/>
+                            <constraint firstAttribute="trailing" secondItem="Wo5-bx-Ado" secondAttribute="trailing" id="BgB-NA-uul"/>
+                            <constraint firstItem="czp-9z-B83" firstAttribute="baseline" secondItem="tdi-HU-aTm" secondAttribute="baseline" id="CR9-T8-DZG"/>
+                            <constraint firstItem="tdi-HU-aTm" firstAttribute="trailing" secondItem="KVW-1T-b80" secondAttribute="trailing" id="Czw-5G-XG6"/>
+                            <constraint firstItem="WfG-ar-gvZ" firstAttribute="top" secondItem="jK4-Up-5DB" secondAttribute="bottom" constant="8" symbolic="YES" id="GjH-Lr-a81"/>
+                            <constraint firstItem="tdi-HU-aTm" firstAttribute="leading" secondItem="czp-9z-B83" secondAttribute="trailing" constant="8" symbolic="YES" id="HGv-2y-lLt"/>
+                            <constraint firstItem="Wo5-bx-Ado" firstAttribute="leading" secondItem="4D4-R2-gFX" secondAttribute="leading" id="Log-xR-Arh"/>
+                            <constraint firstItem="KVW-1T-b80" firstAttribute="trailing" secondItem="GsI-wC-3sH" secondAttribute="trailing" id="M5Y-Dc-LAR"/>
+                            <constraint firstItem="jK4-Up-5DB" firstAttribute="top" secondItem="Wo5-bx-Ado" secondAttribute="bottom" constant="8" id="Pwi-8W-6o0"/>
+                            <constraint firstItem="GsI-wC-3sH" firstAttribute="bottom" secondItem="XyC-rS-7LF" secondAttribute="bottom" id="Q1h-2Y-tBp"/>
+                            <constraint firstItem="WfG-ar-gvZ" firstAttribute="leading" secondItem="KVW-1T-b80" secondAttribute="leading" id="Tis-vC-djN"/>
+                            <constraint firstItem="GsI-wC-3sH" firstAttribute="top" secondItem="KVW-1T-b80" secondAttribute="bottom" constant="10" id="Uz2-2h-H0R"/>
+                            <constraint firstItem="Wo5-bx-Ado" firstAttribute="centerX" secondItem="jK4-Up-5DB" secondAttribute="centerX" id="VNV-ow-9Yw"/>
+                            <constraint firstItem="KVW-1T-b80" firstAttribute="leading" secondItem="GsI-wC-3sH" secondAttribute="leading" id="dh9-Hr-qSv"/>
+                            <constraint firstItem="Wo5-bx-Ado" firstAttribute="top" secondItem="XyC-rS-7LF" secondAttribute="top" id="rOB-Ln-5EM"/>
+                            <constraint firstItem="WfG-ar-gvZ" firstAttribute="leading" secondItem="4D4-R2-gFX" secondAttribute="leadingMargin" id="tmM-Hw-6ju"/>
+                            <constraint firstItem="jK4-Up-5DB" firstAttribute="leading" secondItem="XyC-rS-7LF" secondAttribute="leading" constant="48" id="zyD-fL-Qj2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YlY-Jr-cAk" userLabel="Location : Tun Raja Uda"/>
                     <connections>
-                        <outlet property="backButton" destination="S7C-7I-C1Y" id="7ZD-NE-V3g"/>
+                        <outlet property="backButton" destination="S7C-7I-C1Y" id="TKr-1z-nen"/>
                         <outlet property="buttonFB" destination="czp-9z-B83" id="Pfj-5z-dco"/>
                         <outlet property="buttonFilter" destination="WfG-ar-gvZ" id="2CH-jr-qaF"/>
                         <outlet property="buttonPM" destination="tdi-HU-aTm" id="CLT-eZ-3pF"/>
@@ -131,24 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc2-jm-oiO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4681.679389312977" y="-35.211267605633807"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QY6-Hc-90Z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gCf-0y-jHw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fbE-xb-hb5">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="7rN-Ba-Cko" kind="relationship" relationship="rootViewController" id="y1I-xB-fZV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ln0-9B-aJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3754.9618320610684" y="-35.211267605633807"/>
         </scene>
     </scenes>
     <resources>
