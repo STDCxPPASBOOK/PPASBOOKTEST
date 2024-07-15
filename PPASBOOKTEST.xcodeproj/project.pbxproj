@@ -68,7 +68,7 @@
 		7CCC80FE2C2142560092F741 /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		7CCC81002C2142680092F741 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		7CCC81032C2160360092F741 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		7CDA7B7C2C129730002F7C0B /* PPASBOOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPASBOOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CDA7B7C2C129730002F7C0B /* PPASBOOKTEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPASBOOKTEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDA7B7F2C129730002F7C0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CDA7B812C129730002F7C0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7CDA7B862C129730002F7C0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		7CDA7B7D2C129730002F7C0B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CDA7B7C2C129730002F7C0B /* PPASBOOK.app */,
+				7CDA7B7C2C129730002F7C0B /* PPASBOOKTEST.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,9 +221,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7CDA7B7B2C129730002F7C0B /* PPASBOOK */ = {
+		7CDA7B7B2C129730002F7C0B /* PPASBOOKTEST */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CDA7B902C129731002F7C0B /* Build configuration list for PBXNativeTarget "PPASBOOK" */;
+			buildConfigurationList = 7CDA7B902C129731002F7C0B /* Build configuration list for PBXNativeTarget "PPASBOOKTEST" */;
 			buildPhases = (
 				7CDA7B782C129730002F7C0B /* Sources */,
 				7CDA7B792C129730002F7C0B /* Frameworks */,
@@ -233,9 +233,9 @@
 			);
 			dependencies = (
 			);
-			name = PPASBOOK;
+			name = PPASBOOKTEST;
 			productName = PPASBOOK;
-			productReference = 7CDA7B7C2C129730002F7C0B /* PPASBOOK.app */;
+			productReference = 7CDA7B7C2C129730002F7C0B /* PPASBOOKTEST.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7CDA7B772C129730002F7C0B /* Build configuration list for PBXProject "PPASBOOK" */;
+			buildConfigurationList = 7CDA7B772C129730002F7C0B /* Build configuration list for PBXProject "PPASBOOKTEST" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,7 +266,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7CDA7B7B2C129730002F7C0B /* PPASBOOK */,
+				7CDA7B7B2C129730002F7C0B /* PPASBOOKTEST */,
 			);
 		};
 /* End PBXProject section */
@@ -387,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -444,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -472,7 +472,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,7 +504,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7CDA7B772C129730002F7C0B /* Build configuration list for PBXProject "PPASBOOK" */ = {
+		7CDA7B772C129730002F7C0B /* Build configuration list for PBXProject "PPASBOOKTEST" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDA7B8E2C129731002F7C0B /* Debug */,
@@ -530,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CDA7B902C129731002F7C0B /* Build configuration list for PBXNativeTarget "PPASBOOK" */ = {
+		7CDA7B902C129731002F7C0B /* Build configuration list for PBXNativeTarget "PPASBOOKTEST" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CDA7B912C129731002F7C0B /* Debug */,
