@@ -1,70 +1,80 @@
 import UIKit
 
 class BasicCollectionViewCell: UICollectionViewCell {
-    var imageView = UIImageView()
-    var label1 = UILabel()
-    var label2 = UILabel()
-    var label3 = UILabel()
+    
+    static let identifier = "BasicCollectionViewCell"
+    
+    let imageView = UIImageView()
+    let label1 = UILabel()
+    let label2 = UILabel()
+    let label3 = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        
+        // Configure the cell's subviews
+        configureSubviews()
+        configureCellAppearance()
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
     }
     
-    func commonInit() {
-        backgroundColor = .white
-        layer.borderWidth = 1.0
-        layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = 8.0
+    private func configureSubviews() {
+        contentView.addSubview(imageView)
+        contentView.addSubview(label1)
+        contentView.addSubview(label2)
+        contentView.addSubview(label3)
         
-        // Configure imageView
-        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(imageView)
-        
-        // Configure label1
-        label1.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label1.translatesAutoresizingMaskIntoConstraints = false
-        label1.textColor = .systemTeal
-        addSubview(label1)
-        
-        // Configure label2
-        label2.font = UIFont.systemFont(ofSize: 12)
         label2.translatesAutoresizingMaskIntoConstraints = false
-        //label2.textColor = .blue
-        addSubview(label2)
-        
-        // Configure label3
-        label3.font = UIFont.systemFont(ofSize: 12)
         label3.translatesAutoresizingMaskIntoConstraints = false
-        //label3.textColor = .blue
-        addSubview(label3)
+        
+        // Configure label fonts and colors
+        label1.font = UIFont.systemFont(ofSize: 13, weight: .bold) // Set the font size and weight
+        label1.textColor = .systemTeal // Set the text color
+        label1.textAlignment = .center // Align text center
+        
+        label2.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label2.textColor = .black
+        label2.textAlignment = .center
+        
+        label3.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label3.textColor = .black
+        label3.textAlignment = .center
         
         NSLayoutConstraint.activate([
-            // Constraints for imageView
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.6),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.6),
             
-            // Constraints for label1
-            label1.centerXAnchor.constraint(equalTo: centerXAnchor),
             label1.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
+            label1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            label1.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            label1.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            // Constraints for label2
-            label2.centerXAnchor.constraint(equalTo: centerXAnchor),
             label2.topAnchor.constraint(equalTo: label1.bottomAnchor, constant: 4),
+            label2.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            label2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            label2.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            // Constraints for label3
-            label3.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label3.topAnchor.constraint(equalTo: label2.bottomAnchor, constant: 8),
-            label3.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            label3.topAnchor.constraint(equalTo: label2.bottomAnchor, constant: 4),
+            label3.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            label3.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            label3.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            label3.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
+    }
+    
+    private func configureCellAppearance() {
+        // Set cell border
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1.0
+        //layer.cornerRadius = 10.0
+        clipsToBounds = true
     }
     
     func configure(with data: YourDataModel) {

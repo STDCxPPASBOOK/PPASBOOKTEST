@@ -42,6 +42,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ip4-1o-cTM" kind="presentation" identifier="showDetailSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Uds-Fa-ncq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -157,6 +160,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc2-jm-oiO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4681.679389312977" y="-35.211267605633807"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="grX-S0-Uhj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="Ip4-1o-cTM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZJw-iO-A8l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Bl-Ja-pvD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5324" y="385"/>
         </scene>
     </scenes>
     <resources>
