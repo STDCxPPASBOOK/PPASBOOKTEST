@@ -6,6 +6,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     var topCollectionView: UICollectionView!
     let topCellIdentifier = "TopCell"
     let topData = ["top1", "top2", "top3"]
+    let topURLs = ["", "", "https://www.instagram.com/p/Cj8BfMtJUI0/?utm_source=ig_web_copy_link"]
     var topImageSizes: [CGSize] = []
     
     // Properti untuk collectionView utama (bawah)
@@ -140,7 +141,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func startTimers() {
         // Mulakan pemasa untuk collectionView atas
-        topCollectionTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(scrollTopCollectionView), userInfo: nil, repeats: true)
+        topCollectionTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollTopCollectionView), userInfo: nil, repeats: true)
         
         // Mulakan pemasa untuk collectionView utama
         /*mainCollectionTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(scrollMainCollectionView), userInfo: nil, repeats: true)*/

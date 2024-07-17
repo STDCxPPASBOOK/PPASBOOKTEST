@@ -97,36 +97,59 @@ class FasilitiViewController: UIViewController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
+
     
     @IBAction func filterButtonTapped(_ sender: UIButton) {
-        let alert = UIAlertController(title: "FILTER", message: "Masukkan julat harga:", preferredStyle: .alert)
-        
-        alert.addTextField { textField in
-            textField.placeholder = "Harga Minimum"
-            textField.keyboardType = .numberPad
-        }
-        alert.addTextField { textField in
-            textField.placeholder = "Harga Maksimum"
-            textField.keyboardType = .numberPad
-        }
-        
-        alert.addAction(UIAlertAction(title: "Tapis", style: .default, handler: { _ in
-            if let minPriceText = alert.textFields?[0].text, let maxPriceText = alert.textFields?[1].text,
-               let minPrice = Int(minPriceText), let maxPrice = Int(maxPriceText) {
-                self.applyPriceFilter()
+            let alert = UIAlertController(title: "FILTER", message: "Masukkan julat harga:", preferredStyle: .alert)
+            
+            alert.addTextField { textField in
+                textField.placeholder = "Harga Minimum"
+                textField.keyboardType = .numberPad
             }
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Clear Filter", style: .cancel, handler: { _ in
-            self.applySnapshot() // Apply the initial snapshot to clear filters
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
-            self.applySnapshot() // Apply the initial snapshot to clear filters
-        }))
-        
-        present(alert, animated: true, completion: nil)
-    }
+            alert.addTextField { textField in
+                textField.placeholder = "Harga Maksimum"
+                textField.keyboardType = .numberPad
+            }
+            
+            alert.addAction(UIAlertAction(title: "Tapis", style: .default, handler: { _ in
+                if let minPriceText = alert.textFields?[0].text, let maxPriceText = alert.textFields?[1].text,
+                   let minPrice = Int(minPriceText), let maxPrice = Int(maxPriceText) {
+                    self.applyFilter(minPrice: minPrice, maxPrice: maxPrice)
+                }
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Clear Filter", style: .cancel, handler: { _ in
+                self.applySnapshot() // Apply the initial snapshot to clear filters
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+                self.applySnapshot() // Apply the initial snapshot to clear filters
+            }))
+            
+            present(alert, animated: true, completion: nil)
+        }
+
+        private func applyFilter(minPrice: Int?, maxPrice: Int?) {
+            filteredItems = items.filter { item in
+                // Extract the price from the label3Text and convert to an integer
+                if let priceText = item.label3Text.split(separator: " ").last,
+                   let price = Int(priceText.replacingOccurrences(of: "RM", with: "").replacingOccurrences(of: "/Jam", with: "")) {
+                    if let minPrice = minPrice, let maxPrice = maxPrice {
+                        return price >= minPrice && price <= maxPrice
+                    } else if let minPrice = minPrice {
+                        return price >= minPrice
+                    } else if let maxPrice = maxPrice {
+                        return price <= maxPrice
+                    }
+                }
+                return false
+            }
+            
+            var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+            snapshot.appendSections([.main])
+            snapshot.appendItems(filteredItems)
+            dataSource.apply(snapshot, animatingDifferences: true)
+        }
     
     private func applyPriceFilter() {
         filteredItems = items.sorted { item1, item2 in

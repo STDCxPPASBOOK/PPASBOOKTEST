@@ -11,6 +11,14 @@ class DetailViewController: UIViewController {
     
     var data: YourDataModel?
     var originalPosition: CGPoint?
+    var facility: Facility?
+    
+    struct Facility {
+        let name: String
+        let capacity: Int
+        let price: Double
+    }
+
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -37,6 +45,8 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        resetSlideButtonPosition()
         
         // Reload data if it's updated or reset
         if let data = data {
@@ -68,22 +78,34 @@ class DetailViewController: UIViewController {
             if translation.x > 100 {
                 navigateToNextPage()
             } else {
-                UIView.animate(withDuration: 0.3) {
-                    self.slideButton.center = self.originalPosition!
-                }
+                resetSlideButtonPosition()
             }
         default:
             break
         }
     }
-
-    func navigateToNextPage() {
-        performSegue(withIdentifier: "goToNextPage", sender: self)
+    
+    private func resetSlideButtonPosition() {
+        UIView.animate(withDuration: 0.3) {
+            self.slideButton.center = self.originalPosition!
+        }
     }
-    @IBAction func unwindToDetailViewController(_ unwindSegue: UIStoryboardSegue) {
-        // Optional: Update data if needed when unwinding
-        if let sourceViewController = unwindSegue.source as? DateViewController {
-            self.data = sourceViewController.data
+    
+    @IBAction func unwindToDetailViewController(segue: UIStoryboardSegue) {
+        if segue.source is DateViewController {
+            resetSlideButtonPosition()
+        }
+    }
+
+    @IBAction func navigateToNextPage() {
+        performSegue(withIdentifier: "goToDate", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDate" {
+            if segue.destination is DateViewController {
+                // Lakukan persiapan data jika diperlukan
+            }
         }
     }
 }

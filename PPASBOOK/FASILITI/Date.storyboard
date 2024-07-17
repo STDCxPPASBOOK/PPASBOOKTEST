@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUR-oG-ESl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,7 +39,7 @@
                                     <navigationItem title="Title" id="qJm-Mh-FuU">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="oAD-vf-JdG">
                                             <connections>
-                                                <segue destination="Xb5-eF-CGf" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="N7N-sS-bTL"/>
+                                                <segue destination="t6h-gm-bH2" kind="unwind" unwindAction="unwindToDetailViewControllerWithSegue:" id="Dze-Ce-a1R"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -48,9 +49,6 @@
                         <viewLayoutGuide key="safeArea" id="8xP-rU-hKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <segue destination="t6h-gm-bH2" kind="unwind" unwindAction="unwindToDetailViewController:" id="8KC-qz-Uns"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isN-hT-UDr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="t6h-gm-bH2" userLabel="Exit" sceneMemberID="exit"/>
