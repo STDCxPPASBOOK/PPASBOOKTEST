@@ -8,6 +8,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var slideButton: UIButton!
     @IBOutlet var BG: UIView!
+    @IBOutlet var duaDLayout: UIButton!
+    @IBOutlet var tigaDLayout: UIButton!
+    @IBOutlet weak var duaDImageView: UIImageView!
+    @IBOutlet weak var tigaDImageView: UIImageView!
+
     
     var data: YourDataModel?
     var originalPosition: CGPoint?
@@ -23,6 +28,11 @@ class DetailViewController: UIViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +51,10 @@ class DetailViewController: UIViewController {
             label2.text = data.label2Text
             label3.text = data.label3Text
         }
+        
+        duaDImageView.isHidden = true
+            tigaDImageView.isHidden = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +104,39 @@ class DetailViewController: UIViewController {
             self.slideButton.center = self.originalPosition!
         }
     }
+    
+    @IBAction func duaDLayoutTapped(_ sender: UIButton) {
+        // Toggle visibility of duaDImageView
+        if let isHidden = duaDImageView?.isHidden {
+            duaDImageView?.isHidden = !isHidden
+            if !isHidden {
+                duaDImageView?.image = nil // Kosongkan gambar apabila disembunyikan
+            } else {
+                duaDImageView?.image = UIImage(named: "2D") // Gantikan "namaGambarDuaD" dengan nama gambar sebenar anda
+            }
+        }
+        // Hide tigaDImageView
+        tigaDImageView?.isHidden = true
+        tigaDImageView?.image = nil
+    }
+
+    @IBAction func tigaDLayoutTapped(_ sender: UIButton) {
+        // Toggle visibility of tigaDImageView
+        if let isHidden = tigaDImageView?.isHidden {
+            tigaDImageView?.isHidden = !isHidden
+            if !isHidden {
+                tigaDImageView?.image = nil // Kosongkan gambar apabila disembunyikan
+            } else {
+                tigaDImageView?.image = UIImage(named: "3D") // Gantikan "namaGambarTigaD" dengan nama gambar sebenar anda
+            }
+        }
+        // Hide duaDImageView
+        duaDImageView?.isHidden = true
+        duaDImageView?.image = nil
+    }
+
+
+
     
     @IBAction func unwindToDetailViewController(segue: UIStoryboardSegue) {
         if segue.source is DateViewController {
