@@ -52,8 +52,10 @@ class DetailViewController: UIViewController {
             label3.text = data.label3Text
         }
         
-        duaDImageView.isHidden = true
-            tigaDImageView.isHidden = true
+                duaDImageView.isHidden = false
+                duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
+                tigaDImageView.isHidden = true
+                tigaDImageView.image = nil
         
     }
     
@@ -106,37 +108,18 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func duaDLayoutTapped(_ sender: UIButton) {
-        // Toggle visibility of duaDImageView
-        if let isHidden = duaDImageView?.isHidden {
-            duaDImageView?.isHidden = !isHidden
-            if !isHidden {
-                duaDImageView?.image = nil // Kosongkan gambar apabila disembunyikan
-            } else {
-                duaDImageView?.image = UIImage(named: "2D") // Gantikan "namaGambarDuaD" dengan nama gambar sebenar anda
-            }
+            duaDImageView.isHidden = false
+            duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
+            tigaDImageView.isHidden = true
+            tigaDImageView.image = nil
         }
-        // Hide tigaDImageView
-        tigaDImageView?.isHidden = true
-        tigaDImageView?.image = nil
-    }
 
-    @IBAction func tigaDLayoutTapped(_ sender: UIButton) {
-        // Toggle visibility of tigaDImageView
-        if let isHidden = tigaDImageView?.isHidden {
-            tigaDImageView?.isHidden = !isHidden
-            if !isHidden {
-                tigaDImageView?.image = nil // Kosongkan gambar apabila disembunyikan
-            } else {
-                tigaDImageView?.image = UIImage(named: "3D") // Gantikan "namaGambarTigaD" dengan nama gambar sebenar anda
-            }
+        @IBAction func tigaDLayoutTapped(_ sender: UIButton) {
+            tigaDImageView.isHidden = false
+            tigaDImageView.image = UIImage(named: "3D") // Gantikan "3D" dengan nama gambar sebenar anda
+            duaDImageView.isHidden = true
+            duaDImageView.image = nil
         }
-        // Hide duaDImageView
-        duaDImageView?.isHidden = true
-        duaDImageView?.image = nil
-    }
-
-
-
     
     @IBAction func unwindToDetailViewController(segue: UIStoryboardSegue) {
         if segue.source is DateViewController {
@@ -145,14 +128,14 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func navigateToNextPage() {
-        performSegue(withIdentifier: "goToDate", sender: self)
-    }
+           performSegue(withIdentifier: "goToDate", sender: self)
+       }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToDate" {
-            if segue.destination is DateViewController {
-                // Lakukan persiapan data jika diperlukan
-            }
-        }
-    }
-}
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "goToDate" {
+               if let dateVC = segue.destination as? DateViewController {
+                   dateVC.data = self.data // Mengatur data di DateViewController
+               }
+           }
+       }
+   }
