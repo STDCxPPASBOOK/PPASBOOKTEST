@@ -37,8 +37,3 @@ func addBooking(booking: Booking) {
         }
     }
 }
-
-// Example usage
-let newBooking = Booking(id: UUID().uuidString, userID: "user123", date: Date(), facility: "Conference Room", additionalInfo: "Requires projector")
-addBooking(booking: newBooking)
-
