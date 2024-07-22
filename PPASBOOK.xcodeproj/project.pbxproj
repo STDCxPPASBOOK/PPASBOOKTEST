@@ -18,6 +18,7 @@
 		3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2452C3CD01D000BA091 /* DekstopViewController.swift */; };
 		324A16E32C3E7D7A003E85B5 /* Borang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324A16E22C3E7D7A003E85B5 /* Borang.storyboard */; };
 		32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE759C2C3E78390093FF31 /* ProfileViewController.swift */; };
+		3D52B6A92C4E0C6C0035B464 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D52B6A82C4E0C6C0035B464 /* GoogleService-Info.plist */; };
 		3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */; };
 		3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */; };
 		3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		3219F2452C3CD01D000BA091 /* DekstopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DekstopViewController.swift; sourceTree = "<group>"; };
 		324A16E22C3E7D7A003E85B5 /* Borang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Borang.storyboard; sourceTree = "<group>"; };
 		32FE759C2C3E78390093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3D52B6A82C4E0C6C0035B464 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocation.swift; sourceTree = "<group>"; };
 		3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocationTableViewCell.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				7CDA7B812C129730002F7C0B /* SceneDelegate.swift */,
 				7CDA7B8D2C129731002F7C0B /* Info.plist */,
 				7CDA7B882C129731002F7C0B /* Assets.xcassets */,
+				3D52B6A82C4E0C6C0035B464 /* GoogleService-Info.plist */,
 				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
 				7CCC81062C21659F0092F741 /* LOGIN */,
 				7CCC80BF2C1FD9EA0092F741 /* REGISTER */,
@@ -301,6 +304,7 @@
 				7C271BDA2C350FAD00050986 /* Fasiliti.storyboard in Resources */,
 				324A16E32C3E7D7A003E85B5 /* Borang.storyboard in Resources */,
 				7CF322222C40EAF600877517 /* Detail.storyboard in Resources */,
+				3D52B6A92C4E0C6C0035B464 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +482,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PCG5R59888;
+				DEVELOPMENT_TEAM = W53WW69A9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PPASBOOK/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take pictures";
