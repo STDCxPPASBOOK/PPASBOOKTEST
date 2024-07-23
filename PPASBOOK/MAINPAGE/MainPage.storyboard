@@ -12,7 +12,7 @@
         <!--Main Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MainPageViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main Page View Controller" id="Y6W-OH-hqX" customClass="MainPageViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="W8c-j4-RZK">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DLW-fO-4P0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="DLW-fO-4P0" customClass="MainTabBarController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bookin" itemPositioning="fill" id="r7P-Yb-egQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
