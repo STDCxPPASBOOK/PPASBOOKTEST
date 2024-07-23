@@ -155,7 +155,15 @@ class Scroll2ViewController: UIViewController, UIDocumentInteractionControllerDe
     @objc internal func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
            return self
        }
+    
+    @IBAction func unwindToScroll2ViewController(segue: UIStoryboardSegue) {
+        if let sourceVC = segue.source as? LRRViewController {
+            
+        }
+    }
+    
    }
+
 
 
     /*

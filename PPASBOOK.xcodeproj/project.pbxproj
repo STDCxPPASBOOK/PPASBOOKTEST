@@ -7,17 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3219F2462C3CD01D000BA091 /* AAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F23D2C3CD01D000BA091 /* AAViewController.swift */; };
 		3219F2472C3CD01D000BA091 /* PC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3219F23E2C3CD01D000BA091 /* PC.storyboard */; };
-		3219F2482C3CD01D000BA091 /* LRRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F23F2C3CD01D000BA091 /* LRRViewController.swift */; };
-		3219F2492C3CD01D000BA091 /* AA2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2402C3CD01D000BA091 /* AA2ViewController.swift */; };
-		3219F24A2C3CD01D000BA091 /* FormApplicantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2412C3CD01D000BA091 /* FormApplicantViewController.swift */; };
-		3219F24B2C3CD01D000BA091 /* PCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2422C3CD01D000BA091 /* PCViewController.swift */; };
-		3219F24C2C3CD01D000BA091 /* RQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2432C3CD01D000BA091 /* RQViewController.swift */; };
-		3219F24D2C3CD01D000BA091 /* DesktopsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */; };
-		3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3219F2452C3CD01D000BA091 /* DekstopViewController.swift */; };
 		324A16E32C3E7D7A003E85B5 /* Borang.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324A16E22C3E7D7A003E85B5 /* Borang.storyboard */; };
-		32B1D6CC2C4E516900307191 /* Scroll2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6CB2C4E516900307191 /* Scroll2ViewController.swift */; };
+		32B1D6DC2C4F6EE300307191 /* AA2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6D62C4F6EE200307191 /* AA2ViewController.swift */; };
+		32B1D6DD2C4F6EE300307191 /* AAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6D72C4F6EE200307191 /* AAViewController.swift */; };
+		32B1D6DE2C4F6EE300307191 /* Scroll2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6D82C4F6EE200307191 /* Scroll2ViewController.swift */; };
+		32B1D6DF2C4F6EE300307191 /* LRRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6D92C4F6EE200307191 /* LRRViewController.swift */; };
+		32B1D6E02C4F6EE300307191 /* AA3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6DA2C4F6EE200307191 /* AA3ViewController.swift */; };
+		32B1D6E12C4F6EE300307191 /* PCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D6DB2C4F6EE200307191 /* PCViewController.swift */; };
 		32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE759C2C3E78390093FF31 /* ProfileViewController.swift */; };
 		3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */; };
 		3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */; };
@@ -48,17 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3219F23D2C3CD01D000BA091 /* AAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAViewController.swift; sourceTree = "<group>"; };
 		3219F23E2C3CD01D000BA091 /* PC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PC.storyboard; sourceTree = "<group>"; };
-		3219F23F2C3CD01D000BA091 /* LRRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRRViewController.swift; sourceTree = "<group>"; };
-		3219F2402C3CD01D000BA091 /* AA2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AA2ViewController.swift; sourceTree = "<group>"; };
-		3219F2412C3CD01D000BA091 /* FormApplicantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormApplicantViewController.swift; sourceTree = "<group>"; };
-		3219F2422C3CD01D000BA091 /* PCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCViewController.swift; sourceTree = "<group>"; };
-		3219F2432C3CD01D000BA091 /* RQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RQViewController.swift; sourceTree = "<group>"; };
-		3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesktopsInfoViewController.swift; sourceTree = "<group>"; };
-		3219F2452C3CD01D000BA091 /* DekstopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DekstopViewController.swift; sourceTree = "<group>"; };
 		324A16E22C3E7D7A003E85B5 /* Borang.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Borang.storyboard; sourceTree = "<group>"; };
-		32B1D6CB2C4E516900307191 /* Scroll2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll2ViewController.swift; sourceTree = "<group>"; };
+		32B1D6D62C4F6EE200307191 /* AA2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AA2ViewController.swift; sourceTree = "<group>"; };
+		32B1D6D72C4F6EE200307191 /* AAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAViewController.swift; sourceTree = "<group>"; };
+		32B1D6D82C4F6EE200307191 /* Scroll2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroll2ViewController.swift; sourceTree = "<group>"; };
+		32B1D6D92C4F6EE200307191 /* LRRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRRViewController.swift; sourceTree = "<group>"; };
+		32B1D6DA2C4F6EE200307191 /* AA3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AA3ViewController.swift; sourceTree = "<group>"; };
+		32B1D6DB2C4F6EE200307191 /* PCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCViewController.swift; sourceTree = "<group>"; };
 		32FE759C2C3E78390093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
@@ -223,15 +217,12 @@
 			children = (
 				3219F23E2C3CD01D000BA091 /* PC.storyboard */,
 				324A16E22C3E7D7A003E85B5 /* Borang.storyboard */,
-				3219F2402C3CD01D000BA091 /* AA2ViewController.swift */,
-				3219F23D2C3CD01D000BA091 /* AAViewController.swift */,
-				3219F2452C3CD01D000BA091 /* DekstopViewController.swift */,
-				3219F2442C3CD01D000BA091 /* DesktopsInfoViewController.swift */,
-				3219F2412C3CD01D000BA091 /* FormApplicantViewController.swift */,
-				3219F23F2C3CD01D000BA091 /* LRRViewController.swift */,
-				3219F2422C3CD01D000BA091 /* PCViewController.swift */,
-				3219F2432C3CD01D000BA091 /* RQViewController.swift */,
-				32B1D6CB2C4E516900307191 /* Scroll2ViewController.swift */,
+				32B1D6D62C4F6EE200307191 /* AA2ViewController.swift */,
+				32B1D6DA2C4F6EE200307191 /* AA3ViewController.swift */,
+				32B1D6D72C4F6EE200307191 /* AAViewController.swift */,
+				32B1D6D92C4F6EE200307191 /* LRRViewController.swift */,
+				32B1D6DB2C4F6EE200307191 /* PCViewController.swift */,
+				32B1D6D82C4F6EE200307191 /* Scroll2ViewController.swift */,
 			);
 			path = PINJAMAN;
 			sourceTree = "<group>";
@@ -317,31 +308,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3219F2462C3CD01D000BA091 /* AAViewController.swift in Sources */,
+				32B1D6E02C4F6EE300307191 /* AA3ViewController.swift in Sources */,
 				7CCC81012C2142680092F741 /* MainPageViewController.swift in Sources */,
 				3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */,
-				3219F24C2C3CD01D000BA091 /* RQViewController.swift in Sources */,
+				32B1D6E12C4F6EE300307191 /* PCViewController.swift in Sources */,
+				32B1D6DD2C4F6EE300307191 /* AAViewController.swift in Sources */,
 				7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */,
 				3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */,
 				7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */,
-				32B1D6CC2C4E516900307191 /* Scroll2ViewController.swift in Sources */,
 				7CF322282C44B8D600877517 /* DateViewController.swift in Sources */,
-				3219F24D2C3CD01D000BA091 /* DesktopsInfoViewController.swift in Sources */,
-				3219F2482C3CD01D000BA091 /* LRRViewController.swift in Sources */,
 				7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */,
 				7CDA7B802C129730002F7C0B /* AppDelegate.swift in Sources */,
 				3DE50E472C3D19DF00DB2D78 /* PPASLocationViewController.swift in Sources */,
 				7CF322242C40EB0300877517 /* DetailViewController.swift in Sources */,
-				3219F24B2C3CD01D000BA091 /* PCViewController.swift in Sources */,
 				7CDA7B822C129730002F7C0B /* SceneDelegate.swift in Sources */,
 				7CCC81042C2160360092F741 /* LaunchScreenViewController.swift in Sources */,
-				3219F2492C3CD01D000BA091 /* AA2ViewController.swift in Sources */,
-				3219F24A2C3CD01D000BA091 /* FormApplicantViewController.swift in Sources */,
-				3219F24E2C3CD01D000BA091 /* DekstopViewController.swift in Sources */,
+				32B1D6DE2C4F6EE300307191 /* Scroll2ViewController.swift in Sources */,
 				7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */,
 				32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */,
 				7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */,
+				32B1D6DF2C4F6EE300307191 /* LRRViewController.swift in Sources */,
 				3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */,
+				32B1D6DC2C4F6EE300307191 /* AA2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
