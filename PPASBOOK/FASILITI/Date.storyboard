@@ -119,6 +119,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfk-Zs-Dsp" customClass="FSCalendar">
+                                <rect key="frame" x="30" y="255" width="331" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pv6-DA-lwL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,6 +141,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="calendar" destination="lfk-Zs-Dsp" id="siY-M2-Rov"/>
                         <outlet property="label1" destination="Ita-MU-8Xq" id="pJw-Yk-wIU"/>
                         <outlet property="warna1" destination="G7e-2z-26n" id="Mab-5r-0qd"/>
                         <outlet property="warna2" destination="hxs-xe-PBr" id="NhA-I5-hvg"/>
