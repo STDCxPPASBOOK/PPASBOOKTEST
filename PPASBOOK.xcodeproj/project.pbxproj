@@ -124,11 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				328F06D62C50B795004E82C7 /* PC.storyboard */,
-				328F06D52C50B795004E82C7 /* AA2ViewController.swift */,
-				328F06D12C50B795004E82C7 /* AA3ViewController.swift */,
-				328F06D32C50B795004E82C7 /* AAViewController.swift */,
-				328F06D22C50B795004E82C7 /* LRRViewController.swift */,
 				328F06D72C50B795004E82C7 /* PCViewController.swift */,
+				328F06D32C50B795004E82C7 /* AAViewController.swift */,
+				328F06D12C50B795004E82C7 /* AA3ViewController.swift */,
+				328F06D52C50B795004E82C7 /* AA2ViewController.swift */,
+				328F06D22C50B795004E82C7 /* LRRViewController.swift */,
 				328F06D42C50B795004E82C7 /* Scroll2ViewController.swift */,
 			);
 			path = PINJAMAN2;
@@ -139,7 +139,6 @@
 			children = (
 				3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */,
 				3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */,
-				3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */,
 				3DE50E422C3D19DF00DB2D78 /* PPASLocationViewController.swift */,
 			);
 			path = LOCATION;
@@ -171,6 +170,7 @@
 				7CF322252C41300100877517 /* Date.storyboard */,
 				7CF322272C44B8D600877517 /* DateViewController.swift */,
 				7CF322232C40EB0300877517 /* DetailViewController.swift */,
+				3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */,
 				7C271BDB2C350FF400050986 /* FasilitiViewController.swift */,
 				7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */,
 				7CF322192C3CCBC500877517 /* YourDataModel.swift */,
@@ -257,12 +257,12 @@
 			isa = PBXGroup;
 			children = (
 				328F06C92C50B788004E82C7 /* LAPTOP.storyboard */,
-				328F06C72C50B788004E82C7 /* FiveViewController.swift */,
-				328F06C42C50B788004E82C7 /* FourViewController.swift */,
 				328F06C62C50B788004E82C7 /* OneViewController.swift */,
-				328F06C82C50B788004E82C7 /* SixViewController.swift */,
-				328F06C52C50B788004E82C7 /* ThreeViewController.swift */,
 				328F06C32C50B788004E82C7 /* TwoViewController.swift */,
+				328F06C52C50B788004E82C7 /* ThreeViewController.swift */,
+				328F06C42C50B788004E82C7 /* FourViewController.swift */,
+				328F06C72C50B788004E82C7 /* FiveViewController.swift */,
+				328F06C82C50B788004E82C7 /* SixViewController.swift */,
 			);
 			path = PINJAMAN;
 			sourceTree = "<group>";

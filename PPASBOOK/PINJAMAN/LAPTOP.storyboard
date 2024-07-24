@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zJS-ej-iP1">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--LAPTOP BOOKING-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="OneViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="OneViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +144,7 @@
         <!--Two View Controller-->
         <scene sceneID="MUO-AF-5Gi">
             <objects>
-                <viewController id="gmS-h2-gwG" customClass="TwoViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gmS-h2-gwG" customClass="TwoViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="3nW-vk-fQo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -423,7 +424,7 @@
         <!--Three View Controller-->
         <scene sceneID="qDm-qy-tAo">
             <objects>
-                <viewController id="BQA-RQ-zyb" customClass="ThreeViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BQA-RQ-zyb" customClass="ThreeViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e5c-l6-p0i">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,7 +514,7 @@
         <!--Four View Controller-->
         <scene sceneID="F4C-ok-nrl">
             <objects>
-                <viewController id="t31-D6-OX4" customClass="FourViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t31-D6-OX4" customClass="FourViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qy9-ng-qxz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -655,7 +656,7 @@
         <!--Five View Controller-->
         <scene sceneID="zjV-Wh-MXB">
             <objects>
-                <viewController id="8Hv-tB-cT4" customClass="FiveViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8Hv-tB-cT4" customClass="FiveViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sdQ-q1-0H9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -729,7 +730,7 @@
         <!--Six View Controller-->
         <scene sceneID="RXw-7h-T3m">
             <objects>
-                <viewController id="nUl-qU-IMr" customClass="SixViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nUl-qU-IMr" customClass="SixViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gIX-qC-gCn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,7 +933,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PCLAPTOP" width="853.33331298828125" height="535.33331298828125"/>
+        <image name="PCLAPTOP" width="2560" height="1606"/>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
