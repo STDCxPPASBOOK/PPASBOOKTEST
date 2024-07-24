@@ -27,9 +27,6 @@ class PCViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func bookingNow(_ sender: UIButton) {
-        
-    }
     
     @IBAction func unwindToPCViewController(segue: UIStoryboardSegue) {
         if segue.source is Scroll2ViewController {

@@ -26,9 +26,6 @@ class AA2ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDa
         }
     }
     
-    @IBOutlet var previousButton: UIButton!
-    @IBOutlet var nextButton: UIButton!
-    
     @IBOutlet var pickerDaerah: UIPickerView!
     @IBOutlet var pickerStatus: UIPickerView!
     

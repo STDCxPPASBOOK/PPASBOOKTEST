@@ -100,7 +100,9 @@
                                 <rect key="frame" x="112" y="715" width="169" height="46"/>
                                 <color key="tintColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Booking Now"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Booking Now">
+                                    <color key="baseBackgroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="bookingClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0EH-lL-Jeq"/>
                                     <segue destination="gmS-h2-gwG" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="OnT-x3-mbU"/>
@@ -121,12 +123,20 @@
                             <constraint firstItem="ijJ-Fs-qb9" firstAttribute="top" secondItem="XOg-w8-Khz" secondAttribute="bottom" constant="17" id="qgj-xZ-dRr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="LAPTOP BOOKING" id="Hrz-XG-b32"/>
+                    <navigationItem key="navigationItem" title="LAPTOP BOOKING" id="Hrz-XG-b32">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="Mb0-df-1ml">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="gej-ls-nnG" kind="unwind" unwindAction="unwindToBooking1ViewControllerWithSegue:" id="h99-B2-iuS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookingNow" destination="tzc-IM-mL8" id="IdH-MV-uS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gej-ls-nnG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1008.3969465648854" y="-34.507042253521128"/>
         </scene>
@@ -134,7 +144,7 @@
         <scene sceneID="MUO-AF-5Gi">
             <objects>
                 <viewController id="gmS-h2-gwG" customClass="TwoViewController" customModule="progress" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3nW-vk-fQo">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="3nW-vk-fQo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -143,6 +153,7 @@
                                 <items>
                                     <navigationItem title="Applicant's Requirements" id="PlN-Le-qW5">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="sAY-T6-qEe">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <segue destination="hUI-Fp-7YR" kind="unwind" unwindAction="unwindToOneViewControllerWithSegue:" id="leO-Ng-cEs"/>
                                             </connections>
@@ -150,10 +161,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SR1-Rj-eLc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SR1-Rj-eLc">
                                 <rect key="frame" x="0.0" y="44" width="393" height="808"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naG-63-CqP">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naG-63-CqP">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Warganegara Malaysia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmO-DV-ZXY">
