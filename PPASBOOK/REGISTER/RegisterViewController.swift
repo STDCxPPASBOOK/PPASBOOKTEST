@@ -2,34 +2,75 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var noicTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var confirmPasswordTextField: UITextField!
-    @IBOutlet var fullnameTextField: UITextField!
-    @IBOutlet var contactNumberTextField: UITextField!
+    @IBOutlet var stackView: UIStackView!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var alertLabel: UILabel!
+
+    var medanPendaftaran: [MedanPendaftaran] = [
+        MedanPendaftaran(placeholder: "Email", teks: "", isSecure: false),
+        MedanPendaftaran(placeholder: "No IC", teks: "", isSecure: false),
+        MedanPendaftaran(placeholder: "Kata Laluan", teks: "", isSecure: true),
+        MedanPendaftaran(placeholder: "Sahkan Kata Laluan", teks: "", isSecure: true),
+        MedanPendaftaran(placeholder: "Nama Penuh", teks: "", isSecure: false),
+        MedanPendaftaran(placeholder: "Nombor Telefon", teks: "", isSecure: false)
+    ]
     
+    var textFields: [UITextField] = []
     var alertMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailTextField.clipToC()
-        noicTextField.clipToC()
-        passwordTextField.clipToC()
-        confirmPasswordTextField.clipToC()
-        fullnameTextField.clipToC()
-        contactNumberTextField.clipToC()
+        setupFields()
+        configureUI()
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        }
+
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
+    // MARK: - UI Setup
+    func configureUI() {
         registerButton.layer.cornerRadius = 10
         registerButton.layer.borderColor = UIColor.systemTeal.cgColor
         registerButton.layer.borderWidth = 1.0
         alertLabel.isHidden = true
+        
+        // Configure stackView properties
+        stackView.axis = .vertical
+        stackView.spacing = 16 // Spacing between fields
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        
+        // Configure stackView layout margins
+        stackView.layoutMargins = UIEdgeInsets(top: 40, left: 10, bottom: 40, right: 10)
+        stackView.isLayoutMarginsRelativeArrangement = true
     }
 
+    func setupFields() {
+        for medan in medanPendaftaran {
+            let textField = UITextField()
+            textField.placeholder = medan.placeholder
+            textField.isSecureTextEntry = medan.isSecure
+            textField.textAlignment = .center // Center the text
+            textField.clipToF()
+            textField.heightAnchor.constraint(equalToConstant: 70).isActive = true // Adjust height
+            
+            stackView.addArrangedSubview(textField)
+            textFields.append(textField)
+        }
+    }
+    
     @IBAction func registerTapped(_ sender: UIButton) {
+        let emailTextField = textFields[0]
+        let noicTextField = textFields[1]
+        let passwordTextField = textFields[2]
+        let confirmPasswordTextField = textFields[3]
+        let fullnameTextField = textFields[4]
+        let contactNumberTextField = textFields[5]
+
         guard let email = emailTextField.text, !email.isEmpty,
               let noic = noicTextField.text, !noic.isEmpty,
               let password = passwordTextField.text, !password.isEmpty,
@@ -66,10 +107,13 @@ class RegisterViewController: UIViewController {
         }
 
         // Jika semua validasi lulus
+        let newUser = User(email: email, noic: noic, password: password, fullname: fullname, contactNumber: contactNumber)
+        saveUser(newUser)
+
         alertMessage = "Pendaftaran Berjaya!"
         showAlert(message: alertMessage!, isError: false)
         
-        // Perform segue hanya setelah semua validasi lulus
+        // Lakukan segue hanya setelah semua validasi lulus
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.performSegue(withIdentifier: "goToLogin", sender: self)
         }
@@ -95,6 +139,25 @@ class RegisterViewController: UIViewController {
         return passwordTest.evaluate(with: password)
     }
     
+    func saveUser(_ user: User) {
+        var users = loadUsers()
+        users.append(user)
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(users) {
+            UserDefaults.standard.set(encoded, forKey: "registeredUsers")
+        }
+    }
+    
+    func loadUsers() -> [User] {
+        if let savedUsers = UserDefaults.standard.object(forKey: "registeredUsers") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedUsers = try? decoder.decode([User].self, from: savedUsers) {
+                return loadedUsers
+            }
+        }
+        return []
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToLogin" {
             let destinationVC = segue.destination as? LoginViewController
@@ -103,13 +166,13 @@ class RegisterViewController: UIViewController {
     }
 }
 
+// Extension for UITextField styling
 extension UITextField {
-    func clipToC() {
+    func clipToF() {
         self.layoutIfNeeded()
-        self.layer.borderColor=UIColor.systemTeal.cgColor
-        self.layer.borderWidth = 5.0
-        self.layer.cornerRadius =
-        self.frame.height / 10
+        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderWidth = 3.0 // Border width
+        self.layer.cornerRadius = 35 // Corner radius
         self.clipsToBounds = true
     }
 }

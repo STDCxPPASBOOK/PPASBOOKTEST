@@ -19,7 +19,14 @@ class LoginViewController: UIViewController {
         loginButton.layer.borderColor = UIColor.systemTeal.cgColor
         loginButton.layer.borderWidth = 1.0
         alertLabel.isHidden = true
-    }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        }
+
+        @objc func dismissKeyboard() {
+            view.endEditing(true)
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -41,21 +48,15 @@ class LoginViewController: UIViewController {
             return
         }
 
-        // Example login check
-        if noic == "040401100229" && password == "ACHONG" {
+        let users = loadUsers()
+        if let user = users.first(where: { $0.noic == noic && $0.password == password }) {
             showAlert(message: "Login Berjaya!", isError: false)
-            // Menunda pemanggilan performSegue selama 2 detik
+            // Menunda pemanggilan performSegue selama 1 detik
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.navigateToNextScreen()
+                self.navigateToProfile(user: user)
             }
         } else {
             showAlert(message: "NoIC atau Kata Laluan tidak sah.")
-        }
-    }
-    
-    @IBAction func newUserTapped(_ sender: UIButton) {
-        if let url = URL(string: "http://opac.ppas.gov.my:8080/wicket/bookmarkable/com.vtls.chamo.webapp.component.patron.PatronRegistrationPage?theme=ppas_chamo") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
     
@@ -69,19 +70,37 @@ class LoginViewController: UIViewController {
         return !string.isEmpty && string.allSatisfy { $0.isNumber }
     }
     
-    func navigateToNextScreen() {
-        // Ganti "NextViewController" dengan identifier nama ViewController berikutnya di storyboard
-        performSegue(withIdentifier: "goToMainPage", sender: self)
+    func navigateToProfile(user: User) {
+        let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
+        if let profileVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController {
+            profileVC.modalPresentationStyle = .fullScreen
+            profileVC.modalTransitionStyle = .crossDissolve
+            self.present(profileVC, animated: true, completion: nil)
+        }
+    }
+    
+    func loadUsers() -> [User] {
+        if let savedUsers = UserDefaults.standard.object(forKey: "registeredUsers") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedUsers = try? decoder.decode([User].self, from: savedUsers) {
+                return loadedUsers
+            }
+        }
+        return []
+    }
+    
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+        if segue.source is RegisterViewController {
+        }
     }
 }
 
 extension UITextField {
     func clipToCircle() {
         self.layoutIfNeeded()
-        self.layer.borderColor=UIColor.systemTeal.cgColor
-        self.layer.borderWidth = 5.0
-        self.layer.cornerRadius =
-        self.frame.height / 10
+        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
     }
 }

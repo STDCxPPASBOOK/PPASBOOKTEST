@@ -34,6 +34,8 @@
 		3DE50E672C3E6D8D00DB2D78 /* HistoryMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E662C3E6D8D00DB2D78 /* HistoryMain.storyboard */; };
 		7C271BDA2C350FAD00050986 /* Fasiliti.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C271BD92C350FAD00050986 /* Fasiliti.storyboard */; };
 		7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C271BDB2C350FF400050986 /* FasilitiViewController.swift */; };
+		7CB35EEB2C5202EC00141F60 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB35EEA2C5202EC00141F60 /* Register.swift */; };
+		7CB35EED2C5229D300141F60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB35EEC2C5229D300141F60 /* User.swift */; };
 		7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC80952C1F50800092F741 /* RegisterViewController.swift */; };
 		7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC80972C1F51050092F741 /* LoginViewController.swift */; };
 		7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC80C02C1FDA210092F741 /* Register.storyboard */; };
@@ -80,6 +82,8 @@
 		3DE50E662C3E6D8D00DB2D78 /* HistoryMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryMain.storyboard; sourceTree = "<group>"; };
 		7C271BD92C350FAD00050986 /* Fasiliti.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fasiliti.storyboard; sourceTree = "<group>"; };
 		7C271BDB2C350FF400050986 /* FasilitiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasilitiViewController.swift; sourceTree = "<group>"; };
+		7CB35EEA2C5202EC00141F60 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		7CB35EEC2C5229D300141F60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CCC80952C1F50800092F741 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7CCC80972C1F51050092F741 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CCC80C02C1FDA210092F741 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 			children = (
 				7CCC80C02C1FDA210092F741 /* Register.storyboard */,
 				7CCC80952C1F50800092F741 /* RegisterViewController.swift */,
+				7CB35EEA2C5202EC00141F60 /* Register.swift */,
+				7CB35EEC2C5229D300141F60 /* User.swift */,
 			);
 			path = REGISTER;
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				7CCC81012C2142680092F741 /* MainPageViewController.swift in Sources */,
 				3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */,
 				328F06DB2C50B795004E82C7 /* Scroll2ViewController.swift in Sources */,
+				7CB35EED2C5229D300141F60 /* User.swift in Sources */,
 				7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */,
 				3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */,
 				328F06DA2C50B795004E82C7 /* AAViewController.swift in Sources */,
@@ -381,6 +388,7 @@
 				328F06D92C50B795004E82C7 /* LRRViewController.swift in Sources */,
 				7CCC81042C2160360092F741 /* LaunchScreenViewController.swift in Sources */,
 				7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */,
+				7CB35EEB2C5202EC00141F60 /* Register.swift in Sources */,
 				32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */,
 				328F06CA2C50B788004E82C7 /* TwoViewController.swift in Sources */,
 				7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */,
