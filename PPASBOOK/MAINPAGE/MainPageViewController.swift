@@ -66,6 +66,9 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         mainCollectionTimer?.invalidate()
     }
     
+    @IBAction func unwindToMainPageViewController(segue: UIStoryboardSegue) {
+    }
+    
     // MARK: - Setup CollectionViews
     
     func setupTopCollectionView() {
@@ -141,7 +144,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func startTimers() {
         // Mulakan pemasa untuk collectionView atas
-        topCollectionTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollTopCollectionView), userInfo: nil, repeats: true)
+        topCollectionTimer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(scrollTopCollectionView), userInfo: nil, repeats: true)
         
         // Mulakan pemasa untuk collectionView utama
         /*mainCollectionTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(scrollMainCollectionView), userInfo: nil, repeats: true)*/
@@ -252,11 +255,6 @@ class MyCustomCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         button.frame = contentView.bounds
-    }
-    @IBAction func unwindToMainPageViewController(segue: UIStoryboardSegue) {
-        if segue.source is Booking1ViewController {
-            
-        }
     }
 }
 

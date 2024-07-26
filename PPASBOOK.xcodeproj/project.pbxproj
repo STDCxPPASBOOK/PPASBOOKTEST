@@ -36,6 +36,8 @@
 		7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C271BDB2C350FF400050986 /* FasilitiViewController.swift */; };
 		7CB35EEB2C5202EC00141F60 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB35EEA2C5202EC00141F60 /* Register.swift */; };
 		7CB35EED2C5229D300141F60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB35EEC2C5229D300141F60 /* User.swift */; };
+		7CB35EF22C53441D00141F60 /* BookFly2UViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB35EF12C53441C00141F60 /* BookFly2UViewController.swift */; };
+		7CB35EF42C53449200141F60 /* BookFly2U.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CB35EF32C53449200141F60 /* BookFly2U.storyboard */; };
 		7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC80952C1F50800092F741 /* RegisterViewController.swift */; };
 		7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC80972C1F51050092F741 /* LoginViewController.swift */; };
 		7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC80C02C1FDA210092F741 /* Register.storyboard */; };
@@ -84,6 +86,8 @@
 		7C271BDB2C350FF400050986 /* FasilitiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasilitiViewController.swift; sourceTree = "<group>"; };
 		7CB35EEA2C5202EC00141F60 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		7CB35EEC2C5229D300141F60 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7CB35EF12C53441C00141F60 /* BookFly2UViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFly2UViewController.swift; sourceTree = "<group>"; };
+		7CB35EF32C53449200141F60 /* BookFly2U.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookFly2U.storyboard; sourceTree = "<group>"; };
 		7CCC80952C1F50800092F741 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7CCC80972C1F51050092F741 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7CCC80C02C1FDA210092F741 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -184,6 +188,15 @@
 			path = FASILITI;
 			sourceTree = "<group>";
 		};
+		7CB35EEE2C5342F000141F60 /* BOOKFLY2U */ = {
+			isa = PBXGroup;
+			children = (
+				7CB35EF32C53449200141F60 /* BookFly2U.storyboard */,
+				7CB35EF12C53441C00141F60 /* BookFly2UViewController.swift */,
+			);
+			path = BOOKFLY2U;
+			sourceTree = "<group>";
+		};
 		7CCC80BF2C1FD9EA0092F741 /* REGISTER */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +270,7 @@
 				328F06DF2C50B7AC004E82C7 /* BOOKING */,
 				7CF322142C3CC95500877517 /* PINJAMAN */,
 				32935C8A2C5095DE00B9EFD2 /* PINJAMAN2 */,
+				7CB35EEE2C5342F000141F60 /* BOOKFLY2U */,
 			);
 			path = PPASBOOK;
 			sourceTree = "<group>";
@@ -347,6 +361,7 @@
 				3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */,
 				7CCC80ED2C2132770092F741 /* LaunchScreen.storyboard in Resources */,
 				3DE50E5F2C3E38C200DB2D78 /* Profile.storyboard in Resources */,
+				7CB35EF42C53449200141F60 /* BookFly2U.storyboard in Resources */,
 				328F06DD2C50B795004E82C7 /* PC.storyboard in Resources */,
 				7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */,
 				7CF322262C41300100877517 /* Date.storyboard in Resources */,
@@ -383,6 +398,7 @@
 				328F06CD2C50B788004E82C7 /* OneViewController.swift in Sources */,
 				7CF322242C40EB0300877517 /* DetailViewController.swift in Sources */,
 				7CDA7B822C129730002F7C0B /* SceneDelegate.swift in Sources */,
+				7CB35EF22C53441D00141F60 /* BookFly2UViewController.swift in Sources */,
 				328F06D82C50B795004E82C7 /* AA3ViewController.swift in Sources */,
 				328F06CF2C50B788004E82C7 /* SixViewController.swift in Sources */,
 				328F06D92C50B795004E82C7 /* LRRViewController.swift in Sources */,
