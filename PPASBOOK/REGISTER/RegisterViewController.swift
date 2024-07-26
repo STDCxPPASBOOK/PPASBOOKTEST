@@ -9,8 +9,8 @@ class RegisterViewController: UIViewController {
     var medanPendaftaran: [MedanPendaftaran] = [
         MedanPendaftaran(placeholder: "Email", teks: "", isSecure: false),
         MedanPendaftaran(placeholder: "No IC", teks: "", isSecure: false),
-        MedanPendaftaran(placeholder: "Kata Laluan", teks: "", isSecure: true),
-        MedanPendaftaran(placeholder: "Sahkan Kata Laluan", teks: "", isSecure: true),
+        MedanPendaftaran(placeholder: "Kata Laluan", teks: "", isSecure: false),
+        MedanPendaftaran(placeholder: "Sahkan Kata Laluan", teks: "", isSecure: false),
         MedanPendaftaran(placeholder: "Nama Penuh", teks: "", isSecure: false),
         MedanPendaftaran(placeholder: "Nombor Telefon", teks: "", isSecure: false)
     ]

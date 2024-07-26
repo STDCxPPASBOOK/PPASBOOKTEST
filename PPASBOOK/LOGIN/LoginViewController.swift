@@ -7,6 +7,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var alertLabel: UILabel!
     @IBOutlet var newUser: UIButton!
+    @IBOutlet var togglePasswordButton: UIButton! // Add this outlet
     
     var alertMessage: String?
 
@@ -20,13 +21,16 @@ class LoginViewController: UIViewController {
         loginButton.layer.borderWidth = 1.0
         alertLabel.isHidden = true
         
+        // Add target for toggle password button
+        togglePasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            view.addGestureRecognizer(tapGesture)
-        }
+        view.addGestureRecognizer(tapGesture)
+    }
 
-        @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,6 +62,13 @@ class LoginViewController: UIViewController {
         } else {
             showAlert(message: "NoIC atau Kata Laluan tidak sah.")
         }
+    }
+    
+    @objc func togglePasswordVisibility() {
+        passwordTextField.isSecureTextEntry.toggle()
+        
+        let buttonImageName = passwordTextField.isSecureTextEntry ? "eye.fill" : "eye.slash.fill"
+        togglePasswordButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
     }
     
     func showAlert(message: String, isError: Bool = true) {

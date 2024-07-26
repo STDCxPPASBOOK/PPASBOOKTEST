@@ -73,7 +73,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.backward" catalog="system" id="iiy-kg-vfy">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="H6y-RH-q83" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="R9M-e4-jqN"/>
+                                <segue destination="W4o-XN-ZgX" kind="unwind" unwindAction="unwindToMainPageViewControllerWithSegue:" id="0at-lC-0vi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -83,16 +83,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="W4o-XN-ZgX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1008.3969465648854" y="-34.507042253521128"/>
-        </scene>
-        <!--MainPage-->
-        <scene sceneID="aWc-xX-Uns">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MainPage" id="H6y-RH-q83" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gh6-7G-99D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1672" y="-342"/>
         </scene>
         <!--LAPTOP-->
         <scene sceneID="NP9-qd-pOE">

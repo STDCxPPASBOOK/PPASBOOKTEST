@@ -44,9 +44,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot your password?"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o87-IT-rNW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o87-IT-rNW">
                                 <rect key="frame" x="36" y="663" width="149" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="NEW USER">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,9 +55,11 @@
                                     <segue destination="mrx-dh-pfI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gPi-Si-2qg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-8A-Rdm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAw-8A-Rdm">
                                 <rect key="frame" x="209" y="663" width="147" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="VvF-v1-LXV"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOG IN">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,24 +69,44 @@
                                     <action selector="loginTapped:" destination="NsL-qf-fv1" eventType="touchUpInside" id="Yyc-TG-r2f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-7F-ARd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ev7-7F-ARd">
                                 <rect key="frame" x="36" y="608" width="320" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZq-vr-Ytm">
+                                <rect key="frame" x="323" y="485" width="33" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="eye.fill" catalog="system">
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kmM-mF-9lr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="uZq-vr-Ytm" firstAttribute="top" secondItem="ynh-yh-5ZG" secondAttribute="bottom" constant="50" id="2kz-yF-d7b"/>
+                            <constraint firstItem="Ev7-7F-ARd" firstAttribute="top" secondItem="uZq-vr-Ytm" secondAttribute="bottom" constant="92" id="3xB-9V-CNu"/>
                             <constraint firstItem="x6u-fo-IJo" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ynh-yh-5ZG" secondAttribute="trailing" id="8rc-f1-WoF"/>
                             <constraint firstItem="ynh-yh-5ZG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6vZ-tb-CLg" secondAttribute="leadingMargin" id="8ye-Ec-7Ig"/>
+                            <constraint firstItem="uZq-vr-Ytm" firstAttribute="leading" secondItem="kmM-mF-9lr" secondAttribute="leading" constant="323" id="9YI-7s-Muv"/>
                             <constraint firstItem="KQE-bM-niF" firstAttribute="top" secondItem="x6u-fo-IJo" secondAttribute="bottom" constant="30" id="B6d-sN-WQe"/>
                             <constraint firstItem="x6u-fo-IJo" firstAttribute="top" secondItem="ynh-yh-5ZG" secondAttribute="bottom" constant="30" id="Ctd-L1-8IW"/>
+                            <constraint firstItem="kmM-mF-9lr" firstAttribute="trailing" secondItem="uZq-vr-Ytm" secondAttribute="trailing" constant="37" id="GuI-NB-gfr"/>
+                            <constraint firstItem="uZq-vr-Ytm" firstAttribute="trailing" secondItem="sAw-8A-Rdm" secondAttribute="trailing" id="Muc-h5-IJQ"/>
+                            <constraint firstItem="kmM-mF-9lr" firstAttribute="bottom" secondItem="sAw-8A-Rdm" secondAttribute="bottom" constant="98" id="O25-M7-mLO"/>
+                            <constraint firstItem="uZq-vr-Ytm" firstAttribute="centerY" secondItem="x6u-fo-IJo" secondAttribute="centerY" id="OGa-T1-1gE"/>
+                            <constraint firstItem="uZq-vr-Ytm" firstAttribute="trailing" secondItem="Ev7-7F-ARd" secondAttribute="trailing" id="QC4-7w-vAG"/>
                             <constraint firstItem="KQE-bM-niF" firstAttribute="leading" secondItem="kmM-mF-9lr" secondAttribute="leading" constant="79" id="Qgr-LZ-pJf"/>
+                            <constraint firstItem="sAw-8A-Rdm" firstAttribute="leading" secondItem="o87-IT-rNW" secondAttribute="trailing" constant="24" id="Sk4-hx-uxC"/>
                             <constraint firstItem="kmM-mF-9lr" firstAttribute="bottom" secondItem="ynh-yh-5ZG" secondAttribute="bottom" constant="383" id="VHX-Mt-GVF"/>
+                            <constraint firstItem="sAw-8A-Rdm" firstAttribute="baseline" secondItem="o87-IT-rNW" secondAttribute="baseline" id="Y56-cB-pCN"/>
                             <constraint firstItem="x6u-fo-IJo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ynh-yh-5ZG" secondAttribute="leading" id="ay7-Cd-MCF"/>
+                            <constraint firstItem="sAw-8A-Rdm" firstAttribute="top" secondItem="Ev7-7F-ARd" secondAttribute="bottom" constant="8" symbolic="YES" id="kC4-sU-Msd"/>
+                            <constraint firstItem="sAw-8A-Rdm" firstAttribute="firstBaseline" secondItem="o87-IT-rNW" secondAttribute="baseline" id="ltX-TE-sqF"/>
                             <constraint firstItem="KQE-bM-niF" firstAttribute="centerX" secondItem="x6u-fo-IJo" secondAttribute="centerX" id="pVE-4G-wzc"/>
                             <constraint firstItem="IzN-j6-lKb" firstAttribute="leading" secondItem="6vZ-tb-CLg" secondAttribute="leadingMargin" constant="-54" id="t5A-ol-ySz"/>
                             <constraint firstItem="ynh-yh-5ZG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6vZ-tb-CLg" secondAttribute="trailingMargin" id="vFV-cY-cOA"/>
@@ -101,6 +122,7 @@
                         <outlet property="newUser" destination="o87-IT-rNW" id="GUl-D2-UJR"/>
                         <outlet property="noicTextField" destination="ynh-yh-5ZG" id="3bI-AM-e6C"/>
                         <outlet property="passwordTextField" destination="x6u-fo-IJo" id="yqf-pf-61i"/>
+                        <outlet property="togglePasswordButton" destination="uZq-vr-Ytm" id="och-g8-K2o"/>
                         <segue destination="WnQ-eL-x6m" kind="presentation" identifier="goToMainPage" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fe0-EM-V9w"/>
                     </connections>
                 </viewController>
@@ -156,6 +178,7 @@
     </scenes>
     <resources>
         <image name="LOGIN" width="249.5" height="128"/>
+        <image name="eye.fill" catalog="system" width="128" height="80"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

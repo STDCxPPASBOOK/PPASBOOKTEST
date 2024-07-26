@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rN-Ba-Cko">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -9,14 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainPage-->
-        <scene sceneID="F8d-pQ-hHf">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MainPage" id="vGE-dN-8eT" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fbC-0C-87H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5228" y="-447"/>
-        </scene>
         <!--Fasiliti View Controller-->
         <scene sceneID="L7J-FZ-kdv">
             <objects>
@@ -56,11 +49,11 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="Location : Tun Raja Uda" id="qNM-TL-y3I">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="arrowshape.backward.fill" catalog="system" changesSelectionAsPrimaryAction="YES" id="S7C-7I-C1Y">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" image="chevron.left" catalog="system" changesSelectionAsPrimaryAction="YES" id="S7C-7I-C1Y">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="backButtonTapped:" destination="7rN-Ba-Cko" id="8A7-MA-adh"/>
-                                                <segue destination="vGE-dN-8eT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="28O-oU-IJQ"/>
+                                                <segue destination="pid-dP-4qG" kind="unwind" unwindAction="unwindToMainPageViewControllerWithSegue:" id="EKs-46-AeB"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -158,6 +151,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc2-jm-oiO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="pid-dP-4qG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4681.679389312977" y="-35.211267605633807"/>
         </scene>
@@ -173,7 +167,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
