@@ -24,6 +24,7 @@
 		328F06E22C50B7D4004E82C7 /* LDP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328F06E02C50B7D4004E82C7 /* LDP.storyboard */; };
 		328F06E32C50B7D4004E82C7 /* Booking1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06E12C50B7D4004E82C7 /* Booking1ViewController.swift */; };
 		32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE759C2C3E78390093FF31 /* ProfileViewController.swift */; };
+		32FE76A82C57323B0093FF31 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32FE76A72C57323A0093FF31 /* room.usdz */; };
 		3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */; };
 		3D79637A2C50E61A00A876A8 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7963792C50E61A00A876A8 /* FSCalendar */; };
 		3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */; };
@@ -75,6 +76,7 @@
 		328F06E02C50B7D4004E82C7 /* LDP.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LDP.storyboard; sourceTree = "<group>"; };
 		328F06E12C50B7D4004E82C7 /* Booking1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking1ViewController.swift; sourceTree = "<group>"; };
 		32FE759C2C3E78390093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		32FE76A72C57323A0093FF31 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocation.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				7CDA7B812C129730002F7C0B /* SceneDelegate.swift */,
 				7CDA7B8D2C129731002F7C0B /* Info.plist */,
 				7CDA7B882C129731002F7C0B /* Assets.xcassets */,
+				32FE76A72C57323A0093FF31 /* room.usdz */,
 				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
 				7CCC81062C21659F0092F741 /* LOGIN */,
 				7CCC80BF2C1FD9EA0092F741 /* REGISTER */,
@@ -363,6 +366,7 @@
 				3DE50E5F2C3E38C200DB2D78 /* Profile.storyboard in Resources */,
 				7CB35EF42C53449200141F60 /* BookFly2U.storyboard in Resources */,
 				328F06DD2C50B795004E82C7 /* PC.storyboard in Resources */,
+				32FE76A82C57323B0093FF31 /* room.usdz in Resources */,
 				7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */,
 				7CF322262C41300100877517 /* Date.storyboard in Resources */,
 				328F06E22C50B7D4004E82C7 /* LDP.storyboard in Resources */,

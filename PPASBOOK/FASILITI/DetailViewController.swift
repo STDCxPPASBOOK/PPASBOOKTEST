@@ -1,4 +1,5 @@
 import UIKit
+import SceneKit
 
 class DetailViewController: UIViewController {
     
@@ -11,9 +12,11 @@ class DetailViewController: UIViewController {
     @IBOutlet var duaDLayout: UIButton!
     @IBOutlet var tigaDLayout: UIButton!
     @IBOutlet weak var duaDImageView: UIImageView!
-    @IBOutlet weak var tigaDImageView: UIImageView!
+    @IBOutlet weak var tigaDImageView: SCNView!
 
-    
+    var scene: SCNScene!
+    var modelNode: SCNNode!
+    var initialScale: SCNVector3!
     var data: YourDataModel?
     var originalPosition: CGPoint?
     var facility: Facility?
@@ -55,7 +58,32 @@ class DetailViewController: UIViewController {
                 duaDImageView.isHidden = false
                 duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
                 tigaDImageView.isHidden = true
-                tigaDImageView.image = nil
+                tigaDImageView.scene = nil
+        // Initialize the scene
+        scene = SCNScene()
+        
+        // Load the USDZ model
+        guard let usdScene = SCNScene(named: "room.usdz") else {
+            fatalError("Unable to load USDZ file.")
+        }
+        
+        // Add the model to the scene
+        modelNode = usdScene.rootNode.childNodes.first!
+        scene.rootNode.addChildNode(modelNode)
+        
+        // Save the initial scale
+        initialScale = modelNode.scale
+        
+        // Set the scene to the view
+        tigaDImageView.scene = scene
+        
+        // Allow user interaction
+        tigaDImageView.allowsCameraControl = true
+        tigaDImageView.autoenablesDefaultLighting = true
+        
+        // Add gesture recognizers
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+        tigaDImageView.addGestureRecognizer(pinchGesture)
         
     }
     
@@ -100,6 +128,19 @@ class DetailViewController: UIViewController {
             break
         }
     }
+    @objc func handlePinch(_ gestureRecognizer: UIPinchGestureRecognizer) {
+        if gestureRecognizer.state == .changed || gestureRecognizer.state == .ended {
+            // Apply incremental scale to the model
+            let scale = Float(gestureRecognizer.scale)
+            modelNode.scale = SCNVector3(initialScale.x * scale, initialScale.y * scale, initialScale.z * scale)
+            
+            if gestureRecognizer.state == .ended {
+                // Update the initial scale when the gesture ends
+                initialScale = modelNode.scale
+            }
+        }
+    }
+    
     
     private func resetSlideButtonPosition() {
         UIView.animate(withDuration: 0.3) {
@@ -111,14 +152,15 @@ class DetailViewController: UIViewController {
             duaDImageView.isHidden = false
             duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
             tigaDImageView.isHidden = true
-            tigaDImageView.image = nil
+            tigaDImageView.scene = nil
         }
 
         @IBAction func tigaDLayoutTapped(_ sender: UIButton) {
-            tigaDImageView.isHidden = false
-            tigaDImageView.image = UIImage(named: "3D") // Gantikan "3D" dengan nama gambar sebenar anda
-            duaDImageView.isHidden = true
-            duaDImageView.image = nil
+            
+                tigaDImageView.isHidden = false
+                tigaDImageView.scene = scene // Reuse the existing scene
+                duaDImageView.isHidden = true
+                duaDImageView.image = nil
         }
     
     @IBAction func unwindToDetailViewController(segue: UIStoryboardSegue) {
