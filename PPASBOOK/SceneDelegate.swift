@@ -18,14 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-                let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
-                let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-
-                // Set the default tab to the Home tab (index 1 in this example)
-                tabBarController.selectedIndex = 1
-
-                window?.rootViewController = tabBarController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                let navigationController = UINavigationController(rootViewController: loginViewController)
+                
+                window?.rootViewController = navigationController
                 window?.makeKeyAndVisible()
+            }
             
     }
 
@@ -58,5 +57,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
+
 

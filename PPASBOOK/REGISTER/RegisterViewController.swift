@@ -1,4 +1,5 @@
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
@@ -9,8 +10,8 @@ class RegisterViewController: UIViewController {
     var medanPendaftaran: [MedanPendaftaran] = [
         MedanPendaftaran(placeholder: "Email", teks: "", isSecure: false),
         MedanPendaftaran(placeholder: "No IC", teks: "", isSecure: false),
-        MedanPendaftaran(placeholder: "Kata Laluan", teks: "", isSecure: false),
-        MedanPendaftaran(placeholder: "Sahkan Kata Laluan", teks: "", isSecure: false),
+        MedanPendaftaran(placeholder: "Kata Laluan", teks: "", isSecure: true),
+        MedanPendaftaran(placeholder: "Sahkan Kata Laluan", teks: "", isSecure: true),
         MedanPendaftaran(placeholder: "Nama Penuh", teks: "", isSecure: false),
         MedanPendaftaran(placeholder: "Nombor Telefon", teks: "", isSecure: false)
     ]
@@ -25,26 +26,24 @@ class RegisterViewController: UIViewController {
         configureUI()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-            view.addGestureRecognizer(tapGesture)
-        }
+        view.addGestureRecognizer(tapGesture)
+    }
 
-        @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
-    // MARK: - UI Setup
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     func configureUI() {
         registerButton.layer.cornerRadius = 10
         registerButton.layer.borderColor = UIColor.systemTeal.cgColor
         registerButton.layer.borderWidth = 1.0
         alertLabel.isHidden = true
         
-        // Configure stackView properties
         stackView.axis = .vertical
-        stackView.spacing = 16 // Spacing between fields
+        stackView.spacing = 16
         stackView.alignment = .fill
         stackView.distribution = .fill
         
-        // Configure stackView layout margins
         stackView.layoutMargins = UIEdgeInsets(top: 40, left: 10, bottom: 40, right: 10)
         stackView.isLayoutMarginsRelativeArrangement = true
     }
@@ -54,9 +53,10 @@ class RegisterViewController: UIViewController {
             let textField = UITextField()
             textField.placeholder = medan.placeholder
             textField.isSecureTextEntry = medan.isSecure
-            textField.textAlignment = .center // Center the text
+            textField.textAlignment = .center
+            textField.autocapitalizationType = .none
             textField.clipToF()
-            textField.heightAnchor.constraint(equalToConstant: 70).isActive = true // Adjust height
+            textField.heightAnchor.constraint(equalToConstant: 70).isActive = true
             
             stackView.addArrangedSubview(textField)
             textFields.append(textField)
@@ -106,63 +106,44 @@ class RegisterViewController: UIViewController {
             return
         }
 
-        // Jika semua validasi lulus
-        let newUser = User(email: email, noic: noic, password: password, fullname: fullname, contactNumber: contactNumber)
-        saveUser(newUser)
-
-        alertMessage = "Pendaftaran Berjaya!"
-        showAlert(message: alertMessage!, isError: false)
-        
-        // Lakukan segue hanya setelah semua validasi lulus
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.performSegue(withIdentifier: "goToLogin", sender: self)
+        Auth.auth().createUser(withEmail: noic + "@ppasbook.com", password: password) { [weak self] authResult, error in
+            guard let strongSelf = self else { return }
+            if let error = error {
+                strongSelf.showAlert(message: error.localizedDescription)
+            } else {
+                let newUser = User(email: email, noic: noic, password: password, fullname: fullname, contactNumber: contactNumber)
+                strongSelf.saveUser(newUser)
+                strongSelf.alertMessage = "Pendaftaran Berjaya!"
+                strongSelf.showAlert(message: strongSelf.alertMessage!, isError: false)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    strongSelf.performSegue(withIdentifier: "goToLogin", sender: strongSelf)
+                }
+            }
         }
     }
-    
+
     func showAlert(message: String, isError: Bool = true) {
         alertLabel.text = message
         alertLabel.textColor = isError ? .red : .green
         alertLabel.isHidden = false
     }
 
-    func isValidEmail(_ email: String) -> Bool {
-        return email.contains("@gmail.com")
-    }
-    
     func isNumeric(_ string: String) -> Bool {
         return !string.isEmpty && string.allSatisfy { $0.isNumber }
     }
     
+    func isValidEmail(_ email: String) -> Bool {
+        return email.hasSuffix("@gmail.com")
+    }
+    
     func isValidPassword(_ password: String) -> Bool {
         let passwordRegex = "^(?=.*[0-9]).{8,}$"
-        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return passwordTest.evaluate(with: password)
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
     
     func saveUser(_ user: User) {
-        var users = loadUsers()
-        users.append(user)
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(users) {
-            UserDefaults.standard.set(encoded, forKey: "registeredUsers")
-        }
-    }
-    
-    func loadUsers() -> [User] {
-        if let savedUsers = UserDefaults.standard.object(forKey: "registeredUsers") as? Data {
-            let decoder = JSONDecoder()
-            if let loadedUsers = try? decoder.decode([User].self, from: savedUsers) {
-                return loadedUsers
-            }
-        }
-        return []
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToLogin" {
-            let destinationVC = segue.destination as? LoginViewController
-            destinationVC?.alertMessage = alertMessage
-        }
+        // Implement the method to save user data to Firebase Firestore or Realtime Database.
     }
 }
 

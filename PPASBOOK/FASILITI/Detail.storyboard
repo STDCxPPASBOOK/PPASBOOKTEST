@@ -100,10 +100,6 @@
                                             <action selector="tigaDLayoutTapped:" destination="tnF-mF-nJ2" eventType="touchUpInside" id="gI2-BS-3fp"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWS-QI-EOl">
-                                        <rect key="frame" x="10" y="473" width="365" height="301"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF2-lO-ocT">
                                         <rect key="frame" x="10" y="834" width="361" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,6 +128,10 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
+                                    <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Byo-ZX-zJX">
+                                        <rect key="frame" x="10" y="473" width="367" height="299"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </sceneKitView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="19K-9g-8iW" firstAttribute="centerX" secondItem="r7p-an-FFv" secondAttribute="centerX" id="3jj-Lh-UYw"/>
@@ -166,7 +166,7 @@
                         <outlet property="label2" destination="FF2-lO-ocT" id="Jnh-kD-Ttf"/>
                         <outlet property="label3" destination="EQ9-FW-Jti" id="zRz-Xi-btV"/>
                         <outlet property="slideButton" destination="GSt-p5-tao" id="M3h-yn-BxV"/>
-                        <outlet property="tigaDImageView" destination="qWS-QI-EOl" id="TGP-iU-hnW"/>
+                        <outlet property="tigaDImageView" destination="Byo-ZX-zJX" id="GEC-uM-BLJ"/>
                         <outlet property="tigaDLayout" destination="VgD-Q6-AT9" id="cHP-S7-E0R"/>
                     </connections>
                 </viewController>

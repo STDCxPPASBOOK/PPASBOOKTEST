@@ -1,4 +1,6 @@
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
@@ -39,72 +41,76 @@ class LoginViewController: UIViewController {
             alertMessage = nil // Clear the message after showing it
         }
     }
+    func saveUser(_ user: User) {
+        let db = Firestore.firestore()
+        db.collection("users").document(user.noic).setData([
+            "email": user.email,
+            "noic": user.noic,
+            "fullname": user.fullname,
+            "contactNumber": user.contactNumber
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+    }
 
     @IBAction func loginTapped(_ sender: UIButton) {
-        guard let noic = noicTextField.text, !noic.isEmpty,
-              let password = passwordTextField.text, !password.isEmpty else {
-            showAlert(message: "Sila isi semua maklumat.")
-            return
-        }
-        
-        guard isNumeric(noic) else {
-            showAlert(message: "Nombor IC mesti mengandungi nombor sahaja.")
-            return
-        }
+           guard let noic = noicTextField.text, !noic.isEmpty,
+                 let password = passwordTextField.text, !password.isEmpty else {
+               showAlert(message: "Sila isi semua maklumat.")
+               return
+           }
+           
+           guard isNumeric(noic) else {
+               showAlert(message: "Nombor IC mesti mengandungi nombor sahaja.")
+               return
+           }
 
-        let users = loadUsers()
-        if let user = users.first(where: { $0.noic == noic && $0.password == password }) {
-            showAlert(message: "Login Berjaya!", isError: false)
-            // Menunda pemanggilan performSegue selama 1 detik
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.navigateToProfile(user: user)
-            }
-        } else {
-            showAlert(message: "NoIC atau Kata Laluan tidak sah.")
-        }
-    }
-    
-    @objc func togglePasswordVisibility() {
-        passwordTextField.isSecureTextEntry.toggle()
-        
-        let buttonImageName = passwordTextField.isSecureTextEntry ? "eye.fill" : "eye.slash.fill"
-        togglePasswordButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
-    }
-    
-    func showAlert(message: String, isError: Bool = true) {
-        alertLabel.text = message
-        alertLabel.textColor = isError ? .red : .green
-        alertLabel.isHidden = false
-    }
+           Auth.auth().signIn(withEmail: noic + "@ppasbook.com", password: password) { [weak self] authResult, error in
+               guard let strongSelf = self else { return }
+               if let error = error {
+                   strongSelf.showAlert(message: error.localizedDescription)
+               } else {
+                   strongSelf.showAlert(message: "Login Berjaya!", isError: false)
+                   DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                       strongSelf.navigateToProfile()
+                   }
+               }
+           }
+       }
 
-    func isNumeric(_ string: String) -> Bool {
-        return !string.isEmpty && string.allSatisfy { $0.isNumber }
-    }
-    
-    func navigateToProfile(user: User) {
-        let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
-        if let profileVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController {
-            profileVC.modalPresentationStyle = .fullScreen
-            profileVC.modalTransitionStyle = .crossDissolve
-            self.present(profileVC, animated: true, completion: nil)
-        }
-    }
-    
-    func loadUsers() -> [User] {
-        if let savedUsers = UserDefaults.standard.object(forKey: "registeredUsers") as? Data {
-            let decoder = JSONDecoder()
-            if let loadedUsers = try? decoder.decode([User].self, from: savedUsers) {
-                return loadedUsers
-            }
-        }
-        return []
-    }
-    
-    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
-        if segue.source is RegisterViewController {
-        }
-    }
-}
+       @objc func togglePasswordVisibility() {
+           passwordTextField.isSecureTextEntry.toggle()
+           
+           let buttonImageName = passwordTextField.isSecureTextEntry ? "eye.fill" : "eye.slash.fill"
+           togglePasswordButton.setImage(UIImage(systemName: buttonImageName), for: .normal)
+       }
+       
+       func showAlert(message: String, isError: Bool = true) {
+           alertLabel.text = message
+           alertLabel.textColor = isError ? .red : .green
+           alertLabel.isHidden = false
+       }
+
+       func isNumeric(_ string: String) -> Bool {
+           return !string.isEmpty && string.allSatisfy { $0.isNumber }
+       }
+       
+       func navigateToProfile() {
+           let storyboard = UIStoryboard(name: "MainPage", bundle: nil)
+           let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                  tabBarController.selectedIndex = 1
+           if let profileVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as? MainTabBarController {
+               profileVC.modalPresentationStyle = .fullScreen
+               profileVC.modalTransitionStyle = .crossDissolve
+               self.present(profileVC, animated: true, completion: nil)
+           }
+           
+       }
+   }
 
 extension UITextField {
     func clipToCircle() {
