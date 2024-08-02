@@ -116,6 +116,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="alertLabel" destination="Ev7-7F-ARd" id="3Rl-hv-3Rl"/>
+                        <outlet property="forgotPasswordButton" destination="KQE-bM-niF" id="cTt-ig-ofG"/>
                         <outlet property="loginButton" destination="sAw-8A-Rdm" id="ZPF-ZZ-4f5"/>
                         <outlet property="newUser" destination="o87-IT-rNW" id="GUl-D2-UJR"/>
                         <outlet property="noicTextField" destination="ynh-yh-5ZG" id="3bI-AM-e6C"/>
@@ -136,7 +137,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOt-4w-xia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2894" y="71"/>
+            <point key="canvasLocation" x="2888" y="93"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="qnE-eM-b2O">

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 import QuartzCore
 
 class ProfileViewController: UIViewController {
@@ -20,50 +21,61 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Mengatur corner radius untuk tableView
         tb.layer.cornerRadius = 10
-        tb.clipsToBounds = true // Penting untuk memastikan corner radius terlihat
+        tb.clipsToBounds = true
 
-        // Setup lainnya...
-        
-        // Tambahkan aksi untuk tombol logout
         logoutButton.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
         
-        // Update UI with user data
-        if let user = user {
-            nameLabel.text = user.fullname
-            icLabel.text = user.noic
-        }
+        fetchUserProfile()
     }
     
     @objc func logoutButtonTapped() {
-        // Membuat UIAlertController
         let alert = UIAlertController(title: "Logout", message: "Adakah anda yakin ingin logout?", preferredStyle: .alert)
-        
-        // Menambahkan aksi "Tidak"
         alert.addAction(UIAlertAction(title: "Tidak", style: .cancel, handler: nil))
-        
-        // Menambahkan aksi "Ya"
         alert.addAction(UIAlertAction(title: "Ya", style: .destructive, handler: { action in
             self.logout()
         }))
-        
-        // Menampilkan alert
         present(alert, animated: true, completion: nil)
     }
     
     func logout() {
-        print("User telah logout.")
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let mainVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-            mainVC.modalTransitionStyle = .crossDissolve // Anda bisa memilih .coverVertical, .crossDissolve, .partialCurl, dll.
-            mainVC.modalPresentationStyle = .fullScreen
-            self.present(mainVC, animated: true, completion: nil)
-        } else {
-            print("MainViewController tidak ditemukan di storyboard")
+        do {
+            try Auth.auth().signOut()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
+                loginVC.modalTransitionStyle = .crossDissolve
+                loginVC.modalPresentationStyle = .fullScreen
+                self.present(loginVC, animated: true, completion: nil)
+            }
+        } catch let error {
+            print("Error signing out: \(error.localizedDescription)")
         }
     }
+    
+    func fetchUserProfile() {
+        guard let user = Auth.auth().currentUser else { return }
+        let db = Firestore.firestore()
+        let noic = user.email?.components(separatedBy: "@").first ?? ""
+        db.collection("users").document(noic).getDocument { [weak self] document, error in
+            if let document = document, document.exists, let data = document.data() {
+                let email = data["email"] as? String ?? ""
+                let fullname = data["fullname"] as? String ?? ""
+                let contactNumber = data["contactNumber"] as? String ?? ""
+                let user = User(email: email, noic: noic, fullname: fullname, contactNumber: contactNumber)
+                self?.updateUI(with: user)
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    func updateUI(with user: User) {
+        self.user = user
+        nameLabel.text = user.fullname
+        icLabel.text = user.noic
+    }
+}
+
 
     /*
     // MARK: - Navigation
@@ -74,4 +86,4 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-}
+//}

@@ -111,7 +111,7 @@ class RegisterViewController: UIViewController {
             if let error = error {
                 strongSelf.showAlert(message: error.localizedDescription)
             } else {
-                let newUser = User(email: email, noic: noic, password: password, fullname: fullname, contactNumber: contactNumber)
+                let newUser = User(email: email, noic: noic, fullname: fullname, contactNumber: contactNumber)
                 strongSelf.saveUser(newUser)
                 strongSelf.alertMessage = "Pendaftaran Berjaya!"
                 strongSelf.showAlert(message: strongSelf.alertMessage!, isError: false)
@@ -143,9 +143,22 @@ class RegisterViewController: UIViewController {
     }
     
     func saveUser(_ user: User) {
-        // Implement the method to save user data to Firebase Firestore or Realtime Database.
+        let db = Firestore.firestore()
+        db.collection("users").document(user.noic).setData([
+            "email": user.email,
+            "noic": user.noic,
+            "fullname": user.fullname,
+            "contactNumber": user.contactNumber
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
 }
+
 
 // Extension for UITextField styling
 extension UITextField {
