@@ -161,6 +161,7 @@
 			children = (
 				3DE50E3F2C3D19DF00DB2D78 /* Location.storyboard */,
 				3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */,
+				3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */,
 				3DE50E422C3D19DF00DB2D78 /* PPASLocationViewController.swift */,
 			);
 			path = LOCATION;
@@ -192,7 +193,6 @@
 				7CF322252C41300100877517 /* Date.storyboard */,
 				7CF322272C44B8D600877517 /* DateViewController.swift */,
 				7CF322232C40EB0300877517 /* DetailViewController.swift */,
-				3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */,
 				7C271BDB2C350FF400050986 /* FasilitiViewController.swift */,
 				7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */,
 				7CF322192C3CCBC500877517 /* YourDataModel.swift */,
@@ -591,7 +591,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Akim.PPASBOOK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.STDCx.PPASBOOK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

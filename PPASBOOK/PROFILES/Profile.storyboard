@@ -17,30 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FARHAN FIKRI BIN AMRUL FAIZI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efA-hY-V16">
-                                <rect key="frame" x="99" y="323" width="195" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID : 12192393994828" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-XW-FT9">
-                                <rect key="frame" x="130" y="344" width="133" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IC : 041205030221" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brj-PR-DJf">
-                                <rect key="frame" x="138" y="364" width="116" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-gj-iUZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="gha-g8-g4k">
+                                <rect key="frame" x="0.0" y="323" width="393" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FARHAN FIKRI BIN AMRUL FAIZI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efA-hY-V16">
+                                        <rect key="frame" x="99" y="0.0" width="195" height="15.666666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID : 12192393994828" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-XW-FT9">
+                                        <rect key="frame" x="130.33333333333337" y="19.666666666666686" width="132.66666666666663" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IC : 041205030221" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brj-PR-DJf">
+                                        <rect key="frame" x="138.66666666666666" y="39.333333333333314" width="115.66666666666666" height="15.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-gj-iUZ">
                                 <rect key="frame" x="16" y="398" width="361" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EkV-hR-Tt2">
@@ -58,34 +59,54 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APB-fc-vi7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APB-fc-vi7">
                                 <rect key="frame" x="106" y="704" width="181" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="iGA-hR-2A0"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Logout" cornerStyle="capsule"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-rA-Ufw">
-                                <rect key="frame" x="16" y="81" width="106" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-rA-Ufw">
+                                <rect key="frame" x="15.999999999999993" y="81" width="105.33333333333331" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-lr-NiQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-lr-NiQ">
                                 <rect key="frame" x="69" y="138" width="255" height="176"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177.33333333333331" id="ltr-3K-OxD"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.85852931701030921" green="0.85852931701030921" blue="0.85852931701030921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="APB-fc-vi7" secondAttribute="bottom" constant="65" id="7lN-ov-dKc"/>
+                            <constraint firstItem="k2i-rA-Ufw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="22" id="Bo5-pN-KzS"/>
+                            <constraint firstItem="k2i-rA-Ufw" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="CFi-YX-HEB"/>
+                            <constraint firstItem="YFw-gj-iUZ" firstAttribute="centerX" secondItem="APB-fc-vi7" secondAttribute="centerX" id="Dh9-R8-d97"/>
+                            <constraint firstItem="TIl-lr-NiQ" firstAttribute="centerX" secondItem="gha-g8-g4k" secondAttribute="centerX" id="DqO-Kt-132"/>
+                            <constraint firstItem="APB-fc-vi7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="106" id="EoC-mR-e7T"/>
+                            <constraint firstItem="APB-fc-vi7" firstAttribute="top" secondItem="YFw-gj-iUZ" secondAttribute="bottom" constant="23" id="I2R-In-r4X"/>
+                            <constraint firstItem="gha-g8-g4k" firstAttribute="centerX" secondItem="YFw-gj-iUZ" secondAttribute="centerX" id="Nj3-Yz-WdT"/>
+                            <constraint firstItem="TIl-lr-NiQ" firstAttribute="top" secondItem="k2i-rA-Ufw" secondAttribute="bottom" constant="14" id="fdO-Wa-zoR"/>
+                            <constraint firstAttribute="trailing" secondItem="gha-g8-g4k" secondAttribute="trailing" id="goT-Ge-7mH"/>
+                            <constraint firstItem="gha-g8-g4k" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="hfT-ac-xgp"/>
+                            <constraint firstItem="gha-g8-g4k" firstAttribute="top" secondItem="TIl-lr-NiQ" secondAttribute="bottom" constant="8.6666666666666856" id="hvr-fj-nxN"/>
+                            <constraint firstItem="YFw-gj-iUZ" firstAttribute="top" secondItem="gha-g8-g4k" secondAttribute="bottom" constant="20" id="ms8-7g-N08"/>
+                            <constraint firstItem="TIl-lr-NiQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="69" id="nC4-Ey-gfg"/>
+                            <constraint firstItem="k2i-rA-Ufw" firstAttribute="leading" secondItem="YFw-gj-iUZ" secondAttribute="leading" id="ncd-ta-1vN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Pbn-MQ-ZQn"/>
                     <connections>
                         <outlet property="icLabel" destination="brj-PR-DJf" id="fz9-rP-5lB"/>
                         <outlet property="logoutButton" destination="APB-fc-vi7" id="Lu3-6x-jge"/>
-                        <outlet property="nameLabel" destination="efA-hY-V16" id="32c-Gu-Phw"/>
+                        <outlet property="nameLabel" destination="efA-hY-V16" id="bO1-RP-hMq"/>
                         <outlet property="tb" destination="YFw-gj-iUZ" id="PM6-A2-Kom"/>
                     </connections>
                 </viewController>
