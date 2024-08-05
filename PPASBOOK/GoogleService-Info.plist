@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.Akim.PPASBOOK</string>
+	<string>com.STDCx.PPASBOOK</string>
 	<key>PROJECT_ID</key>
 	<string>ppasbook-12446</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:697480612806:ios:3301eaa2788698a93f40c7</string>
+	<string>1:697480612806:ios:919762cabf2206643f40c7</string>
 	<key>DATABASE_URL</key>
 	<string>https://ppasbook-12446-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
