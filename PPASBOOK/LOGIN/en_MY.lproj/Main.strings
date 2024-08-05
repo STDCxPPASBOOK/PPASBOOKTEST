@@ -1,0 +1,36 @@
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "AQi-oZ-Eyi"; */
+"AQi-oZ-Eyi.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ev7-7F-ARd"; */
+"Ev7-7F-ARd.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "LOGIN"; ObjectID = "G45-6y-UVV"; */
+"G45-6y-UVV.title" = "LOGIN";
+
+/* Class = "UIButton"; configuration.title = "Forgot your password?"; ObjectID = "KQE-bM-niF"; */
+"KQE-bM-niF.configuration.title" = "Forgot your password?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KQE-bM-niF"; */
+"KQE-bM-niF.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "NEW USER"; ObjectID = "o87-IT-rNW"; */
+"o87-IT-rNW.configuration.title" = "NEW USER";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "o87-IT-rNW"; */
+"o87-IT-rNW.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "LOG IN"; ObjectID = "sAw-8A-Rdm"; */
+"sAw-8A-Rdm.configuration.title" = "LOG IN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sAw-8A-Rdm"; */
+"sAw-8A-Rdm.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uZq-vr-Ytm"; */
+"uZq-vr-Ytm.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "x6u-fo-IJo"; */
+"x6u-fo-IJo.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "No IC"; ObjectID = "ynh-yh-5ZG"; */
+"ynh-yh-5ZG.placeholder" = "No IC";
