@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
         tb.layer.cornerRadius = 10
         tb.clipsToBounds = true
+        tb.isScrollEnabled = false // Disable scrolling on the table view
         
         logoutButton.layer.cornerRadius = 10
         logoutButton.clipsToBounds = true
