@@ -57,6 +57,9 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9R5-Nd-yEk" kind="presentation" identifier="Social" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="bDO-fn-wgz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -111,6 +114,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1603.8167938931297" y="-20.422535211267608"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="pwZ-WU-1Ve">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Social" id="9R5-Nd-yEk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xD0-eM-6ms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2489" y="-10"/>
         </scene>
     </scenes>
     <resources>

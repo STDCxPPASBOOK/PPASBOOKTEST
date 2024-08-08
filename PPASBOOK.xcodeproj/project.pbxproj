@@ -57,6 +57,9 @@
 		7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CDA7B882C129731002F7C0B /* Assets.xcassets */; };
 		7CE8D9632C606B1900E74CF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDA7B852C129730002F7C0B /* Main.storyboard */; };
 		7CE8D9682C606CAD00E74CF5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8D9662C606CAD00E74CF5 /* Localizable.strings */; };
+		7CE8D98E2C63289F00E74CF5 /* Social.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE8D98D2C63289F00E74CF5 /* Social.storyboard */; };
+		7CE8D9902C6328C200E74CF5 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */; };
+		7CE8D9B42C635C3000E74CF5 /* SocialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */; };
 		7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */; };
 		7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322192C3CCBC500877517 /* YourDataModel.swift */; };
 		7CF322222C40EAF600877517 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF322212C40EAF600877517 /* Detail.storyboard */; };
@@ -117,6 +120,9 @@
 		7CE8D9672C606CAD00E74CF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CE8D9692C606CB300E74CF5 /* en_MY */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en_MY; path = en_MY.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CE8D96A2C606CB400E74CF5 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7CE8D98D2C63289F00E74CF5 /* Social.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Social.storyboard; sourceTree = "<group>"; };
+		7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CF322192C3CCBC500877517 /* YourDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDataModel.swift; sourceTree = "<group>"; };
 		7CF322212C40EAF600877517 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 			children = (
 				3DE50E5E2C3E38C200DB2D78 /* Profile.storyboard */,
 				32FE759C2C3E78390093FF31 /* ProfileViewController.swift */,
+				7CE8D98D2C63289F00E74CF5 /* Social.storyboard */,
+				7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */,
+				7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */,
 			);
 			path = PROFILES;
 			sourceTree = "<group>";
@@ -197,13 +206,13 @@
 			isa = PBXGroup;
 			children = (
 				7C271BD92C350FAD00050986 /* Fasiliti.storyboard */,
-				7CF322212C40EAF600877517 /* Detail.storyboard */,
-				7CF322252C41300100877517 /* Date.storyboard */,
-				7CF322272C44B8D600877517 /* DateViewController.swift */,
-				7CF322232C40EB0300877517 /* DetailViewController.swift */,
 				7C271BDB2C350FF400050986 /* FasilitiViewController.swift */,
 				7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */,
 				7CF322192C3CCBC500877517 /* YourDataModel.swift */,
+				7CF322212C40EAF600877517 /* Detail.storyboard */,
+				7CF322232C40EB0300877517 /* DetailViewController.swift */,
+				7CF322252C41300100877517 /* Date.storyboard */,
+				7CF322272C44B8D600877517 /* DateViewController.swift */,
 			);
 			path = FASILITI;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 				328F06D02C50B788004E82C7 /* LAPTOP.storyboard in Resources */,
 				3DE50E672C3E6D8D00DB2D78 /* HistoryMain.storyboard in Resources */,
 				7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */,
+				7CE8D98E2C63289F00E74CF5 /* Social.storyboard in Resources */,
 				7CDA7B872C129730002F7C0B /* Base in Resources */,
 				7CCC80FF2C2142560092F741 /* MainPage.storyboard in Resources */,
 				3D7963E92C605E0C00A876A8 /* GoogleService-Info.plist in Resources */,
@@ -423,6 +433,7 @@
 				7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */,
 				328F06CC2C50B788004E82C7 /* ThreeViewController.swift in Sources */,
 				7CF322282C44B8D600877517 /* DateViewController.swift in Sources */,
+				7CE8D9B42C635C3000E74CF5 /* SocialCollectionViewCell.swift in Sources */,
 				328F06CE2C50B788004E82C7 /* FiveViewController.swift in Sources */,
 				7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */,
 				7CDA7B802C129730002F7C0B /* AppDelegate.swift in Sources */,
@@ -433,6 +444,7 @@
 				7CF322242C40EB0300877517 /* DetailViewController.swift in Sources */,
 				7CDA7B822C129730002F7C0B /* SceneDelegate.swift in Sources */,
 				7CB35EF22C53441D00141F60 /* BookFly2UViewController.swift in Sources */,
+				7CE8D9902C6328C200E74CF5 /* SocialViewController.swift in Sources */,
 				328F06D82C50B795004E82C7 /* AA3ViewController.swift in Sources */,
 				328F06CF2C50B788004E82C7 /* SixViewController.swift in Sources */,
 				328F06D92C50B795004E82C7 /* LRRViewController.swift in Sources */,
