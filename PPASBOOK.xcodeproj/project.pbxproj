@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321CA7282C647E0900A30A9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321CA7272C647E0900A30A9C /* Profile.storyboard */; };
 		328F06CA2C50B788004E82C7 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C32C50B788004E82C7 /* TwoViewController.swift */; };
 		328F06CB2C50B788004E82C7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C42C50B788004E82C7 /* FourViewController.swift */; };
 		328F06CC2C50B788004E82C7 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C52C50B788004E82C7 /* ThreeViewController.swift */; };
@@ -36,7 +37,6 @@
 		3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */; };
 		3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */; };
 		3DE50E472C3D19DF00DB2D78 /* PPASLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE50E422C3D19DF00DB2D78 /* PPASLocationViewController.swift */; };
-		3DE50E5F2C3E38C200DB2D78 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E5E2C3E38C200DB2D78 /* Profile.storyboard */; };
 		3DE50E672C3E6D8D00DB2D78 /* HistoryMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE50E662C3E6D8D00DB2D78 /* HistoryMain.storyboard */; };
 		7C271BDA2C350FAD00050986 /* Fasiliti.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C271BD92C350FAD00050986 /* Fasiliti.storyboard */; };
 		7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C271BDB2C350FF400050986 /* FasilitiViewController.swift */; };
@@ -69,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321CA7272C647E0900A30A9C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		328F06C32C50B788004E82C7 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		328F06C42C50B788004E82C7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		328F06C52C50B788004E82C7 /* ThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		3DE50E402C3D19DF00DB2D78 /* PPASLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocation.swift; sourceTree = "<group>"; };
 		3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocationTableViewCell.swift; sourceTree = "<group>"; };
 		3DE50E422C3D19DF00DB2D78 /* PPASLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPASLocationViewController.swift; sourceTree = "<group>"; };
-		3DE50E5E2C3E38C200DB2D78 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3DE50E662C3E6D8D00DB2D78 /* HistoryMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HistoryMain.storyboard; sourceTree = "<group>"; };
 		7C271BD92C350FAD00050986 /* Fasiliti.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fasiliti.storyboard; sourceTree = "<group>"; };
 		7C271BDB2C350FF400050986 /* FasilitiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasilitiViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		3DE50E5B2C3E369800DB2D78 /* PROFILES */ = {
 			isa = PBXGroup;
 			children = (
-				3DE50E5E2C3E38C200DB2D78 /* Profile.storyboard */,
+				321CA7272C647E0900A30A9C /* Profile.storyboard */,
 				32FE759C2C3E78390093FF31 /* ProfileViewController.swift */,
 				7CE8D98D2C63289F00E74CF5 /* Social.storyboard */,
 				7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */,
@@ -394,6 +394,7 @@
 			files = (
 				328F06D02C50B788004E82C7 /* LAPTOP.storyboard in Resources */,
 				3DE50E672C3E6D8D00DB2D78 /* HistoryMain.storyboard in Resources */,
+				321CA7282C647E0900A30A9C /* Profile.storyboard in Resources */,
 				7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */,
 				7CE8D98E2C63289F00E74CF5 /* Social.storyboard in Resources */,
 				7CDA7B872C129730002F7C0B /* Base in Resources */,
@@ -401,7 +402,6 @@
 				3D7963E92C605E0C00A876A8 /* GoogleService-Info.plist in Resources */,
 				3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */,
 				7CCC80ED2C2132770092F741 /* LaunchScreen.storyboard in Resources */,
-				3DE50E5F2C3E38C200DB2D78 /* Profile.storyboard in Resources */,
 				7CB35EF42C53449200141F60 /* BookFly2U.storyboard in Resources */,
 				328F06DD2C50B795004E82C7 /* PC.storyboard in Resources */,
 				32FE76A82C57323B0093FF31 /* room.usdz in Resources */,
