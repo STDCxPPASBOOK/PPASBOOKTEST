@@ -13,11 +13,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     var user: User? // Add a property to hold the user data
 
     let menuItems = [
-        ("Settings & Privacy"),
-        ("History"),
-        ("Language"),
-        ("How to use PPASBOOK"),
-        ("Social Media")
+        "Settings & Privacy",
+        "History",
+        "Language",
+        "How to use PPASBOOK",
+        "Social Media"
     ]
 
     override func viewDidLoad() {
@@ -44,6 +44,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         fetchUserProfile()
         loadProfileImage() // Load the profile image from UserDefaults
+    }
+    
+    @IBAction func unwindToProfileViewController(segue: UIStoryboardSegue) {
+        if segue.source is SocialViewController {
+            
+        }
     }
     
     @objc func logoutButtonTapped() {
@@ -83,7 +89,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             } else {
                 print("Document does not exist")
             }
+            
         }
+        
     }
     
     func updateUI(with user: User) {
@@ -109,11 +117,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // Implement navigation or action based on selected row
-        // Example:
-        // if indexPath.row == 0 {
-        //     // Navigate to Edit Profile screen
-        // }
+        
+        // Navigate to the SocialMediaViewController if the "Social Media" row is selected
+        if indexPath.row == 4 {
+            let storyboard = UIStoryboard(name: "Social", bundle: nil)
+            if let socialMediaVC = storyboard.instantiateViewController(withIdentifier: "Social") as? SocialViewController {
+                navigationController?.pushViewController(socialMediaVC, animated: true)
+            }
+        }
     }
 
     // MARK: - UIImagePickerControllerDelegate Methods
