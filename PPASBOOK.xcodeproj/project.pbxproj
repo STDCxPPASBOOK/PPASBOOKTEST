@@ -14,6 +14,7 @@
 		32053C172C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32053C162C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard */; };
 		32053C1B2C65CE9D0059B130 /* DetailLaptopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */; };
 		321CA7282C647E0900A30A9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321CA7272C647E0900A30A9C /* Profile.storyboard */; };
+		326E80152C69FCD700818A2E /* AddOn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326E80142C69FCD700818A2E /* AddOn.storyboard */; };
 		328A26202C69AB7C00DEAC10 /* ShowForm2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A261F2C69AB7C00DEAC10 /* ShowForm2ViewController.swift */; };
 		328A26222C69AC5100DEAC10 /* Custom2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */; };
 		328A26242C69AC8600DEAC10 /* FormItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26232C69AC8600DEAC10 /* FormItem2.swift */; };
@@ -36,6 +37,7 @@
 		328F06DE2C50B795004E82C7 /* PCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06D72C50B795004E82C7 /* PCViewController.swift */; };
 		328F06E22C50B7D4004E82C7 /* LDP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328F06E02C50B7D4004E82C7 /* LDP.storyboard */; };
 		328F06E32C50B7D4004E82C7 /* Booking1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06E12C50B7D4004E82C7 /* Booking1ViewController.swift */; };
+		32EDD73C2C6A009800A35019 /* AddOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EDD73B2C6A009800A35019 /* AddOnViewController.swift */; };
 		32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FE759C2C3E78390093FF31 /* ProfileViewController.swift */; };
 		32FE76A82C57323B0093FF31 /* room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 32FE76A72C57323A0093FF31 /* room.usdz */; };
 		3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */; };
@@ -88,6 +90,7 @@
 		32053C162C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DETAIL_LAPTOP.storyboard; sourceTree = "<group>"; };
 		32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLaptopViewController.swift; sourceTree = "<group>"; };
 		321CA7272C647E0900A30A9C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		326E80142C69FCD700818A2E /* AddOn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOn.storyboard; sourceTree = "<group>"; };
 		328A261F2C69AB7C00DEAC10 /* ShowForm2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowForm2ViewController.swift; sourceTree = "<group>"; };
 		328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom2TableViewCell.swift; sourceTree = "<group>"; };
 		328A26232C69AC8600DEAC10 /* FormItem2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormItem2.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 		328F06D72C50B795004E82C7 /* PCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PCViewController.swift; sourceTree = "<group>"; };
 		328F06E02C50B7D4004E82C7 /* LDP.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LDP.storyboard; sourceTree = "<group>"; };
 		328F06E12C50B7D4004E82C7 /* Booking1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking1ViewController.swift; sourceTree = "<group>"; };
+		32EDD73B2C6A009800A35019 /* AddOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOnViewController.swift; sourceTree = "<group>"; };
 		32FE759C2C3E78390093FF31 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		32FE76A72C57323A0093FF31 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				7CF322232C40EB0300877517 /* DetailViewController.swift */,
 				7CF322252C41300100877517 /* Date.storyboard */,
 				7CF322272C44B8D600877517 /* DateViewController.swift */,
+				326E80142C69FCD700818A2E /* AddOn.storyboard */,
+				32EDD73B2C6A009800A35019 /* AddOnViewController.swift */,
 			);
 			path = FASILITI;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				3DE50E442C3D19DF00DB2D78 /* Location.storyboard in Resources */,
 				7CCC80ED2C2132770092F741 /* LaunchScreen.storyboard in Resources */,
 				7CB35EF42C53449200141F60 /* BookFly2U.storyboard in Resources */,
+				326E80152C69FCD700818A2E /* AddOn.storyboard in Resources */,
 				328F06DD2C50B795004E82C7 /* PC.storyboard in Resources */,
 				32FE76A82C57323B0093FF31 /* room.usdz in Resources */,
 				7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */,
@@ -460,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32EDD73C2C6A009800A35019 /* AddOnViewController.swift in Sources */,
 				328F06E32C50B7D4004E82C7 /* Booking1ViewController.swift in Sources */,
 				7CCC81012C2142680092F741 /* MainPageViewController.swift in Sources */,
 				3D7963302C4F4DF700A876A8 /* MainTabBarController.swift in Sources */,
@@ -663,7 +671,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QA49H8JU8T;
+				DEVELOPMENT_TEAM = A7AT6M475H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PPASBOOK/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take pictures";
@@ -699,7 +707,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QA49H8JU8T;
+				DEVELOPMENT_TEAM = A7AT6M475H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PPASBOOK/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera to take pictures";
