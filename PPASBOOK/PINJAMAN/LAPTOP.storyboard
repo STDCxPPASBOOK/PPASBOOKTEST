@@ -394,7 +394,6 @@
                             <constraint firstItem="naG-63-CqP" firstAttribute="width" secondItem="3nW-vk-fQo" secondAttribute="width" id="MwW-DB-Bjg"/>
                             <constraint firstItem="X8b-Di-XNI" firstAttribute="centerX" secondItem="3nW-vk-fQo" secondAttribute="centerX" id="Ojw-3U-qcO"/>
                             <constraint firstItem="X8b-Di-XNI" firstAttribute="top" secondItem="D5O-Ru-bpX" secondAttribute="top" id="UCl-oI-niT"/>
-                            <constraint firstItem="naG-63-CqP" firstAttribute="height" secondItem="3nW-vk-fQo" secondAttribute="height" multiplier="0.938967" id="ho3-hB-9WA"/>
                             <constraint firstItem="SR1-Rj-eLc" firstAttribute="trailing" secondItem="X8b-Di-XNI" secondAttribute="trailing" id="kpo-98-opS"/>
                             <constraint firstItem="SR1-Rj-eLc" firstAttribute="bottom" secondItem="D5O-Ru-bpX" secondAttribute="bottom" id="wou-Ga-690"/>
                             <constraint firstItem="X8b-Di-XNI" firstAttribute="leading" secondItem="D5O-Ru-bpX" secondAttribute="leading" id="xIb-9T-hvW"/>
@@ -429,81 +428,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0G-nj-Uc5">
-                                <rect key="frame" x="0.0" y="57" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Loan Requirement" id="cco-lz-zeh"/>
-                                </items>
-                            </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1. Kerosakan dan kehilangan set peminjaman perlu dilaporkan segera kepada PPAS." translatesAutoresizingMaskIntoConstraints="NO" id="6kD-2C-cI6">
-                                <rect key="frame" x="16" y="216" width="361" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-Xn-V1y">
+                                <rect key="frame" x="0.0" y="-24" width="393" height="900"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYH-Qj-90L">
+                                        <rect key="frame" x="37" y="778" width="130" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Previous">
+                                            <color key="baseBackgroundColor" red="0.92156863209999995" green="0.3058823645" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="N1q-vl-4BL" kind="unwind" unwindAction="unwindToTwoViewControllerWithSegue:" id="px4-IQ-tZm"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1. Kerosakan dan kehilangan set peminjaman perlu dilaporkan segera kepada PPAS." translatesAutoresizingMaskIntoConstraints="NO" id="O2g-YG-0wm">
+                                        <rect key="frame" x="16" y="240" width="361" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8yR-Ip-FPa">
+                                        <rect key="frame" x="16" y="293" width="361" height="115"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">2. Setiap peminjaman bertangungjawab sepenuhnya ke atas desktop yang pinjam. Kehilangan set peminjaman juga perlu segera membuat laporan polis dan didenda harga Desktop RM1000.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="3. Pinjaman yang telah dibuat telah tidak boleh dipindah milik." translatesAutoresizingMaskIntoConstraints="NO" id="or6-Eo-VYo">
+                                        <rect key="frame" x="16" y="403" width="361" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTL-gn-S0p">
+                                        <rect key="frame" x="16" y="456" width="361" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">4. Peminjam harus menggunakan kemudahan pinjaman PC untuk tujuan murni dan tidak menyalahi undang-undang di bawah seksyen 233 Akta Komunikasi dan Multimedia 1998. Jika peminjam didapati tersabit dengan kesalahan, PPAS berhak untuk menarik balik segala kemudahan dengan serta-merta.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="5. Peminjam hendaklah memastikan nombor telefon dan alamat rumah adalah yang terkini. " translatesAutoresizingMaskIntoConstraints="NO" id="NST-b4-04b">
+                                        <rect key="frame" x="16" y="602" width="361" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2g-ag-7LQ">
+                                        <rect key="frame" x="0.0" y="74" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <items>
+                                            <navigationItem title="Loan Requirements" id="PVo-AM-Km4"/>
+                                        </items>
+                                    </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZ7-1F-pKs">
+                                        <rect key="frame" x="231" y="778" width="129" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Next">
+                                            <color key="baseBackgroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="BQA-RQ-zyb" eventType="touchUpInside" id="1B0-aX-wZS"/>
+                                            <segue destination="t31-D6-OX4" kind="presentation" identifier="goToFourViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="85l-nw-H6p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nYw-c4-g3b">
-                                <rect key="frame" x="16" y="269" width="361" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">2. Setiap peminjaman bertangungjawab sepenuhnya ke atas desktop yang pinjam. Kehilangan set peminjaman juga perlu segera membuat laporan polis dan didenda harga Desktop RM1000.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="3. Pinjaman yang telah dibuat telah tidak boleh dipindah milik." translatesAutoresizingMaskIntoConstraints="NO" id="37v-vq-aQp">
-                                <rect key="frame" x="16" y="379" width="361" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZI9-kG-wfy">
-                                <rect key="frame" x="16" y="432" width="361" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">4. Peminjam harus menggunakan kemudahan pinjaman PC untuk tujuan murni dan tidak menyalahi undang-undang di bawah seksyen 233 Akta Komunikasi dan Multimedia 1998. Jika peminjam didapati tersabit dengan kesalahan, PPAS berhak untuk menarik balik segala kemudahan dengan serta-merta.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="5. Peminjam hendaklah memastikan nombor telefon dan alamat rumah adalah yang terkini. " translatesAutoresizingMaskIntoConstraints="NO" id="s4g-Mh-LLu">
-                                <rect key="frame" x="16" y="578" width="361" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZ7-1F-pKs">
-                                <rect key="frame" x="236" y="748" width="129" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Next">
-                                    <color key="baseBackgroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="BQA-RQ-zyb" eventType="touchUpInside" id="1B0-aX-wZS"/>
-                                    <segue destination="t31-D6-OX4" kind="presentation" identifier="goToFourViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="85l-nw-H6p"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYH-Qj-90L">
-                                <rect key="frame" x="38" y="748" width="130" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Previous">
-                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.3058823645" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="N1q-vl-4BL" kind="unwind" unwindAction="unwindToTwoViewControllerWithSegue:" id="px4-IQ-tZm"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="900" id="rlu-YK-dk9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gT3-Po-WDg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T1h-Xn-V1y" firstAttribute="centerX" secondItem="e5c-l6-p0i" secondAttribute="centerX" id="TqG-27-ZHp"/>
+                            <constraint firstItem="T1h-Xn-V1y" firstAttribute="centerY" secondItem="e5c-l6-p0i" secondAttribute="centerY" id="jmK-9V-jCn"/>
+                            <constraint firstItem="T1h-Xn-V1y" firstAttribute="leading" secondItem="gT3-Po-WDg" secondAttribute="leading" id="ssS-Gq-pqd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wM-5r-esX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -527,7 +540,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u90-uM-aVc">
-                                <rect key="frame" x="33" y="755" width="130" height="44"/>
+                                <rect key="frame" x="40" y="755" width="130" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Previous">
@@ -537,19 +550,8 @@
                                     <segue destination="xA8-R9-kJM" kind="unwind" unwindAction="unwindToThreeViewControllerWithSegue:" id="gPc-Sa-ka6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGO-zS-fFj">
-                                <rect key="frame" x="231" y="755" width="129" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Next">
-                                    <color key="baseBackgroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="8Hv-tB-cT4" kind="presentation" identifier="goToFiveViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="a0V-12-oGX"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="1. Saya akan menjaga peralatan ini dengan baik." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5FW-YD-6l4">
-                                <rect key="frame" x="16" y="164" width="361" height="45"/>
+                                <rect key="frame" x="16" y="145" width="361" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -557,7 +559,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-yq-O4a">
-                                <rect key="frame" x="16" y="302" width="361" height="148"/>
+                                <rect key="frame" x="16" y="283" width="361" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">2. Saya akan bertanggungjawab di atas sebarang kerosakan atau kehilangan disebabkan oleh  kecuaian diri saya sendiri dan bersedia untuk menerima sebarang tindakan yang dikenakan oleh pihak pengurusan PPAS sekiranya perlu. (sertakan bersama lampiran aduan polis sekiranya peralatan hilang).</string>
@@ -566,7 +568,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="3. Saya akan menyerahkan semula set pinjaman tersebut pada tarikh yang telah dipersetujui." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-nc-8qk">
-                                <rect key="frame" x="16" y="571" width="361" height="67"/>
+                                <rect key="frame" x="16" y="552" width="361" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -574,7 +576,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ha-y9-5RK">
-                                <rect key="frame" x="100" y="237" width="70" height="35"/>
+                                <rect key="frame" x="100" y="218" width="70" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -584,7 +586,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfv-X9-13V">
-                                <rect key="frame" x="211" y="237" width="97" height="35"/>
+                                <rect key="frame" x="211" y="218" width="97" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -594,7 +596,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBS-dX-Jbr">
-                                <rect key="frame" x="91" y="654" width="70" height="35"/>
+                                <rect key="frame" x="91" y="635" width="70" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -604,7 +606,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byl-x1-RXe">
-                                <rect key="frame" x="211" y="654" width="97" height="35"/>
+                                <rect key="frame" x="211" y="635" width="97" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -614,7 +616,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nB-vT-39Y">
-                                <rect key="frame" x="91" y="485" width="70" height="35"/>
+                                <rect key="frame" x="91" y="466" width="70" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -624,13 +626,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gC-EB-len">
-                                <rect key="frame" x="211" y="485" width="97" height="35"/>
+                                <rect key="frame" x="211" y="466" width="97" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system" title="TIDAK"/>
                                 <connections>
                                     <action selector="iconClicked4:" destination="t31-D6-OX4" eventType="touchUpInside" id="DWy-I8-Cui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGO-zS-fFj">
+                                <rect key="frame" x="232" y="755" width="129" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <color key="baseBackgroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="8Hv-tB-cT4" kind="presentation" identifier="goToFiveViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="a0V-12-oGX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -686,7 +699,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZ7-o7-sK9">
-                                <rect key="frame" x="36" y="751" width="130" height="44"/>
+                                <rect key="frame" x="34" y="751" width="130" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Previous">
@@ -696,8 +709,15 @@
                                     <segue destination="YYh-UX-fbR" kind="unwind" unwindAction="unwindToFourViewControllerWithSegue:" id="j8c-rH-5LU"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8g2-7F-seB">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Applicant's Agreement" id="7Yl-h7-0e1"/>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-In-mMi">
-                                <rect key="frame" x="234" y="751" width="129" height="44"/>
+                                <rect key="frame" x="229" y="751" width="129" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Next">
@@ -707,13 +727,6 @@
                                     <segue destination="nUl-qU-IMr" kind="presentation" identifier="goToSixViewController" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kKq-PS-jFL"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8g2-7F-seB">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Applicant's Agreement" id="7Yl-h7-0e1"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pzo-RG-RLj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -765,6 +778,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="BOOK NOW">
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="bookNowTapped:" destination="nUl-qU-IMr" eventType="touchUpInside" id="Var-cK-dvJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -904,14 +920,86 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pickerDaerah" destination="nf3-Bt-wpl" id="UJ3-cL-OnC"/>
-                        <outlet property="pickerStatus" destination="ymn-cD-ytp" id="fha-HY-zMJ"/>
+                        <outlet property="AlamatLabel3" destination="iOW-0b-Xak" id="1QZ-85-Q9U"/>
+                        <outlet property="BandarLabel5" destination="qG2-cI-cps" id="jaG-Xc-vyE"/>
+                        <outlet property="BookNow" destination="gAR-8K-30Y" id="Ww5-y2-XiT"/>
+                        <outlet property="EmelLabel6" destination="uYQ-jL-HeN" id="N6w-oN-OcO"/>
+                        <outlet property="NamaLabel1" destination="bLH-ID-Tcd" id="SJY-fK-Nwz"/>
+                        <outlet property="NoIcLabel2" destination="Ny0-9N-naR" id="Yex-Sc-vDB"/>
+                        <outlet property="NoTelLabel7" destination="77Y-Lp-DPD" id="rb5-36-eGf"/>
+                        <outlet property="PickerDaerah" destination="nf3-Bt-wpl" id="qPE-0l-T4C"/>
+                        <outlet property="PickerStatus" destination="ymn-cD-ytp" id="eUl-MQ-Sls"/>
+                        <outlet property="PoskodLabel4" destination="4dc-O2-gZ1" id="y5G-q9-zSd"/>
+                        <segue destination="3jr-1v-NcF" kind="presentation" identifier="BookingNowDataSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Rci-QV-m8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulc-Og-zeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="KQm-6S-nr1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5423.6641221374048" y="-35.211267605633807"/>
+        </scene>
+        <!--Show Form View Controller-->
+        <scene sceneID="iT6-eH-ecU">
+            <objects>
+                <viewController id="3jr-1v-NcF" customClass="ShowFormViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JBw-Wk-SKE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-Hj-I71">
+                                <rect key="frame" x="0.0" y="100" width="393" height="752"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Qh8-G6-2K4">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qh8-G6-2K4" id="HzZ-aA-WKF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="9n8-ga-YAK">
+                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9n8-ga-YAK" id="PLa-OK-Ayh">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WLK-Or-efj" kind="show" identifier="showDetailSegue" id="svR-Mk-315"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-fm-LT2">
+                                <rect key="frame" x="0.0" y="56" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="HISTORY BOOKING" id="XQY-6I-qBe"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r82-m4-yYf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yqW-Hj-I71" id="ySo-72-2fb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nf-0I-MgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6284.7328244274804" y="-35.211267605633807"/>
+        </scene>
+        <!--DETAIL_LAPTOP-->
+        <scene sceneID="Ifm-ah-CRc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DETAIL_LAPTOP" id="WLK-Or-efj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DKA-eM-VQr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOA-7F-LeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7045" y="-74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UK1-2v-3XE">
@@ -943,7 +1031,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

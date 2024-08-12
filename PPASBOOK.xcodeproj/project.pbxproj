@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32053C0F2C65C8110059B130 /* ShowFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C0E2C65C8110059B130 /* ShowFormViewController.swift */; };
+		32053C112C65C8700059B130 /* FormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C102C65C8700059B130 /* FormItem.swift */; };
+		32053C132C65C88A0059B130 /* FormArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C122C65C88A0059B130 /* FormArray.swift */; };
+		32053C152C65C9B40059B130 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C142C65C9B40059B130 /* CustomTableViewCell.swift */; };
+		32053C172C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32053C162C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard */; };
+		32053C1B2C65CE9D0059B130 /* DetailLaptopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */; };
 		321CA7282C647E0900A30A9C /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321CA7272C647E0900A30A9C /* Profile.storyboard */; };
+		328A26202C69AB7C00DEAC10 /* ShowForm2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A261F2C69AB7C00DEAC10 /* ShowForm2ViewController.swift */; };
+		328A26222C69AC5100DEAC10 /* Custom2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */; };
+		328A26242C69AC8600DEAC10 /* FormItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26232C69AC8600DEAC10 /* FormItem2.swift */; };
+		328A26262C69ACAD00DEAC10 /* FormArray2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26252C69ACAD00DEAC10 /* FormArray2.swift */; };
+		328A26282C69AD0F00DEAC10 /* DetailDesktopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A26272C69AD0F00DEAC10 /* DetailDesktopViewController.swift */; };
+		328A262A2C69AD4500DEAC10 /* DETAIL_DESKTOP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328A26292C69AD4500DEAC10 /* DETAIL_DESKTOP.storyboard */; };
 		328F06CA2C50B788004E82C7 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C32C50B788004E82C7 /* TwoViewController.swift */; };
 		328F06CB2C50B788004E82C7 /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C42C50B788004E82C7 /* FourViewController.swift */; };
 		328F06CC2C50B788004E82C7 /* ThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F06C52C50B788004E82C7 /* ThreeViewController.swift */; };
@@ -69,7 +81,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32053C0E2C65C8110059B130 /* ShowFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFormViewController.swift; sourceTree = "<group>"; };
+		32053C102C65C8700059B130 /* FormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormItem.swift; sourceTree = "<group>"; };
+		32053C122C65C88A0059B130 /* FormArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormArray.swift; sourceTree = "<group>"; };
+		32053C142C65C9B40059B130 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		32053C162C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DETAIL_LAPTOP.storyboard; sourceTree = "<group>"; };
+		32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLaptopViewController.swift; sourceTree = "<group>"; };
 		321CA7272C647E0900A30A9C /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		328A261F2C69AB7C00DEAC10 /* ShowForm2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowForm2ViewController.swift; sourceTree = "<group>"; };
+		328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom2TableViewCell.swift; sourceTree = "<group>"; };
+		328A26232C69AC8600DEAC10 /* FormItem2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormItem2.swift; sourceTree = "<group>"; };
+		328A26252C69ACAD00DEAC10 /* FormArray2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormArray2.swift; sourceTree = "<group>"; };
+		328A26272C69AD0F00DEAC10 /* DetailDesktopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDesktopViewController.swift; sourceTree = "<group>"; };
+		328A26292C69AD4500DEAC10 /* DETAIL_DESKTOP.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DETAIL_DESKTOP.storyboard; sourceTree = "<group>"; };
 		328F06C32C50B788004E82C7 /* TwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		328F06C42C50B788004E82C7 /* FourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		328F06C52C50B788004E82C7 /* ThreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeViewController.swift; sourceTree = "<group>"; };
@@ -160,12 +184,18 @@
 			isa = PBXGroup;
 			children = (
 				328F06D62C50B795004E82C7 /* PC.storyboard */,
+				328A26292C69AD4500DEAC10 /* DETAIL_DESKTOP.storyboard */,
 				328F06D72C50B795004E82C7 /* PCViewController.swift */,
+				328F06D42C50B795004E82C7 /* Scroll2ViewController.swift */,
+				328F06D22C50B795004E82C7 /* LRRViewController.swift */,
 				328F06D32C50B795004E82C7 /* AAViewController.swift */,
 				328F06D12C50B795004E82C7 /* AA3ViewController.swift */,
+				328A26232C69AC8600DEAC10 /* FormItem2.swift */,
+				328A26252C69ACAD00DEAC10 /* FormArray2.swift */,
 				328F06D52C50B795004E82C7 /* AA2ViewController.swift */,
-				328F06D22C50B795004E82C7 /* LRRViewController.swift */,
-				328F06D42C50B795004E82C7 /* Scroll2ViewController.swift */,
+				328A261F2C69AB7C00DEAC10 /* ShowForm2ViewController.swift */,
+				328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */,
+				328A26272C69AD0F00DEAC10 /* DetailDesktopViewController.swift */,
 			);
 			path = PINJAMAN2;
 			sourceTree = "<group>";
@@ -311,12 +341,18 @@
 			isa = PBXGroup;
 			children = (
 				328F06C92C50B788004E82C7 /* LAPTOP.storyboard */,
+				32053C162C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard */,
 				328F06C62C50B788004E82C7 /* OneViewController.swift */,
 				328F06C32C50B788004E82C7 /* TwoViewController.swift */,
 				328F06C52C50B788004E82C7 /* ThreeViewController.swift */,
 				328F06C42C50B788004E82C7 /* FourViewController.swift */,
 				328F06C72C50B788004E82C7 /* FiveViewController.swift */,
+				32053C102C65C8700059B130 /* FormItem.swift */,
+				32053C122C65C88A0059B130 /* FormArray.swift */,
 				328F06C82C50B788004E82C7 /* SixViewController.swift */,
+				32053C0E2C65C8110059B130 /* ShowFormViewController.swift */,
+				32053C142C65C9B40059B130 /* CustomTableViewCell.swift */,
+				32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */,
 			);
 			path = PINJAMAN;
 			sourceTree = "<group>";
@@ -396,6 +432,7 @@
 				3DE50E672C3E6D8D00DB2D78 /* HistoryMain.storyboard in Resources */,
 				321CA7282C647E0900A30A9C /* Profile.storyboard in Resources */,
 				7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */,
+				328A262A2C69AD4500DEAC10 /* DETAIL_DESKTOP.storyboard in Resources */,
 				7CE8D98E2C63289F00E74CF5 /* Social.storyboard in Resources */,
 				7CDA7B872C129730002F7C0B /* Base in Resources */,
 				7CCC80FF2C2142560092F741 /* MainPage.storyboard in Resources */,
@@ -406,6 +443,7 @@
 				328F06DD2C50B795004E82C7 /* PC.storyboard in Resources */,
 				32FE76A82C57323B0093FF31 /* room.usdz in Resources */,
 				7CCC80C12C1FDA210092F741 /* Register.storyboard in Resources */,
+				32053C172C65CAEF0059B130 /* DETAIL_LAPTOP.storyboard in Resources */,
 				7CF322262C41300100877517 /* Date.storyboard in Resources */,
 				328F06E22C50B7D4004E82C7 /* LDP.storyboard in Resources */,
 				7CE8D9632C606B1900E74CF5 /* Main.storyboard in Resources */,
@@ -430,6 +468,7 @@
 				7C271BDC2C350FF400050986 /* FasilitiViewController.swift in Sources */,
 				3DE50E452C3D19DF00DB2D78 /* PPASLocation.swift in Sources */,
 				328F06DA2C50B795004E82C7 /* AAViewController.swift in Sources */,
+				328A26282C69AD0F00DEAC10 /* DetailDesktopViewController.swift in Sources */,
 				7CCC80982C1F51050092F741 /* LoginViewController.swift in Sources */,
 				328F06CC2C50B788004E82C7 /* ThreeViewController.swift in Sources */,
 				7CF322282C44B8D600877517 /* DateViewController.swift in Sources */,
@@ -439,19 +478,28 @@
 				7CDA7B802C129730002F7C0B /* AppDelegate.swift in Sources */,
 				328F06CB2C50B788004E82C7 /* FourViewController.swift in Sources */,
 				328F06DC2C50B795004E82C7 /* AA2ViewController.swift in Sources */,
+				32053C1B2C65CE9D0059B130 /* DetailLaptopViewController.swift in Sources */,
 				3DE50E472C3D19DF00DB2D78 /* PPASLocationViewController.swift in Sources */,
 				328F06CD2C50B788004E82C7 /* OneViewController.swift in Sources */,
 				7CF322242C40EB0300877517 /* DetailViewController.swift in Sources */,
+				328A26242C69AC8600DEAC10 /* FormItem2.swift in Sources */,
+				328A26262C69ACAD00DEAC10 /* FormArray2.swift in Sources */,
 				7CDA7B822C129730002F7C0B /* SceneDelegate.swift in Sources */,
 				7CB35EF22C53441D00141F60 /* BookFly2UViewController.swift in Sources */,
 				7CE8D9902C6328C200E74CF5 /* SocialViewController.swift in Sources */,
 				328F06D82C50B795004E82C7 /* AA3ViewController.swift in Sources */,
+				32053C152C65C9B40059B130 /* CustomTableViewCell.swift in Sources */,
 				328F06CF2C50B788004E82C7 /* SixViewController.swift in Sources */,
 				328F06D92C50B795004E82C7 /* LRRViewController.swift in Sources */,
 				7CCC81042C2160360092F741 /* LaunchScreenViewController.swift in Sources */,
+				328A26222C69AC5100DEAC10 /* Custom2TableViewCell.swift in Sources */,
 				7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */,
+				328A26202C69AB7C00DEAC10 /* ShowForm2ViewController.swift in Sources */,
+				32053C112C65C8700059B130 /* FormItem.swift in Sources */,
 				7CB35EEB2C5202EC00141F60 /* Register.swift in Sources */,
+				32053C132C65C88A0059B130 /* FormArray.swift in Sources */,
 				32FE759D2C3E78390093FF31 /* ProfileViewController.swift in Sources */,
+				32053C0F2C65C8110059B130 /* ShowFormViewController.swift in Sources */,
 				328F06CA2C50B788004E82C7 /* TwoViewController.swift in Sources */,
 				7CCC80962C1F50800092F741 /* RegisterViewController.swift in Sources */,
 				3DE50E462C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift in Sources */,
