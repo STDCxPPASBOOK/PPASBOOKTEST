@@ -70,13 +70,13 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
 
         // Past dates
         if currentDate < today {
-            return .red
+            return UIColor.lightGray // Unavailable or past dates
         }
         
         // Weekends
         let weekday = Calendar.current.component(.weekday, from: date)
-        if weekday == 7 || weekday == 1 { // 1 = Sunday, 7 = Saturday
-            return .red
+        if weekday == 1{ // 1 = Sunday, 7 = Saturday
+            return UIColor.lightGray // Unavailable on weekends
         }
 
         let slots = generateTimeSlots(for: date)
@@ -91,11 +91,11 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
         let almostFullThreshold = Int(Double(totalSlots) * 0.75) // 75% of the slots
         
         if bookedCount == totalSlots {
-            return .red // Fully booked
+            return UIColor.lightGray // Fully booked
         } else if bookedCount >= almostFullThreshold {
-            return .yellow // Almost full
+            return UIColor.systemMint // Almost full
         } else {
-            return .green // Available
+            return UIColor.systemTeal // Available
         }
     }
     
