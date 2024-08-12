@@ -683,13 +683,23 @@
                         <outlet property="PickerDaerah" destination="2ex-ry-mSk" id="y3w-E3-Fnn"/>
                         <outlet property="PickerStatus" destination="aVU-3R-keD" id="SKn-xg-EH6"/>
                         <outlet property="PoskodLabel4" destination="FTA-yT-dRU" id="nVc-Ni-BJX"/>
-                        <segue destination="qsc-WP-Lge" kind="presentation" identifier="BookingNowDataSegue2" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ygq-Uz-S7B"/>
+                        <segue destination="wKB-Qk-fvj" kind="presentation" identifier="BookingNowDataSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qRi-UT-Oix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aO1-NC-AqL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Zxi-ib-ymB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8438.9312977099235" y="-509.15492957746483"/>
+        </scene>
+        <!--MainPage-->
+        <scene sceneID="4vW-EP-dI4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainPage" id="wKB-Qk-fvj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SxB-9H-8m7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KWF-Sn-ZEy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9250" y="-509"/>
         </scene>
         <!--REQUIREMENT-->
         <scene sceneID="cez-MF-f6E">
@@ -987,7 +997,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="la9-TT-UnK" kind="show" trigger="accessoryAction" id="NMN-eP-Sru"/>
+                                            <segue destination="la9-TT-UnK" kind="show" identifier="showDetailSegue" trigger="accessoryAction" id="NMN-eP-Sru"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1009,7 +1019,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1DX-hg-bY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9367" y="-509"/>
+            <point key="canvasLocation" x="10314" y="-496"/>
         </scene>
         <!--DETAIL_DESKTOP-->
         <scene sceneID="bCj-xa-vz8">
@@ -1019,7 +1029,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25o-rG-7fD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10158" y="-511"/>
+            <point key="canvasLocation" x="10869" y="-499"/>
         </scene>
     </scenes>
     <resources>

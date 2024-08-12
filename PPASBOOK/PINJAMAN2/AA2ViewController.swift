@@ -184,7 +184,7 @@ class AA2ViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDa
         infoLabel.text = "Data saved. Go to the next screen."
         
         // Perform segue after saving the data
-        performSegue(withIdentifier: "BookingNowDataSegue2", sender: nil)
+        performSegue(withIdentifier: "BookingNowDataSegue", sender: nil)
     }
 
     // MARK: - UIPickerViewDataSource

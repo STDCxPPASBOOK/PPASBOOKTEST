@@ -930,7 +930,7 @@
                         <outlet property="PickerDaerah" destination="nf3-Bt-wpl" id="qPE-0l-T4C"/>
                         <outlet property="PickerStatus" destination="ymn-cD-ytp" id="eUl-MQ-Sls"/>
                         <outlet property="PoskodLabel4" destination="4dc-O2-gZ1" id="y5G-q9-zSd"/>
-                        <segue destination="3jr-1v-NcF" kind="presentation" identifier="BookingNowDataSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Rci-QV-m8M"/>
+                        <segue destination="JF1-yT-z6V" kind="presentation" identifier="BookingNowDataSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="fis-u2-JvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulc-Og-zeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -938,68 +938,15 @@
             </objects>
             <point key="canvasLocation" x="5423.6641221374048" y="-35.211267605633807"/>
         </scene>
-        <!--Show Form View Controller-->
-        <scene sceneID="iT6-eH-ecU">
+        <!--MainPage-->
+        <scene sceneID="gYQ-c6-70s">
             <objects>
-                <viewController id="3jr-1v-NcF" customClass="ShowFormViewController" customModule="PPASBOOK" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JBw-Wk-SKE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yqW-Hj-I71">
-                                <rect key="frame" x="0.0" y="100" width="393" height="752"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Qh8-G6-2K4">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qh8-G6-2K4" id="HzZ-aA-WKF">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" id="9n8-ga-YAK">
-                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9n8-ga-YAK" id="PLa-OK-Ayh">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="WLK-Or-efj" kind="show" identifier="showDetailSegue" id="svR-Mk-315"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-fm-LT2">
-                                <rect key="frame" x="0.0" y="56" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="HISTORY BOOKING" id="XQY-6I-qBe"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="r82-m4-yYf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="yqW-Hj-I71" id="ySo-72-2fb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Nf-0I-MgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6284.7328244274804" y="-35.211267605633807"/>
-        </scene>
-        <!--DETAIL_LAPTOP-->
-        <scene sceneID="Ifm-ah-CRc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="DETAIL_LAPTOP" id="WLK-Or-efj" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="DKA-eM-VQr"/>
+                <viewControllerPlaceholder storyboardName="MainPage" id="JF1-yT-z6V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dvS-LS-eTV"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WOA-7F-LeT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5z-Y1-2Oe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7045" y="-74"/>
+            <point key="canvasLocation" x="6283" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UK1-2v-3XE">
@@ -1031,7 +978,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -118,6 +118,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        // Navigate to ShowFormViewController if the "History" row is selected
+        if indexPath.row == 1 {
+            let storyboard = UIStoryboard(name: "History", bundle: nil)
+            if let showFormVC = storyboard.instantiateViewController(withIdentifier: "History") as? ShowFormViewController {
+                navigationController?.pushViewController(showFormVC, animated: true)
+            }
+        }
+        
         // Navigate to the SocialMediaViewController if the "Social Media" row is selected
         if indexPath.row == 4 {
             let storyboard = UIStoryboard(name: "Social", bundle: nil)
@@ -126,6 +134,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
+
 
     // MARK: - UIImagePickerControllerDelegate Methods
 
