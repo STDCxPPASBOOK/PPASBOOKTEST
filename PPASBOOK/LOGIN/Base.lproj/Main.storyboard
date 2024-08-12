@@ -59,7 +59,7 @@
                                                     <segue destination="mrx-dh-pfI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Cxb-jD-Q6C"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOGIN" translatesAutoresizingMaskIntoConstraints="NO" id="Sok-Vy-kQF">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LOGIN" translatesAutoresizingMaskIntoConstraints="NO" id="Sok-Vy-kQF">
                                                 <rect key="frame" x="0.0" y="94" width="375" height="198"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdG-Ff-2JQ">
@@ -174,7 +174,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOt-4w-xia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2888" y="93"/>
+            <point key="canvasLocation" x="2887" y="124"/>
         </scene>
         <!--MainPage-->
         <scene sceneID="qnE-eM-b2O">
