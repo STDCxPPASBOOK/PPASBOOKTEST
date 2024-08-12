@@ -108,7 +108,7 @@ class DetailViewController: UIViewController {
         
         BG.layer.borderWidth = 1.0
         BG.layer.borderColor = UIColor.black.cgColor
-        BG.layer.backgroundColor = UIColor.lightGray.cgColor
+        BG.layer.backgroundColor = UIColor.systemGray5.cgColor
         BG.layer.cornerRadius = BG.frame.height / 2
     }
 

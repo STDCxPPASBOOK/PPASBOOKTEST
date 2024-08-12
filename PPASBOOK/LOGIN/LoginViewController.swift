@@ -42,6 +42,9 @@ class LoginViewController: UIViewController {
             alertMessage = nil
         }
     }
+    
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+    }
 
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let noic = noicTextField.text, !noic.isEmpty,
