@@ -33,7 +33,7 @@ class SocialViewController: UIViewController, UICollectionViewDataSource, UIColl
     // MARK: - UICollectionViewDelegateFlowLayout
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width - 20, height: 100) // Adjust the size as needed
+        return CGSize(width: collectionView.frame.width - 20, height: 90) // Adjust the size as needed
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

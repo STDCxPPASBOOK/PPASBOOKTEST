@@ -22,7 +22,7 @@ class SocialCollectionViewCell: UICollectionViewCell {
 
             // Optional: Add a border
             self.layer.borderWidth = 1
-            self.layer.borderColor = UIColor.lightGray.cgColor
+            self.layer.borderColor = UIColor.black.cgColor
 
             // Optional: Add rounded corners to content view
             contentView.layer.cornerRadius = 10
