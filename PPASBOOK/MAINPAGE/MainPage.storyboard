@@ -98,6 +98,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="JTz-bX-xqq" firstAttribute="centerX" secondItem="n4a-90-jLt" secondAttribute="centerX" id="5dE-VL-NMy"/>
                                     <constraint firstItem="JTz-bX-xqq" firstAttribute="centerX" secondItem="BvK-IX-fYS" secondAttribute="centerX" constant="-16" id="ACB-xd-SIP"/>
