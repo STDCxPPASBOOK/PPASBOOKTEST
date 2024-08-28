@@ -59,9 +59,6 @@
                                                     <segue destination="mrx-dh-pfI" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Cxb-jD-Q6C"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LOGIN" translatesAutoresizingMaskIntoConstraints="NO" id="Sok-Vy-kQF">
-                                                <rect key="frame" x="0.0" y="94" width="375" height="198"/>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdG-Ff-2JQ">
                                                 <rect key="frame" x="205" y="598" width="151" height="57"/>
                                                 <state key="normal" title="Button"/>
@@ -92,12 +89,26 @@
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                             </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1" translatesAutoresizingMaskIntoConstraints="NO" id="6Ux-qb-Zsa">
+                                                <rect key="frame" x="16" y="39" width="360" height="161"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1 1" translatesAutoresizingMaskIntoConstraints="NO" id="nUl-mx-BlS">
+                                                <rect key="frame" x="16" y="208" width="215" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="84" id="mGQ-JR-X6v"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo1 2" translatesAutoresizingMaskIntoConstraints="NO" id="XOU-hB-PcF">
+                                                <rect key="frame" x="239" y="208" width="137" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="137" id="kvk-9A-2RK"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="xLH-Y3-zOY" firstAttribute="top" secondItem="5A1-7S-AYU" secondAttribute="bottom" constant="92" id="1lZ-DL-GxX"/>
                                             <constraint firstItem="5A1-7S-AYU" firstAttribute="top" secondItem="crz-PK-bPi" secondAttribute="bottom" constant="50" id="3KU-IJ-fNR"/>
-                                            <constraint firstItem="Sok-Vy-kQF" firstAttribute="centerX" secondItem="bxi-PX-epN" secondAttribute="centerX" id="3QB-hh-mq6"/>
                                             <constraint firstItem="5A1-7S-AYU" firstAttribute="trailing" secondItem="xLH-Y3-zOY" secondAttribute="trailing" id="5ye-mM-CrV"/>
                                             <constraint firstItem="uoC-0N-C3D" firstAttribute="centerX" secondItem="xLH-Y3-zOY" secondAttribute="centerX" id="64T-hK-and"/>
                                             <constraint firstItem="5A1-7S-AYU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aUi-KK-n6v" secondAttribute="leading" constant="20" symbolic="YES" id="6vb-an-Uh8"/>
@@ -106,26 +117,33 @@
                                             <constraint firstAttribute="bottom" secondItem="pdG-Ff-2JQ" secondAttribute="bottom" constant="145" id="Ghw-5X-njf"/>
                                             <constraint firstItem="JMQ-wt-Gwy" firstAttribute="leading" secondItem="xLH-Y3-zOY" secondAttribute="leading" id="H8j-3D-WX6"/>
                                             <constraint firstItem="JMQ-wt-Gwy" firstAttribute="top" secondItem="xLH-Y3-zOY" secondAttribute="bottom" constant="8" id="Hc5-Ul-oro"/>
-                                            <constraint firstItem="Sok-Vy-kQF" firstAttribute="top" secondItem="aUi-KK-n6v" secondAttribute="top" constant="94" id="JYw-aI-jKX"/>
+                                            <constraint firstItem="crz-PK-bPi" firstAttribute="top" secondItem="XOU-hB-PcF" secondAttribute="bottom" constant="8" symbolic="YES" id="KrN-zj-eac"/>
                                             <constraint firstItem="crz-PK-bPi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bxi-PX-epN" secondAttribute="leading" id="MnS-ex-XGL"/>
+                                            <constraint firstItem="nUl-mx-BlS" firstAttribute="leading" secondItem="crz-PK-bPi" secondAttribute="leading" id="O1P-yS-Tm5"/>
                                             <constraint firstAttribute="bottom" secondItem="JMQ-wt-Gwy" secondAttribute="bottom" constant="145" id="OBs-lN-ytj"/>
                                             <constraint firstItem="crz-PK-bPi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bxi-PX-epN" secondAttribute="trailing" id="P07-hX-eQG"/>
                                             <constraint firstItem="5A1-7S-AYU" firstAttribute="centerY" secondItem="bxi-PX-epN" secondAttribute="centerY" id="PAe-wN-lbW"/>
-                                            <constraint firstItem="crz-PK-bPi" firstAttribute="top" secondItem="Sok-Vy-kQF" secondAttribute="bottom" constant="8" symbolic="YES" id="QJ3-Zk-a7N"/>
+                                            <constraint firstItem="XOU-hB-PcF" firstAttribute="leading" secondItem="nUl-mx-BlS" secondAttribute="trailing" constant="8" symbolic="YES" id="TE3-oj-ifW"/>
+                                            <constraint firstItem="nUl-mx-BlS" firstAttribute="leading" secondItem="bxi-PX-epN" secondAttribute="leading" id="TT9-22-F7b"/>
                                             <constraint firstItem="pdG-Ff-2JQ" firstAttribute="top" secondItem="xLH-Y3-zOY" secondAttribute="bottom" constant="8" symbolic="YES" id="W5C-Cd-G0I"/>
                                             <constraint firstItem="xLH-Y3-zOY" firstAttribute="leading" secondItem="aUi-KK-n6v" secondAttribute="leading" constant="36" id="XMU-xW-83M"/>
                                             <constraint firstItem="JMQ-wt-Gwy" firstAttribute="top" secondItem="aUi-KK-n6v" secondAttribute="top" constant="598" id="Z4W-te-xaW"/>
-                                            <constraint firstItem="Sok-Vy-kQF" firstAttribute="leading" secondItem="aUi-KK-n6v" secondAttribute="leading" id="b2d-db-41g"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sok-Vy-kQF" secondAttribute="trailing" id="bqL-Yy-grA"/>
+                                            <constraint firstItem="6Ux-qb-Zsa" firstAttribute="top" secondItem="aUi-KK-n6v" secondAttribute="top" constant="39" id="aG0-II-PGO"/>
+                                            <constraint firstItem="nUl-mx-BlS" firstAttribute="top" secondItem="6Ux-qb-Zsa" secondAttribute="bottom" constant="8" symbolic="YES" id="e4e-9M-z9l"/>
                                             <constraint firstItem="bxi-PX-epN" firstAttribute="centerX" secondItem="uoC-0N-C3D" secondAttribute="centerX" id="fXX-Oa-sRx"/>
+                                            <constraint firstItem="6Ux-qb-Zsa" firstAttribute="leading" secondItem="nUl-mx-BlS" secondAttribute="leading" id="iCC-Bo-v4A"/>
                                             <constraint firstItem="xLH-Y3-zOY" firstAttribute="top" secondItem="uoC-0N-C3D" secondAttribute="bottom" constant="8" symbolic="YES" id="jDQ-Yh-PvH"/>
                                             <constraint firstItem="uoC-0N-C3D" firstAttribute="leading" secondItem="aUi-KK-n6v" secondAttribute="leading" constant="79" id="lcN-3z-9Sc"/>
+                                            <constraint firstItem="crz-PK-bPi" firstAttribute="top" secondItem="nUl-mx-BlS" secondAttribute="bottom" constant="8" symbolic="YES" id="oAP-cg-TL7"/>
                                             <constraint firstItem="pdG-Ff-2JQ" firstAttribute="trailing" secondItem="xLH-Y3-zOY" secondAttribute="trailing" id="ox7-VS-PL1"/>
                                             <constraint firstAttribute="height" constant="800" id="pLR-3q-JqU"/>
+                                            <constraint firstItem="XOU-hB-PcF" firstAttribute="trailing" secondItem="bxi-PX-epN" secondAttribute="trailing" id="plK-dv-znK"/>
                                             <constraint firstAttribute="trailing" secondItem="5A1-7S-AYU" secondAttribute="trailing" constant="37" id="sw3-4k-xeX"/>
                                             <constraint firstItem="JMQ-wt-Gwy" firstAttribute="baseline" secondItem="pdG-Ff-2JQ" secondAttribute="firstBaseline" id="t9Y-Eh-pDh"/>
+                                            <constraint firstItem="nUl-mx-BlS" firstAttribute="top" secondItem="XOU-hB-PcF" secondAttribute="top" id="uTI-iM-yf7"/>
                                             <constraint firstItem="pdG-Ff-2JQ" firstAttribute="top" secondItem="aUi-KK-n6v" secondAttribute="top" constant="598" id="wsA-GX-Ge1"/>
                                             <constraint firstItem="pdG-Ff-2JQ" firstAttribute="leading" secondItem="JMQ-wt-Gwy" secondAttribute="trailing" constant="26" id="xT6-qc-hwB"/>
+                                            <constraint firstItem="6Ux-qb-Zsa" firstAttribute="trailing" secondItem="XOU-hB-PcF" secondAttribute="trailing" id="xgs-pv-Fak"/>
                                             <constraint firstItem="uoC-0N-C3D" firstAttribute="top" secondItem="bxi-PX-epN" secondAttribute="bottom" constant="30" id="zdO-9Q-PsB"/>
                                             <constraint firstItem="bxi-PX-epN" firstAttribute="top" secondItem="crz-PK-bPi" secondAttribute="bottom" constant="30" id="zhf-cJ-0xX"/>
                                         </constraints>
@@ -164,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5I-Ok-BA5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071.1999999999998" y="-333.28335832083962"/>
+            <point key="canvasLocation" x="2070.9923664122139" y="-333.80281690140845"/>
         </scene>
         <!--Register-->
         <scene sceneID="AcU-l9-YXq">
@@ -213,8 +231,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOGIN" width="249.5" height="128"/>
         <image name="eye.fill" catalog="system" width="128" height="80"/>
+        <image name="logo1" width="332.5" height="187.5"/>
+        <image name="logo1 1" width="328" height="190"/>
+        <image name="logo1 2" width="212.5" height="293"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
