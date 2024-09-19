@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             guard let strongSelf = self else { return }
             if let error = error {
-                strongSelf.showAlert(message: error.localizedDescription)
+                strongSelf.showAlert(message: "Kata Laluan Salah")
             } else {
                 strongSelf.showAlert(message: "Login Berjaya!", isError: false)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

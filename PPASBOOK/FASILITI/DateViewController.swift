@@ -100,21 +100,24 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        // Check if the selected date is in the past
+        // Semak jika tarikh yang dipilih adalah masa lampau
         if Calendar.current.startOfDay(for: date) < Calendar.current.startOfDay(for: Date()) {
-            let alert = UIAlertController(title: "Unavailable", message: "Booking is not available for past dates.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Tidak Tersedia", message: "Tempahan tidak tersedia untuk tarikh yang lalu.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
         
         let weekday = Calendar.current.component(.weekday, from: date)
-        if weekday == 7 || weekday == 1 { // 1 = Sunday, 7 = Saturday
-            let alert = UIAlertController(title: "Unavailable", message: "Booking is not available on weekends.", preferredStyle: .alert)
+        if weekday == 7 || weekday == 1 { // 1 = Ahad, 7 = Sabtu
+            let alert = UIAlertController(title: "Tidak Tersedia", message: "Tempahan tidak tersedia pada hujung minggu.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
+        
+        // Lakukan segue ke halaman seterusnya
+        performSegue(withIdentifier: "showNextPage", sender: date)
 
         let slots = generateTimeSlots(for: date)
         let bookedSlots = bookings.filter { booking in
@@ -125,6 +128,16 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
         
         // Present the slots to the user
         presentTimeSlots(slots: slots, bookedSlots: bookedSlots, selectedDate: date)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNextPage" {
+            if let addOnViewController = segue.destination as? AddOnViewController,
+               let selectedDate = sender as? Date {
+                // Hantar tarikh yang dipilih kepada AddOnViewController
+                addOnViewController.selectedDate = selectedDate
+            }
+        }
     }
     
     func presentTimeSlots(slots: [TimeSlot], bookedSlots: [Booking], selectedDate: Date) {
@@ -187,6 +200,8 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
         self.calendar.reloadData()
     }
 }
+
+
 
 struct Booking {
     var id: String

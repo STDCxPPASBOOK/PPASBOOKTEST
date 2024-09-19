@@ -146,12 +146,23 @@
                         <outlet property="warna1" destination="G7e-2z-26n" id="Mab-5r-0qd"/>
                         <outlet property="warna2" destination="hxs-xe-PBr" id="NhA-I5-hvg"/>
                         <outlet property="warna3" destination="Khe-7u-sEi" id="CfA-0O-MWd"/>
+                        <segue destination="Cqq-mP-B56" kind="show" identifier="showNextPage" id="32l-SY-waB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgw-ln-MSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="q3v-Rb-T7G" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2153.4351145038167" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="2135" y="3"/>
+        </scene>
+        <!--AddOnViewController-->
+        <scene sceneID="uek-Sq-vDu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddOn" referencedIdentifier="AddOnViewController" id="Cqq-mP-B56" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="x93-Nc-vKQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbI-vp-3NC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="3"/>
         </scene>
     </scenes>
     <resources>

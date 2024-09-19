@@ -1,6 +1,8 @@
 import UIKit
 
 class AddOnViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    var selectedDate: Date?
 
     @IBOutlet weak var Cup1: UIImageView!
     @IBOutlet weak var Wifi2: UIImageView!
@@ -24,6 +26,12 @@ class AddOnViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+                
+                // Contoh penggunaan selectedDate
+                if let date = selectedDate {
+                    print("Tarikh yang dipilih: \(date)")
+                }
         
         tableView1.dataSource = self
         tableView1.delegate = self
