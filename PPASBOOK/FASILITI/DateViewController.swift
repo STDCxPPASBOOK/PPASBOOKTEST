@@ -8,7 +8,9 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
     @IBOutlet var warna2: UIView!
     @IBOutlet var warna3: UIView!
     @IBOutlet weak var calendar: FSCalendar!
-
+    @IBOutlet var Label2: UILabel!
+    @IBOutlet var Label3: UILabel!
+    
     var data: YourDataModel? // Property to store received data
     var bookings: [Booking] = []
     let mockFacilityID = "Bilik Meeting"
@@ -22,6 +24,8 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
         // Reload data if it's updated or reset
         if let data = data {
             label1.text = data.label1Text
+            Label2.text = data.label2Text // Memaparkan data yang sama di Label2
+            Label3.text = data.label3Text
         }
     }
 
@@ -136,6 +140,12 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
                let selectedDate = sender as? Date {
                 // Hantar tarikh yang dipilih kepada AddOnViewController
                 addOnViewController.selectedDate = selectedDate
+
+                // Hantar data lain kepada AddOnViewController
+                if let data = self.data {
+                    addOnViewController.label1Text = data.label1Text
+                    addOnViewController.label3Text = data.label3Text
+                }
             }
         }
     }

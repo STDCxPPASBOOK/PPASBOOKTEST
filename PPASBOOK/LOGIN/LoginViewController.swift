@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         let email = noic + "@ppasbook.com"
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             guard let strongSelf = self else { return }
-            if let error = error {
+            if error != nil {
                 strongSelf.showAlert(message: "Kata Laluan Salah")
             } else {
                 strongSelf.showAlert(message: "Login Berjaya!", isError: false)
