@@ -28,12 +28,13 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet var image1: UIButton!
     @IBOutlet var image2: UIButton!
     @IBOutlet var image3: UIButton!
+    @IBOutlet var bg1: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Konfigurasi background view dan gambar
-        bg.clipToBg()
+        bg.clipTopCorners(radius: 50.0)
         image1.clipToImage()
         image2.clipToImage()
         image3.clipToImage()
@@ -45,7 +46,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         setupMainCollectionView()
         
         // Tambahkan background dan collectionView utama ke view
-        view.addSubview(bg)
+        //view.addSubview(bg)
         view.addSubview(collectionView)
         
         // Bawa background dan collectionView utama ke depan
@@ -119,13 +120,14 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         // Buat layout untuk collectionView utama (bawah)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumInteritemSpacing = 5 // Jarak mendatar antara item
-        layout.minimumLineSpacing = 5 // Jarak menegak antara baris
+        layout.minimumInteritemSpacing = 10 // Jarak mendatar antara item
+        layout.minimumLineSpacing = 10 // Jarak menegak antara baris
         
         // Kira posisi dan saiz collectionView utama
-        let collectionViewHeight: CGFloat = 280
-        let tabBarHeight: CGFloat = 83  // Sesuaikan dengan ketinggian tab bar anda
-        let collectionViewY = view.frame.height - collectionViewHeight - tabBarHeight
+        let collectionViewHeight: CGFloat = 200
+        let collectionViewY: CGFloat = 570
+        //let tabBarHeight: CGFloat = 100  // Sesuaikan dengan ketinggian tab bar anda
+        //let collectionViewY = view.frame.height - collectionViewHeight - tabBarHeight
         
         // Buat collectionView utama dengan layout yang dibuat
         collectionView = UICollectionView(frame: CGRect(x: 0, y: collectionViewY, width: view.frame.width, height: collectionViewHeight), collectionViewLayout: layout)
@@ -188,12 +190,17 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == topCollectionView {
-            return topImageSizes[indexPath.item]
+            // Ubah saiz item collectionView atas
+            let width: CGFloat = 150 // Ubah saiz lebar yang dikehendaki
+            let height: CGFloat = 150 // Ubah saiz tinggi yang dikehendaki
+            return CGSize(width: width, height: height)
         } else {
-            return imageSizes[indexPath.item]
+            // Ubah saiz item collectionView utama
+            let width: CGFloat = 175 // Ubah saiz lebar yang dikehendaki
+            let height: CGFloat = 175 // Ubah saiz tinggi yang dikehendaki
+            return CGSize(width: width, height: height)
         }
     }
 }
@@ -238,13 +245,13 @@ class MyCustomCollectionViewCell: UICollectionViewCell {
         
         // Inisialisasi UIImageView dalam cell
         button = UIButton(frame: contentView.bounds)
-        button.contentMode = .scaleAspectFit // Sesuaikan jika diperlukan
-        button.layer.cornerRadius = 10 // Corner radius untuk imageView dalam cell
-        button.clipsToBounds = true
+        button.contentMode = .scaleAspectFill // Sesuaikan jika diperlukan
+        //button.layer.cornerRadius = 10 // Corner radius untuk imageView dalam cell
+        //button.clipsToBounds = true
         contentView.addSubview(button)
         
         // Tetapkan penampilan button (border, dll.)
-        button.layer.borderColor = UIColor.black.cgColor
+        //button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = 1.0
     }
     
@@ -260,12 +267,17 @@ class MyCustomCollectionViewCell: UICollectionViewCell {
 
 // Extensions untuk UIView dan UIButton
 extension UIView {
-    func clipToBg() {
+    func clipTopCorners(radius: CGFloat) {
         self.layoutIfNeeded()
-        self.layer.borderColor = UIColor.systemTeal.cgColor
-        self.layer.borderWidth = 5.0
-        self.layer.cornerRadius = self.frame.height / 10
-        self.clipsToBounds = true
+        
+        // Buat mask path hanya untuk bahagian atas
+        let maskPath = UIBezierPath(roundedRect: self.bounds,
+                                    byRoundingCorners: [.topLeft, .topRight],
+                                    cornerRadii: CGSize(width: radius, height: radius))
+
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        self.layer.mask = shape
     }
 }
 
