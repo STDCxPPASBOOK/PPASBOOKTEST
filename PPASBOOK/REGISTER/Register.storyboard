@@ -17,24 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-ZM-j68">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-ZM-j68">
                                 <rect key="frame" x="0.0" y="-24" width="393" height="900"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n2Y-aw-eiW">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 3" translatesAutoresizingMaskIntoConstraints="NO" id="INd-It-hWY">
+                                        <rect key="frame" x="0.0" y="24" width="393" height="852"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n2Y-aw-eiW">
                                         <rect key="frame" x="16" y="146" width="361" height="582"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-o8-gQj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-o8-gQj">
                                         <rect key="frame" x="16" y="736" width="361" height="39"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-b9-qD2">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFM-b9-qD2">
                                         <rect key="frame" x="67" y="783" width="258" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="EBp-sD-nW3"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="REGISTER">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,10 +48,34 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="leading" secondItem="J4W-ZM-j68" secondAttribute="leading" id="0dc-96-SOc"/>
+                                    <constraint firstItem="n2Y-aw-eiW" firstAttribute="leading" secondItem="J4W-ZM-j68" secondAttribute="leading" constant="16" id="4G0-35-4mB"/>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="centerX" secondItem="QFM-b9-qD2" secondAttribute="centerX" id="AhA-rw-JvU"/>
+                                    <constraint firstItem="QFM-b9-qD2" firstAttribute="top" secondItem="bqy-o8-gQj" secondAttribute="bottom" constant="8" symbolic="YES" id="KSy-aZ-6yU"/>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="centerY" secondItem="J4W-ZM-j68" secondAttribute="centerY" id="T9F-ks-Aq8"/>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="centerX" secondItem="n2Y-aw-eiW" secondAttribute="centerX" id="W5H-4r-uQZ"/>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="centerX" secondItem="bqy-o8-gQj" secondAttribute="centerX" id="W5K-UJ-J7A"/>
+                                    <constraint firstItem="QFM-b9-qD2" firstAttribute="centerX" secondItem="n2Y-aw-eiW" secondAttribute="centerX" id="Wij-oD-h9U"/>
+                                    <constraint firstItem="QFM-b9-qD2" firstAttribute="leading" secondItem="J4W-ZM-j68" secondAttribute="leading" constant="67" id="dc0-CP-Z1O"/>
+                                    <constraint firstAttribute="trailing" secondItem="INd-It-hWY" secondAttribute="trailing" id="e9h-rZ-bnc"/>
+                                    <constraint firstAttribute="bottom" secondItem="QFM-b9-qD2" secondAttribute="bottom" constant="65" id="hoI-Zk-AFJ"/>
+                                    <constraint firstItem="bqy-o8-gQj" firstAttribute="top" secondItem="n2Y-aw-eiW" secondAttribute="bottom" constant="8" symbolic="YES" id="iR8-LQ-PyG"/>
+                                    <constraint firstItem="n2Y-aw-eiW" firstAttribute="top" secondItem="J4W-ZM-j68" secondAttribute="top" constant="146" id="n6s-4k-5mX"/>
+                                    <constraint firstAttribute="bottom" secondItem="n2Y-aw-eiW" secondAttribute="bottom" constant="172" id="oTE-8a-Gl8"/>
+                                    <constraint firstItem="INd-It-hWY" firstAttribute="top" secondItem="J4W-ZM-j68" secondAttribute="top" constant="24" id="v8M-79-BST"/>
+                                    <constraint firstItem="n2Y-aw-eiW" firstAttribute="leading" secondItem="bqy-o8-gQj" secondAttribute="leading" id="wId-Qz-uCX"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hEi-xh-ceM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J4W-ZM-j68" secondAttribute="trailing" id="4Oo-Yg-TAp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="J4W-ZM-j68" secondAttribute="bottom" constant="-58" id="8b8-bE-Mue"/>
+                            <constraint firstItem="J4W-ZM-j68" firstAttribute="leading" secondItem="Lv0-mu-RWD" secondAttribute="leading" id="9Hw-pw-AF5"/>
+                            <constraint firstItem="J4W-ZM-j68" firstAttribute="centerY" secondItem="Lv0-mu-RWD" secondAttribute="centerY" id="y3z-xE-fbY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NEW USER" id="FOT-ng-tRe">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="LgE-I2-QMb">
@@ -102,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image 3" width="188.66667175292969" height="419.33334350585938"/>
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
