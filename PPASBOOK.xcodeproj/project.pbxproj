@@ -210,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
-				7CCC81062C21659F0092F741 /* LOGIN */,
 				7CCC80BF2C1FD9EA0092F741 /* REGISTER */,
 				3DE50E5B2C3E369800DB2D78 /* PROFILES */,
 				7CCC80FD2C2142300092F741 /* MAINPAGE */,
@@ -228,8 +227,16 @@
 		3DC57C442CA5538800F7D4EF /* ADMIN */ = {
 			isa = PBXGroup;
 			children = (
+				3DC57C452CA553DA00F7D4EF /* MainPage */,
 			);
 			path = ADMIN;
+			sourceTree = "<group>";
+		};
+		3DC57C452CA553DA00F7D4EF /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainPage;
 			sourceTree = "<group>";
 		};
 		3DE50E432C3D19DF00DB2D78 /* LOCATION */ = {
@@ -336,8 +343,7 @@
 				7CDA7B852C129730002F7C0B /* Main.storyboard */,
 				7CCC80972C1F51050092F741 /* LoginViewController.swift */,
 			);
-			name = LOGIN;
-			path = ../LOGIN;
+			path = LOGIN;
 			sourceTree = "<group>";
 		};
 		7CDA7B732C129730002F7C0B = {
@@ -367,6 +373,7 @@
 				3D7963E82C605E0B00A876A8 /* GoogleService-Info.plist */,
 				7CDA7B882C129731002F7C0B /* Assets.xcassets */,
 				32FE76A72C57323A0093FF31 /* room.usdz */,
+				7CCC81062C21659F0092F741 /* LOGIN */,
 				7CE8D9662C606CAD00E74CF5 /* Localizable.strings */,
 			);
 			path = PPASBOOK;
