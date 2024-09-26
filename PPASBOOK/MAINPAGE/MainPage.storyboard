@@ -144,8 +144,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0sz-Q7-787"/>
                     <connections>
-                        <outlet property="bg" destination="DMK-dv-v8Q" id="EBh-VR-AET"/>
-                        <outlet property="bg1" destination="DMK-dv-v8Q" id="6ZK-p0-Lo0"/>
+                        <outlet property="bg" destination="DMK-dv-v8Q" id="hEv-Mw-g7s"/>
+                        <outlet property="bg1" destination="znU-PK-9cC" id="9He-kv-EH6"/>
                         <outlet property="image1" destination="3on-Ms-cia" id="I21-za-Ri0"/>
                         <outlet property="image2" destination="HHR-dc-AXR" id="hWD-Fy-AzT"/>
                         <outlet property="image3" destination="xR9-la-ybg" id="a0c-2e-76U"/>

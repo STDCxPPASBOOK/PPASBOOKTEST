@@ -48,10 +48,13 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         // Tambahkan background dan collectionView utama ke view
         //view.addSubview(bg)
         view.addSubview(collectionView)
+        view.addSubview(topCollectionView)
         
         // Bawa background dan collectionView utama ke depan
         view.bringSubviewToFront(bg)
+        view.bringSubviewToFront(bg1)
         view.bringSubviewToFront(collectionView)
+        view.bringSubviewToFront(topCollectionView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -193,8 +196,8 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == topCollectionView {
             // Ubah saiz item collectionView atas
-            let width: CGFloat = 150 // Ubah saiz lebar yang dikehendaki
-            let height: CGFloat = 150 // Ubah saiz tinggi yang dikehendaki
+            let width: CGFloat = 180 // Ubah saiz lebar yang dikehendaki
+            let height: CGFloat = 180 // Ubah saiz tinggi yang dikehendaki
             return CGSize(width: width, height: height)
         } else {
             // Ubah saiz item collectionView utama
@@ -216,13 +219,13 @@ class TopCollectionViewCell: UICollectionViewCell {
         // Inisialisasi UIButton dalam cell
         button = UIButton(frame: contentView.bounds)
         button.contentMode = .scaleAspectFit // Sesuaikan jika diperlukan
-        button.layer.cornerRadius = 10 // Corner radius untuk button dalam cell
-        button.clipsToBounds = true
+        //button.layer.cornerRadius = 10 // Corner radius untuk button dalam cell
+        //button.clipsToBounds = true
         contentView.addSubview(button)
         
         // Tetapkan penampilan button (border, dll.)
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 1.0
+        //button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 0.5
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -252,7 +255,7 @@ class MyCustomCollectionViewCell: UICollectionViewCell {
         
         // Tetapkan penampilan button (border, dll.)
         //button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 1.0
+        button.layer.borderWidth = 0.5
     }
     
     required init?(coder aDecoder: NSCoder) {
