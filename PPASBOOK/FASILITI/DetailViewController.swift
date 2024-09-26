@@ -9,25 +9,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var slideButton: UIButton!
     @IBOutlet var BG: UIView!
-    @IBOutlet var duaDLayout: UIButton!
-    @IBOutlet var tigaDLayout: UIButton!
     @IBOutlet weak var duaDImageView: UIImageView!
     @IBOutlet weak var tigaDImageView: SCNView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     var scene: SCNScene!
     var modelNode: SCNNode!
     var initialScale: SCNVector3!
     var data: YourDataModel?
     var originalPosition: CGPoint?
-    var facility: Facility?
     
-    struct Facility {
-        let name: String
-        let capacity: Int
-        let price: Double
-    }
-
-
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -35,7 +26,6 @@ class DetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,36 +45,31 @@ class DetailViewController: UIViewController {
             label3.text = data.label3Text
         }
         
-                duaDImageView.isHidden = false
-                duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
-                tigaDImageView.isHidden = true
-                tigaDImageView.scene = nil
-        // Initialize the scene
-        scene = SCNScene()
+        // Tunjukkan paparan 2D pada permulaan
+        duaDImageView.isHidden = false
+        duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan imej sebenar anda
+        tigaDImageView.isHidden = true
+        tigaDImageView.scene = nil
         
-        // Load the USDZ model
+        // Initialize the 3D scene
+        scene = SCNScene()
         guard let usdScene = SCNScene(named: "room.usdz") else {
             fatalError("Unable to load USDZ file.")
         }
         
-        // Add the model to the scene
         modelNode = usdScene.rootNode.childNodes.first!
         scene.rootNode.addChildNode(modelNode)
-        
-        // Save the initial scale
         initialScale = modelNode.scale
-        
-        // Set the scene to the view
         tigaDImageView.scene = scene
-        
-        // Allow user interaction
         tigaDImageView.allowsCameraControl = true
         tigaDImageView.autoenablesDefaultLighting = true
         
-        // Add gesture recognizers
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
         tigaDImageView.addGestureRecognizer(pinchGesture)
         
+        // Set initial segment index
+        segmentedControl.selectedSegmentIndex = 0
+        updateViewBasedOnSegment(segmentedControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +77,6 @@ class DetailViewController: UIViewController {
         
         resetSlideButtonPosition()
         
-        // Reload data if it's updated or reset
         if let data = data {
             imageView.image = UIImage(named: data.imageName)
             label1.text = data.label1Text
@@ -128,19 +112,17 @@ class DetailViewController: UIViewController {
             break
         }
     }
+    
     @objc func handlePinch(_ gestureRecognizer: UIPinchGestureRecognizer) {
         if gestureRecognizer.state == .changed || gestureRecognizer.state == .ended {
-            // Apply incremental scale to the model
             let scale = Float(gestureRecognizer.scale)
             modelNode.scale = SCNVector3(initialScale.x * scale, initialScale.y * scale, initialScale.z * scale)
             
             if gestureRecognizer.state == .ended {
-                // Update the initial scale when the gesture ends
                 initialScale = modelNode.scale
             }
         }
     }
-    
     
     private func resetSlideButtonPosition() {
         UIView.animate(withDuration: 0.3) {
@@ -148,20 +130,28 @@ class DetailViewController: UIViewController {
         }
     }
     
-    @IBAction func duaDLayoutTapped(_ sender: UIButton) {
+    @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
+        print("Segment changed to index: \(sender.selectedSegmentIndex)")
+        updateViewBasedOnSegment(sender)
+    }
+    
+    // Function to update view based on selected segment
+    private func updateViewBasedOnSegment(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            // Tunjukkan paparan 2D
+            print("Switching to 2D view")
             duaDImageView.isHidden = false
-            duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan nama gambar sebenar anda
             tigaDImageView.isHidden = true
-            tigaDImageView.scene = nil
+        case 1:
+            // Tunjukkan paparan 3D
+            print("Switching to 3D view")
+            tigaDImageView.isHidden = false
+            duaDImageView.isHidden = true
+        default:
+            print("Invalid segment index")
         }
-
-        @IBAction func tigaDLayoutTapped(_ sender: UIButton) {
-            
-                tigaDImageView.isHidden = false
-                tigaDImageView.scene = scene // Reuse the existing scene
-                duaDImageView.isHidden = true
-                duaDImageView.image = nil
-        }
+    }
     
     @IBAction func unwindToDetailViewController(segue: UIStoryboardSegue) {
         if segue.source is DateViewController {
@@ -170,14 +160,14 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func navigateToNextPage() {
-           performSegue(withIdentifier: "goToDate", sender: self)
-       }
+        performSegue(withIdentifier: "goToDate", sender: self)
+    }
 
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if segue.identifier == "goToDate" {
-               if let dateVC = segue.destination as? DateViewController {
-                   dateVC.data = self.data // Mengatur data di DateViewController
-               }
-           }
-       }
-   }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDate" {
+            if let dateVC = segue.destination as? DateViewController {
+                dateVC.data = self.data
+            }
+        }
+    }
+}

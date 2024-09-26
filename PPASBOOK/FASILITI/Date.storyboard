@@ -154,7 +154,6 @@
                                             <constraint firstItem="qqP-lz-KYV" firstAttribute="leading" secondItem="nlM-xa-1Xb" secondAttribute="leading" constant="30" id="oja-Ku-XAS"/>
                                             <constraint firstItem="0K3-r6-wO8" firstAttribute="trailing" secondItem="Wcd-F5-ByU" secondAttribute="trailing" id="qL1-hc-9vr"/>
                                             <constraint firstItem="TML-mx-T24" firstAttribute="top" secondItem="Wcd-F5-ByU" secondAttribute="bottom" constant="15" id="rTJ-3L-Q2g"/>
-                                            <constraint firstAttribute="height" constant="900" id="sQG-Jd-Mlg"/>
                                             <constraint firstItem="Wcd-F5-ByU" firstAttribute="trailing" secondItem="TML-mx-T24" secondAttribute="trailing" id="zLw-oM-UhU"/>
                                         </constraints>
                                     </view>

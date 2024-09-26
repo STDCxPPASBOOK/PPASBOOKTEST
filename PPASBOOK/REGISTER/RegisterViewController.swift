@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerButton.clipToR()
         
         setupFields()
         configureUI()
@@ -34,9 +35,6 @@ class RegisterViewController: UIViewController {
     }
 
     func configureUI() {
-        registerButton.layer.cornerRadius = 10
-        registerButton.layer.borderColor = UIColor.systemTeal.cgColor
-        registerButton.layer.borderWidth = 1.0
         alertLabel.isHidden = true
         
         stackView.axis = .vertical
@@ -167,6 +165,16 @@ extension UITextField {
         self.layer.borderColor = UIColor.systemTeal.cgColor
         self.layer.borderWidth = 3.0 // Border width
         self.layer.cornerRadius = 35 // Corner radius
+        self.clipsToBounds = true
+    }
+}
+
+extension UIButton {
+    func clipToR() {
+        self.layoutIfNeeded()
+        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
     }
 }

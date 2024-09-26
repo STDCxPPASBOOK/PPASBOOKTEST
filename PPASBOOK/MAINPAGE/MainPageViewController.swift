@@ -5,7 +5,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
     // Properti untuk collectionView atas
     var topCollectionView: UICollectionView!
     let topCellIdentifier = "TopCell"
-    let topData = ["top1", "top2", "top3"]
+    let topData = ["top4", "top5", "top6", "top7"]
     let topURLs = ["", "", "https://www.instagram.com/p/Cj8BfMtJUI0/?utm_source=ig_web_copy_link"]
     var topImageSizes: [CGSize] = []
     
@@ -89,7 +89,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         topLayout.minimumLineSpacing = 5
         
         // Kira posisi dan saiz collectionView atas
-        let topCollectionViewHeight: CGFloat = 250
+        let topCollectionViewHeight: CGFloat = 210
         let topCollectionViewY: CGFloat = 170 // Sesuaikan dengan posisi yang diinginkan
         
         // Buat collectionView atas dengan layout yang dibuat
@@ -123,7 +123,7 @@ class MainPageViewController: UIViewController, UICollectionViewDataSource, UICo
         layout.minimumLineSpacing = 5 // Jarak menegak antara baris
         
         // Kira posisi dan saiz collectionView utama
-        let collectionViewHeight: CGFloat = 245
+        let collectionViewHeight: CGFloat = 280
         let tabBarHeight: CGFloat = 83  // Sesuaikan dengan ketinggian tab bar anda
         let collectionViewY = view.frame.height - collectionViewHeight - tabBarHeight
         

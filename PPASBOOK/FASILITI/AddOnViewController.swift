@@ -48,6 +48,8 @@ class AddOnViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ButtonApply.clipToA()
 
         // Konfigurasi untuk UIPickerView
         timePicker.delegate = self
@@ -190,5 +192,15 @@ class AddOnViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
         completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
+    }
+}
+
+extension UIButton {
+    func clipToA() {
+        self.layoutIfNeeded()
+        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
     }
 }

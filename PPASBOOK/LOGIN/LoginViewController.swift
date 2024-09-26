@@ -18,10 +18,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         noicTextField.clipToCircle()
         passwordTextField.clipToCircle()
-
-        loginButton.layer.cornerRadius = 10
-        loginButton.layer.borderColor = UIColor.systemTeal.cgColor
-        loginButton.layer.borderWidth = 1.0
+        loginButton.clipToCircle()
+        newUser.clipToCircle()
+        
         alertLabel.isHidden = true
 
         togglePasswordButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
@@ -128,11 +127,20 @@ class LoginViewController: UIViewController {
 extension UITextField {
     func clipToCircle() {
         self.layoutIfNeeded()
-        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderColor = UIColor.systemYellow.cgColor
         self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.cornerRadius = self.frame.height / 5
         self.clipsToBounds = true
     }
 }
 
+extension UIButton {
+    func clipToCircle() {
+        self.layoutIfNeeded()
+        self.layer.borderColor = UIColor.systemTeal.cgColor
+        self.layer.borderWidth = 2.0
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
+}
 
