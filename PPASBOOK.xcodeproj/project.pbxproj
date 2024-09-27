@@ -181,8 +181,7 @@
 				328F06E02C50B7D4004E82C7 /* LDP.storyboard */,
 				328F06E12C50B7D4004E82C7 /* Booking1ViewController.swift */,
 			);
-			name = BOOKING;
-			path = ../BOOKING;
+			path = BOOKING;
 			sourceTree = "<group>";
 		};
 		32935C8A2C5095DE00B9EFD2 /* PINJAMAN2 */ = {
@@ -202,24 +201,12 @@
 				328A26212C69AC5100DEAC10 /* Custom2TableViewCell.swift */,
 				328A26272C69AD0F00DEAC10 /* DetailDesktopViewController.swift */,
 			);
-			name = PINJAMAN2;
-			path = ../PINJAMAN2;
+			path = PINJAMAN2;
 			sourceTree = "<group>";
 		};
 		3DC57C432CA5537900F7D4EF /* USER */ = {
 			isa = PBXGroup;
 			children = (
-				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
-				7CCC80BF2C1FD9EA0092F741 /* REGISTER */,
-				3DE50E5B2C3E369800DB2D78 /* PROFILES */,
-				7CCC80FD2C2142300092F741 /* MAINPAGE */,
-				7C271BD82C3503A300050986 /* FASILITI */,
-				3DE50E432C3D19DF00DB2D78 /* LOCATION */,
-				3DE50E612C3E647E00DB2D78 /* HISTORY */,
-				328F06DF2C50B7AC004E82C7 /* BOOKING */,
-				7CF322142C3CC95500877517 /* PINJAMAN */,
-				32935C8A2C5095DE00B9EFD2 /* PINJAMAN2 */,
-				7CB35EEE2C5342F000141F60 /* BOOKFLY2U */,
 			);
 			path = USER;
 			sourceTree = "<group>";
@@ -247,8 +234,7 @@
 				3DE50E412C3D19DF00DB2D78 /* PPASLocationTableViewCell.swift */,
 				3DE50E422C3D19DF00DB2D78 /* PPASLocationViewController.swift */,
 			);
-			name = LOCATION;
-			path = ../LOCATION;
+			path = LOCATION;
 			sourceTree = "<group>";
 		};
 		3DE50E5B2C3E369800DB2D78 /* PROFILES */ = {
@@ -260,8 +246,7 @@
 				7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */,
 				7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */,
 			);
-			name = PROFILES;
-			path = ../PROFILES;
+			path = PROFILES;
 			sourceTree = "<group>";
 		};
 		3DE50E612C3E647E00DB2D78 /* HISTORY */ = {
@@ -273,7 +258,7 @@
 				32053C1A2C65CE9D0059B130 /* DetailLaptopViewController.swift */,
 			);
 			name = HISTORY;
-			path = ../../HISTORY;
+			path = ../HISTORY;
 			sourceTree = "<group>";
 		};
 		7C271BD82C3503A300050986 /* FASILITI */ = {
@@ -290,8 +275,7 @@
 				326E80142C69FCD700818A2E /* AddOn.storyboard */,
 				32EDD73B2C6A009800A35019 /* AddOnViewController.swift */,
 			);
-			name = FASILITI;
-			path = ../FASILITI;
+			path = FASILITI;
 			sourceTree = "<group>";
 		};
 		7CB35EEE2C5342F000141F60 /* BOOKFLY2U */ = {
@@ -300,8 +284,7 @@
 				7CB35EF32C53449200141F60 /* BookFly2U.storyboard */,
 				7CB35EF12C53441C00141F60 /* BookFly2UViewController.swift */,
 			);
-			name = BOOKFLY2U;
-			path = ../BOOKFLY2U;
+			path = BOOKFLY2U;
 			sourceTree = "<group>";
 		};
 		7CCC80BF2C1FD9EA0092F741 /* REGISTER */ = {
@@ -312,8 +295,7 @@
 				7CB35EEA2C5202EC00141F60 /* Register.swift */,
 				7CB35EEC2C5229D300141F60 /* User.swift */,
 			);
-			name = REGISTER;
-			path = ../REGISTER;
+			path = REGISTER;
 			sourceTree = "<group>";
 		};
 		7CCC80FD2C2142300092F741 /* MAINPAGE */ = {
@@ -323,8 +305,7 @@
 				7CCC81002C2142680092F741 /* MainPageViewController.swift */,
 				3D79632F2C4F4DF700A876A8 /* MainTabBarController.swift */,
 			);
-			name = MAINPAGE;
-			path = ../MAINPAGE;
+			path = MAINPAGE;
 			sourceTree = "<group>";
 		};
 		7CCC81022C2160060092F741 /* LAUNCHSCREEN */ = {
@@ -333,8 +314,7 @@
 				7CCC80EC2C2132770092F741 /* LaunchScreen.storyboard */,
 				7CCC81032C2160360092F741 /* LaunchScreenViewController.swift */,
 			);
-			name = LAUNCHSCREEN;
-			path = ../LAUNCHSCREEN;
+			path = LAUNCHSCREEN;
 			sourceTree = "<group>";
 		};
 		7CCC81062C21659F0092F741 /* LOGIN */ = {
@@ -365,6 +345,17 @@
 		7CDA7B7E2C129730002F7C0B /* PPASBOOK */ = {
 			isa = PBXGroup;
 			children = (
+				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
+				7CCC80BF2C1FD9EA0092F741 /* REGISTER */,
+				3DE50E5B2C3E369800DB2D78 /* PROFILES */,
+				7CCC80FD2C2142300092F741 /* MAINPAGE */,
+				7C271BD82C3503A300050986 /* FASILITI */,
+				3DE50E432C3D19DF00DB2D78 /* LOCATION */,
+				3DE50E612C3E647E00DB2D78 /* HISTORY */,
+				328F06DF2C50B7AC004E82C7 /* BOOKING */,
+				7CF322142C3CC95500877517 /* PINJAMAN */,
+				32935C8A2C5095DE00B9EFD2 /* PINJAMAN2 */,
+				7CB35EEE2C5342F000141F60 /* BOOKFLY2U */,
 				3DC57C442CA5538800F7D4EF /* ADMIN */,
 				3DC57C432CA5537900F7D4EF /* USER */,
 				7CDA7B7F2C129730002F7C0B /* AppDelegate.swift */,
@@ -393,8 +384,7 @@
 				328F06C82C50B788004E82C7 /* SixViewController.swift */,
 				32053C142C65C9B40059B130 /* CustomTableViewCell.swift */,
 			);
-			name = PINJAMAN;
-			path = ../PINJAMAN;
+			path = PINJAMAN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
