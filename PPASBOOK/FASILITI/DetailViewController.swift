@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     var scene: SCNScene!
     var modelNode: SCNNode!
     var initialScale: SCNVector3!
-    var data: YourDataModel?
+    var data: FacilityDataModel?
     var originalPosition: CGPoint?
     
     required init?(coder: NSCoder) {

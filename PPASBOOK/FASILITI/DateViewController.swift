@@ -11,7 +11,7 @@ class DateViewController: UIViewController, FSCalendarDataSource, FSCalendarDele
     @IBOutlet var Label2: UILabel!
     @IBOutlet var Label3: UILabel!
     
-    var data: YourDataModel? // Property to store received data
+    var data: FacilityDataModel? // Property to store received data
     var bookings: [Booking] = []
     let mockFacilityID = "Bilik Meeting"
     let operationStartHour = 8

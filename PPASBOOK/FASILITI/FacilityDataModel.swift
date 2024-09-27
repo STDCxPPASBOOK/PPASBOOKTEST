@@ -1,6 +1,6 @@
 import Foundation
 
-struct YourDataModel: Hashable {
+struct FacilityDataModel: Hashable {
     let imageName: String
     let label1Text: String
     let label2Text: String

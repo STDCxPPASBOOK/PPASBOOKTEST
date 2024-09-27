@@ -75,7 +75,7 @@
 		7CE8D9902C6328C200E74CF5 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */; };
 		7CE8D9B42C635C3000E74CF5 /* SocialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */; };
 		7CF322182C3CCB2900877517 /* BasicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */; };
-		7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322192C3CCBC500877517 /* YourDataModel.swift */; };
+		7CF3221A2C3CCBC500877517 /* FacilityDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322192C3CCBC500877517 /* FacilityDataModel.swift */; };
 		7CF322222C40EAF600877517 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF322212C40EAF600877517 /* Detail.storyboard */; };
 		7CF322242C40EB0300877517 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF322232C40EB0300877517 /* DetailViewController.swift */; };
 		7CF322262C41300100877517 /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF322252C41300100877517 /* Date.storyboard */; };
@@ -152,7 +152,7 @@
 		7CE8D98F2C6328C200E74CF5 /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		7CE8D9B32C635C3000E74CF5 /* SocialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCollectionViewCell.swift; sourceTree = "<group>"; };
-		7CF322192C3CCBC500877517 /* YourDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourDataModel.swift; sourceTree = "<group>"; };
+		7CF322192C3CCBC500877517 /* FacilityDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacilityDataModel.swift; sourceTree = "<group>"; };
 		7CF322212C40EAF600877517 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		7CF322232C40EB0300877517 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7CF322252C41300100877517 /* Date.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Date.storyboard; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				7C271BD92C350FAD00050986 /* Fasiliti.storyboard */,
 				7C271BDB2C350FF400050986 /* FasilitiViewController.swift */,
 				7CF322172C3CCB2900877517 /* BasicCollectionViewCell.swift */,
-				7CF322192C3CCBC500877517 /* YourDataModel.swift */,
+				7CF322192C3CCBC500877517 /* FacilityDataModel.swift */,
 				7CF322212C40EAF600877517 /* Detail.storyboard */,
 				7CF322232C40EB0300877517 /* DetailViewController.swift */,
 				7CF322252C41300100877517 /* Date.storyboard */,
@@ -535,7 +535,7 @@
 				328F06D92C50B795004E82C7 /* LRRViewController.swift in Sources */,
 				7CCC81042C2160360092F741 /* LaunchScreenViewController.swift in Sources */,
 				328A26222C69AC5100DEAC10 /* Custom2TableViewCell.swift in Sources */,
-				7CF3221A2C3CCBC500877517 /* YourDataModel.swift in Sources */,
+				7CF3221A2C3CCBC500877517 /* FacilityDataModel.swift in Sources */,
 				328A26202C69AB7C00DEAC10 /* ShowForm2ViewController.swift in Sources */,
 				32053C112C65C8700059B130 /* FormItem.swift in Sources */,
 				7CB35EEB2C5202EC00141F60 /* Register.swift in Sources */,

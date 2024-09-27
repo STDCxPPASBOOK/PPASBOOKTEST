@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseFirestore
 
 private let reuseIdentifier = "Cell"
 
@@ -11,23 +12,11 @@ class FasilitiViewController: UIViewController {
     @IBOutlet var buttonFB: UIButton!
     @IBOutlet var buttonPM: UIButton!
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, YourDataModel>!
-    var items = [
-        YourDataModel(imageName: "Auditorium", label1Text: "Auditorium", label2Text: "👥 200 Pax(Maksimum)", label3Text: "💵 RM 330/Jam"),
-        YourDataModel(imageName: "DewanSerbaguna", label1Text: "Dewan Serbaguna", label2Text: "👥 200 Pax(Maksimum)", label3Text: "💵 RM 250/Jam"),
-        YourDataModel(imageName: "BilikSeminar4", label1Text: "Bilik Seminar 4", label2Text: "👥 70 Pax(Maksimum)", label3Text: "💵 RM 200/Jam"),
-        YourDataModel(imageName: "BilikKaca1", label1Text: "Bilik Kaca 1", label2Text: "👥 55 Pax(Maksimum)", label3Text: "💵 RM 80/Jam"),
-        YourDataModel(imageName: "BilikAktivitiKanak", label1Text: "Bilik Aktiviti Kanak-Kanak", label2Text: "👥 40 Pax(Maksimum)", label3Text: "💵 RM 60/Jam"),
-        YourDataModel(imageName: "BilikMesyuarat", label1Text: "Bilik Mesyuarat", label2Text: "👥 40 Pax(Maksimum)", label3Text: "💵 RM 80/Jam"),
-        YourDataModel(imageName: "slide1", label1Text: "Bilik Latihan", label2Text: "👥 28 Pax(Maksimum)", label3Text: "💵 RM 75/Jam"),
-        YourDataModel(imageName: "MakmalIT", label1Text: "Makmal IT", label2Text: "👥 80 Pax(Maksimum)", label3Text: "💵 RM 80/Jam"),
-        YourDataModel(imageName: "Bilik Perbincangan 1", label1Text: "Bilik Perbincangan 1", label2Text: "👥 20 Pax(Maksimum)", label3Text: "💵 RM 50/Jam"),
-        YourDataModel(imageName: "Bilik Perbincangan 2", label1Text: "Bilik Perbincangan 2", label2Text: "👥 10 Pax(Maksimum)", label3Text: "💵 RM 40/Jam"),
-        YourDataModel(imageName: "BilikTaklimat", label1Text: "Bilik Taklimat", label2Text: "👥 40 Pax(Maksimum)", label3Text: "💵 RM 70/Jam"),
-    ]
+    var dataSource: UICollectionViewDiffableDataSource<Section, FacilityDataModel>!
+    var items: [FacilityDataModel] = []
     
-    var filteredItems: [YourDataModel] = []
-    var selectedItem: YourDataModel?
+    var filteredItems: [FacilityDataModel] = []
+    var selectedItem: FacilityDataModel?
     
     enum Section: CaseIterable {
         case main
@@ -43,6 +32,8 @@ class FasilitiViewController: UIViewController {
         // Setup data source and delegate
         createDataSource()
         
+        fetchFacilityData()
+        
         // Apply initial snapshot
         applySnapshot()
         
@@ -53,9 +44,40 @@ class FasilitiViewController: UIViewController {
         // Add shadow to buttons
         configureButtonShadows()
     }
+    private func fetchFacilityData() {
+            let db = Firestore.firestore()
+            
+            db.collection("facilities").getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error fetching documents: \(error)")
+                    return
+                }
+                
+                guard let documents = snapshot?.documents else {
+                    print("No documents found")
+                    return
+                }
+                
+                self.items = documents.compactMap { document -> FacilityDataModel? in
+                    let data = document.data()
+                    guard
+                        let imageName = data["imageName"] as? String,
+                        let label1Text = data["label1Text"] as? String,
+                        let label2Text = data["label2Text"] as? String,
+                        let label3Text = data["label3Text"] as? String
+                    else {
+                        return nil
+                    }
+                    return FacilityDataModel(imageName: imageName, label1Text: label1Text, label2Text: label2Text, label3Text: label3Text)
+                }
+                
+                // Apply snapshot to update the UI
+                self.applySnapshot()
+            }
+        }
     
     private func createDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<BasicCollectionViewCell, YourDataModel> { cell, indexPath, data in
+        let cellRegistration = UICollectionView.CellRegistration<BasicCollectionViewCell, FacilityDataModel> { cell, indexPath, data in
             cell.configure(with: data)
         }
         
@@ -65,7 +87,7 @@ class FasilitiViewController: UIViewController {
     }
     
     private func applySnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, FacilityDataModel>()
         snapshot.appendSections([.main])
         snapshot.appendItems(items)
         dataSource.apply(snapshot, animatingDifferences: true)
@@ -145,7 +167,7 @@ class FasilitiViewController: UIViewController {
                 return false
             }
             
-            var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+            var snapshot = NSDiffableDataSourceSnapshot<Section, FacilityDataModel>()
             snapshot.appendSections([.main])
             snapshot.appendItems(filteredItems)
             dataSource.apply(snapshot, animatingDifferences: true)
@@ -164,7 +186,7 @@ class FasilitiViewController: UIViewController {
         }
         
         // Apply snapshot with filteredItems after filtering
-        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, FacilityDataModel>()
         snapshot.appendSections([.main])
         snapshot.appendItems(filteredItems)
         dataSource.apply(snapshot, animatingDifferences: true)
@@ -209,7 +231,7 @@ class FasilitiViewController: UIViewController {
             return false
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, FacilityDataModel>()
         snapshot.appendSections([.main])
         snapshot.appendItems(filteredItems)
         dataSource.apply(snapshot, animatingDifferences: true)
@@ -259,7 +281,7 @@ extension FasilitiViewController: UISearchBarDelegate {
             applySnapshot() // Show all items if search text is empty
         } else {
             filteredItems = items.filter { $0.label1Text.contains(searchText) }
-            var snapshot = NSDiffableDataSourceSnapshot<Section, YourDataModel>()
+            var snapshot = NSDiffableDataSourceSnapshot<Section, FacilityDataModel>()
             snapshot.appendSections([.main])
             snapshot.appendItems(filteredItems)
             dataSource.apply(snapshot, animatingDifferences: true)

@@ -77,7 +77,7 @@ class BasicCollectionViewCell: UICollectionViewCell {
         clipsToBounds = true
     }
     
-    func configure(with data: YourDataModel) {
+    func configure(with data: FacilityDataModel) {
         imageView.image = UIImage(named: data.imageName)
         label1.text = data.label1Text
         label2.text = data.label2Text
