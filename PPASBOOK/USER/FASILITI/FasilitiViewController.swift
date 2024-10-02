@@ -64,11 +64,12 @@ class FasilitiViewController: UIViewController {
                         let imageName = data["imageName"] as? String,
                         let label1Text = data["label1Text"] as? String,
                         let label2Text = data["label2Text"] as? String,
-                        let label3Text = data["label3Text"] as? String
+                        let label3Text = data["label3Text"] as? String,
+                        let usdzFileName = data["usdzFileName"] as? String
                     else {
                         return nil
                     }
-                    return FacilityDataModel(facilityId: "", imageName: imageName, label1Text: label1Text, label2Text: label2Text, label3Text: label3Text, usdzFileName: "")
+                    return FacilityDataModel(facilityId: "", imageName: imageName, label1Text: label1Text, label2Text: label2Text, label3Text: label3Text, usdzFileName: usdzFileName)
                 }
                 
                 // Apply snapshot to update the UI

@@ -14,6 +14,9 @@
 		3D7963832C5750E900A876A8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7963822C5750E900A876A8 /* FirebaseDatabase */; };
 		3D7963852C5750E900A876A8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3D7963842C5750E900A876A8 /* FirebaseFirestore */; };
 		3D7963E92C605E0C00A876A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D7963E82C605E0B00A876A8 /* GoogleService-Info.plist */; };
+		3DC57E2D2CACF09600F7D4EF /* bilik_perbincangan1.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DC57E2C2CACF09600F7D4EF /* bilik_perbincangan1.usdz */; };
+		3DC57E2F2CACF0A200F7D4EF /* bilik_perbincangan2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DC57E2E2CACF0A200F7D4EF /* bilik_perbincangan2.usdz */; };
+		3DC57E312CACF0AA00F7D4EF /* makmal_it.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3DC57E302CACF0AA00F7D4EF /* makmal_it.usdz */; };
 		7CCC80ED2C2132770092F741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCC80EC2C2132770092F741 /* LaunchScreen.storyboard */; };
 		7CCC81042C2160360092F741 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCC81032C2160360092F741 /* LaunchScreenViewController.swift */; };
 		7CDA7B802C129730002F7C0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA7B7F2C129730002F7C0B /* AppDelegate.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		32FE76A72C57323A0093FF31 /* room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = room.usdz; sourceTree = "<group>"; };
 		3D7963E82C605E0B00A876A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3DC57E2C2CACF09600F7D4EF /* bilik_perbincangan1.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = bilik_perbincangan1.usdz; sourceTree = "<group>"; };
+		3DC57E2E2CACF0A200F7D4EF /* bilik_perbincangan2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = bilik_perbincangan2.usdz; sourceTree = "<group>"; };
+		3DC57E302CACF0AA00F7D4EF /* makmal_it.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = makmal_it.usdz; sourceTree = "<group>"; };
 		7CCC80EC2C2132770092F741 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CCC81032C2160360092F741 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7CDA7B7C2C129730002F7C0B /* PPASBOOK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPASBOOK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +112,9 @@
 				7CDA7B8D2C129731002F7C0B /* Info.plist */,
 				3D7963E82C605E0B00A876A8 /* GoogleService-Info.plist */,
 				7CDA7B882C129731002F7C0B /* Assets.xcassets */,
+				3DC57E2C2CACF09600F7D4EF /* bilik_perbincangan1.usdz */,
+				3DC57E2E2CACF0A200F7D4EF /* bilik_perbincangan2.usdz */,
+				3DC57E302CACF0AA00F7D4EF /* makmal_it.usdz */,
 				32FE76A72C57323A0093FF31 /* room.usdz */,
 				7CE8D9662C606CAD00E74CF5 /* Localizable.strings */,
 			);
@@ -191,7 +200,10 @@
 				7CDA7B892C129731002F7C0B /* Assets.xcassets in Resources */,
 				3D7963E92C605E0C00A876A8 /* GoogleService-Info.plist in Resources */,
 				7CCC80ED2C2132770092F741 /* LaunchScreen.storyboard in Resources */,
+				3DC57E2F2CACF0A200F7D4EF /* bilik_perbincangan2.usdz in Resources */,
+				3DC57E2D2CACF09600F7D4EF /* bilik_perbincangan1.usdz in Resources */,
 				32FE76A82C57323B0093FF31 /* room.usdz in Resources */,
+				3DC57E312CACF0AA00F7D4EF /* makmal_it.usdz in Resources */,
 				7CE8D9682C606CAD00E74CF5 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
