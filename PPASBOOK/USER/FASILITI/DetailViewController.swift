@@ -43,33 +43,40 @@ class DetailViewController: UIViewController {
             label1.text = data.label1Text
             label2.text = data.label2Text
             label3.text = data.label3Text
+            
+            // Tunjukkan paparan 2D pada permulaan
+            duaDImageView.isHidden = false
+            duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan imej sebenar anda
+            tigaDImageView.isHidden = true
+            tigaDImageView.scene = nil
+            
+            // Initialize the 3D scene
+            scene = SCNScene()
+            guard let usdScene = SCNScene(named: data.usdzFileName) else {
+                fatalError("Unable to load USDZ file.")
+            }
+            
+            
+            modelNode = usdScene.rootNode.childNodes.first!
+            scene.rootNode.addChildNode(modelNode)
+            initialScale = modelNode.scale
+            tigaDImageView.scene = scene
+            tigaDImageView.allowsCameraControl = true
+            tigaDImageView.autoenablesDefaultLighting = true
+            
+            let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
+            tigaDImageView.addGestureRecognizer(pinchGesture)
+            
+            // Set initial segment index
+            segmentedControl.selectedSegmentIndex = 0
+            updateViewBasedOnSegment(segmentedControl)
+        } else {
+            imageView.image = UIImage(named: "defaultImage") // Use a default image
+            label1.text = "No data available"
+            label2.text = ""
+            label3.text = ""
+            print("Warning: FacilityDataModel is nil.")
         }
-        
-        // Tunjukkan paparan 2D pada permulaan
-        duaDImageView.isHidden = false
-        duaDImageView.image = UIImage(named: "2D") // Gantikan "2D" dengan imej sebenar anda
-        tigaDImageView.isHidden = true
-        tigaDImageView.scene = nil
-        
-        // Initialize the 3D scene
-        scene = SCNScene()
-        guard let usdScene = SCNScene(named: "room.usdz") else {
-            fatalError("Unable to load USDZ file.")
-        }
-        
-        modelNode = usdScene.rootNode.childNodes.first!
-        scene.rootNode.addChildNode(modelNode)
-        initialScale = modelNode.scale
-        tigaDImageView.scene = scene
-        tigaDImageView.allowsCameraControl = true
-        tigaDImageView.autoenablesDefaultLighting = true
-        
-        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
-        tigaDImageView.addGestureRecognizer(pinchGesture)
-        
-        // Set initial segment index
-        segmentedControl.selectedSegmentIndex = 0
-        updateViewBasedOnSegment(segmentedControl)
     }
     
     override func viewWillAppear(_ animated: Bool) {

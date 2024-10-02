@@ -68,7 +68,7 @@ class FasilitiViewController: UIViewController {
                     else {
                         return nil
                     }
-                    return FacilityDataModel(imageName: imageName, label1Text: label1Text, label2Text: label2Text, label3Text: label3Text)
+                    return FacilityDataModel(facilityId: "", imageName: imageName, label1Text: label1Text, label2Text: label2Text, label3Text: label3Text, usdzFileName: "")
                 }
                 
                 // Apply snapshot to update the UI
