@@ -1,6 +1,6 @@
 import UIKit
 
-class MainPageViewController: UIViewController {
+class AdminViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Model untuk CollectionItem
     struct CollectionItem {
@@ -8,7 +8,6 @@ class MainPageViewController: UIViewController {
         let isAdminItem: Bool
     }
 
-    
     // Outlets dari storyboard
     @IBOutlet var bg: UIView!
     @IBOutlet var image1: UIButton!
@@ -17,6 +16,8 @@ class MainPageViewController: UIViewController {
     @IBOutlet var bg1: UIView!
     @IBOutlet var topCollection: UICollectionView!
     @IBOutlet var bottomCollection: UICollectionView! // Outlet untuk bottomCollection
+    @IBOutlet var editButton: UIButton! // Butang untuk mengedit
+    @IBOutlet var addButton: UIButton!
     
     // Sumber data untuk koleksi gabungan
         let topCollectionItems: [CollectionItem] = [
@@ -36,7 +37,6 @@ class MainPageViewController: UIViewController {
             CollectionItem(imageName: "slide2", isAdminItem: true),
             CollectionItem(imageName: "slide3", isAdminItem: true),
             CollectionItem(imageName: "slide4", isAdminItem: false)
-            
         ]
         
         override func viewDidLoad() {
@@ -72,7 +72,7 @@ class MainPageViewController: UIViewController {
         }
     }
 
-    extension MainPageViewController: UICollectionViewDelegateFlowLayout {
+    extension AdminViewController: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 180, height: 180) // Saiz item tetap
         }
@@ -82,7 +82,7 @@ class MainPageViewController: UIViewController {
         }
     }
 
-    extension MainPageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    extension AdminViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             if collectionView == topCollection {
                 return topCollectionItems.count // Jumlah item untuk topCollection
@@ -143,7 +143,7 @@ class MainPageViewController: UIViewController {
 
     // Extensions untuk UIView dan UIButton (sama seperti sebelum ini)
     extension UIView {
-        func clipTopCorners(radius: CGFloat) {
+        func clipTopCorner(radius: CGFloat) {
             self.layoutIfNeeded()
             let maskPath = UIBezierPath(roundedRect: self.bounds,
                                         byRoundingCorners: [.topLeft, .topRight],
@@ -156,7 +156,7 @@ class MainPageViewController: UIViewController {
     }
 
     extension UIButton {
-        func clipToImage() {
+        func clipToImages() {
             self.layoutIfNeeded()
             self.layer.borderColor = UIColor.black.cgColor
             self.layer.borderWidth = 1.0

@@ -48,9 +48,9 @@
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7C81034B2CA666E100CF4FAB /* ADMIN */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ADMIN; sourceTree = "<group>"; };
 		7C81034C2CA666EE00CF4FAB /* USER */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = USER; sourceTree = "<group>"; };
 		7C8103CA2CA6674E00CF4FAB /* LoginRegister */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7C8103D52CA6676500CF4FAB /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = LoginRegister; sourceTree = "<group>"; };
+		7C81046A2CAA5E5200CF4FAB /* ADMIN */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ADMIN; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			children = (
 				7C8103CA2CA6674E00CF4FAB /* LoginRegister */,
 				7C81034C2CA666EE00CF4FAB /* USER */,
-				7C81034B2CA666E100CF4FAB /* ADMIN */,
+				7C81046A2CAA5E5200CF4FAB /* ADMIN */,
 				7CCC81022C2160060092F741 /* LAUNCHSCREEN */,
 				7CDA7B7F2C129730002F7C0B /* AppDelegate.swift */,
 				7CDA7B812C129730002F7C0B /* SceneDelegate.swift */,
@@ -128,9 +128,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7C81034B2CA666E100CF4FAB /* ADMIN */,
 				7C81034C2CA666EE00CF4FAB /* USER */,
 				7C8103CA2CA6674E00CF4FAB /* LoginRegister */,
+				7C81046A2CAA5E5200CF4FAB /* ADMIN */,
 			);
 			name = PPASBOOK;
 			packageProductDependencies = (

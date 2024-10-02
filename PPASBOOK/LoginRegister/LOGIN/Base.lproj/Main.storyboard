@@ -107,6 +107,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PsX-3N-ubl">
+                                <rect key="frame" x="172" y="582" width="34" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.circle.fill" catalog="system">
+                                    <color key="baseForegroundColor" red="0.31764706970000001" green="0.69019609689999994" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="trD-1n-qg2" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="eI8-WJ-pDL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kmM-mF-9lr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -187,6 +198,16 @@
             </objects>
             <point key="canvasLocation" x="2895" y="-332"/>
         </scene>
+        <!--Admin-->
+        <scene sceneID="G3h-ho-6Jj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Admin" id="trD-1n-qg2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dih-VN-eQk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YAZ-iz-sCN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2738" y="-155"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image 3" width="188.66667175292969" height="419.33334350585938"/>
@@ -194,6 +215,7 @@
         <image name="logo1" width="332.5" height="187.5"/>
         <image name="logo1 1" width="328" height="190"/>
         <image name="logo1 2" width="212.5" height="293"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
