@@ -1,167 +1,165 @@
 import UIKit
 
 class AdminViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    // Model untuk CollectionItem
-    struct CollectionItem {
-        let imageName: String
-        let isAdminItem: Bool
-    }
 
-    // Outlets dari storyboard
+    // Outlets from storyboard
     @IBOutlet var bg: UIView!
     @IBOutlet var image1: UIButton!
     @IBOutlet var image2: UIButton!
     @IBOutlet var image3: UIButton!
     @IBOutlet var bg1: UIView!
     @IBOutlet var topCollection: UICollectionView!
-    @IBOutlet var bottomCollection: UICollectionView! // Outlet untuk bottomCollection
-    @IBOutlet var editButton: UIButton! // Butang untuk mengedit
+    @IBOutlet var bottomCollection: UICollectionView!
+    @IBOutlet var editButton: UIButton!
     @IBOutlet var addButton: UIButton!
+
+    // Shared Data
+    var bottomCollectionItems: [CollectionItem] = SharedCollectionData.shared.bottomCollectionItems
+    var topCollectionItems: [CollectionItem] = SharedCollectionData.shared.topCollectionItems
     
-    // Sumber data untuk koleksi gabungan
-        let topCollectionItems: [CollectionItem] = [
-            // Gambar untuk top collection (MainPageViewController)
-            CollectionItem(imageName: "top1", isAdminItem: false),
-            CollectionItem(imageName: "top2", isAdminItem: false),
-            CollectionItem(imageName: "top3", isAdminItem: false),
-            CollectionItem(imageName: "top4", isAdminItem: false),
-            CollectionItem(imageName: "top5", isAdminItem: false),
-            CollectionItem(imageName: "top6", isAdminItem: false),
-            CollectionItem(imageName: "top7", isAdminItem: false)
-        ]
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        let bottomCollectionItems: [CollectionItem] = [
-            // Gambar untuk bottom collection (AdminViewController)
-            CollectionItem(imageName: "slide1", isAdminItem: true),
-            CollectionItem(imageName: "slide2", isAdminItem: true),
-            CollectionItem(imageName: "slide3", isAdminItem: true),
-            CollectionItem(imageName: "slide4", isAdminItem: false)
-        ]
+        // Configure UI
+        bg.clipTopCorner(radius: 50.0)
+        image1.clipToImages()
+        image2.clipToImages()
+        image3.clipToImages()
         
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            // Konfigurasi background view
-            bg.clipTopCorners(radius: 50.0)
-            image1.clipToImage()
-            image2.clipToImage()
-            image3.clipToImage()
-            
-            // Atur UICollectionView untuk topCollection
-            configureCollectionView(topCollection, with: topCollectionItems)
-            
-            // Atur UICollectionView untuk bottomCollection
-            configureCollectionView(bottomCollection, with: bottomCollectionItems)
-        }
+        // Configure collections
+        configureCollectionView(topCollection, with: topCollectionItems)
+        configureCollectionView(bottomCollection, with: bottomCollectionItems)
         
-        func configureCollectionView(_ collectionView: UICollectionView, with items: [CollectionItem]) {
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize(width: 180, height: 180) // Saiz item
-            layout.minimumLineSpacing = 10 // Spacing antara item
-            layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10) // Padding
-            collectionView.collectionViewLayout = layout
-            
-            collectionView.isPagingEnabled = true // Mengaktifkan paging
-            collectionView.delegate = self
-            collectionView.dataSource = self
-        }
-        
-        @IBAction func unwindToMainPageViewController(segue: UIStoryboardSegue) {
-        }
+        // Add tap gesture recognizer to the top collection view
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(addImage))
+        topCollection.addGestureRecognizer(tapGesture)
+
+        // Add tap gesture recognizer to the edit button
+        let editGesture = UITapGestureRecognizer(target: self, action: #selector(deleteImage))
+        editButton.addGestureRecognizer(editGesture)
+
+        // Register cell for collection view
+        topCollection.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "combinedCell")
+    }
+    
+    func configureCollectionView(_ collectionView: UICollectionView, with items: [CollectionItem]) {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 180, height: 180)
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        collectionView.collectionViewLayout = layout
+        collectionView.isPagingEnabled = true
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
-    extension AdminViewController: UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 180, height: 180) // Saiz item tetap
+    @objc func addImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+
+    @objc func deleteImage() {
+        guard let indexPath = topCollection.indexPathsForSelectedItems?.first else {
+            print("No item selected to delete.")
+            return
         }
         
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-            return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10) // Padding kiri dan kanan
-        }
-    }
-
-    extension AdminViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            if collectionView == topCollection {
-                return topCollectionItems.count // Jumlah item untuk topCollection
-            } else {
-                return bottomCollectionItems.count // Jumlah item untuk bottomCollection
-            }
-        }
+        // Ensure data source is updated first
+        SharedCollectionData.shared.topCollectionItems.remove(at: indexPath.row)
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "combinedCell", for: indexPath)
-            
-            let item: CollectionItem
-            if collectionView == topCollection {
-                item = topCollectionItems[indexPath.row] // Ambil item untuk topCollection
-            } else {
-                item = bottomCollectionItems[indexPath.row] // Ambil item untuk bottomCollection
-            }
-            
-            let imageView = UIImageView(image: UIImage(named: item.imageName))
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-            cell.contentView.addSubview(imageView)
-            
-            // Layout constraints untuk imageView
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-                imageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
-                imageView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-                imageView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor)
-            ])
-            
-            // Tambahkan border pada setiap item
-            cell.layer.borderColor = UIColor.black.cgColor  // Warna border hitam
-            cell.layer.borderWidth = 0.5  // Tebal border 0.5 poin
-            cell.layer.masksToBounds = true
-            
-            return cell
-        }
+        // Then delete item from collection view
+        topCollection.deleteItems(at: [indexPath])
+        print("Item deleted at index: \(indexPath.row)")
+    }
+    
+    @IBAction func unwindToMainPageViewController(segue: UIStoryboardSegue) {
+    }
+}
+
+// Extensions for UICollectionView
+extension AdminViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 180)
+    }
+}
+
+extension AdminViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return collectionView == topCollection ? topCollectionItems.count : bottomCollectionItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "combinedCell", for: indexPath)
+        let item = collectionView == topCollection ? topCollectionItems[indexPath.row] : bottomCollectionItems[indexPath.row]
         
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            let item: CollectionItem
-            if collectionView == topCollection {
-                item = topCollectionItems[indexPath.row]
-            } else {
-                item = bottomCollectionItems[indexPath.row]
-            }
-            
-            if item.isAdminItem {
-                // Kendalikan pemilihan item admin
-                print("Item admin dipilih: \(item.imageName)")
-            } else {
-                // Kendalikan pemilihan item biasa
-                print("Item biasa dipilih: \(item.imageName)")
-            }
+        let imageView = UIImageView(image: UIImage(named: item.imageName))
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        cell.contentView.addSubview(imageView)
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor)
+        ])
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderWidth = 2.0
+        cell?.contentView.layer.borderColor = UIColor.systemBlue.cgColor
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.contentView.layer.borderWidth = 0.0
+    }
+}
+
+// Extensions for UIView and UIButton
+extension UIView {
+    func clipTopCorner(radius: CGFloat) {
+        self.layoutIfNeeded()
+        let maskPath = UIBezierPath(roundedRect: self.bounds,
+                                    byRoundingCorners: [.topLeft, .topRight],
+                                    cornerRadii: CGSize(width: radius, height: radius))
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        self.layer.mask = shape
+    }
+}
+
+extension UIButton {
+    func clipToImages() {
+        self.layoutIfNeeded()
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = self.frame.height / 2
+        self.clipsToBounds = true
+    }
+}
+
+// Implementing UIImagePickerControllerDelegate methods
+extension AdminViewController {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            // Add new item
+            let newItem = CollectionItem(imageName: "newImageFromPicker", isAdminItem: true)
+            SharedCollectionData.shared.topCollectionItems.append(newItem)
+            topCollection.reloadData()
+            print("New item added: \(newItem.imageName)") // Log debug
         }
+        dismiss(animated: true, completion: nil)
     }
 
-    // Extensions untuk UIView dan UIButton (sama seperti sebelum ini)
-    extension UIView {
-        func clipTopCorner(radius: CGFloat) {
-            self.layoutIfNeeded()
-            let maskPath = UIBezierPath(roundedRect: self.bounds,
-                                        byRoundingCorners: [.topLeft, .topRight],
-                                        cornerRadii: CGSize(width: radius, height: radius))
-            
-            let shape = CAShapeLayer()
-            shape.path = maskPath.cgPath
-            self.layer.mask = shape
-        }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
-
-    extension UIButton {
-        func clipToImages() {
-            self.layoutIfNeeded()
-            self.layer.borderColor = UIColor.black.cgColor
-            self.layer.borderWidth = 1.0
-            self.layer.cornerRadius = self.frame.height / 2
-            self.clipsToBounds = true
-        }
-    }
-
+}
